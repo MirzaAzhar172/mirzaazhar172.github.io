@@ -241,24 +241,40 @@
     <div id="awardsCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="row justify-content-center">
-            <!-- Award 1 -->
-            <div class="col-md-4">
-              <div class="card border-dark h-100 shadow-sm">
-                <a href="assets/img/awards/platinum_award.png" target="_blank">
-                  <img src="assets/img/awards/platinum_award.png"
-                       class="card-img-top img-fluid w-100"
-                       style="object-fit: cover; height: 300px;"
-                       alt="Platinum Award" />
-                </a>
-                <div class="card-body text-center">
-                  <h5 class="card-title fw-bold">PLATINUM AWARD (Johan)</h5>
-                  <p class="card-text">Geran Teknologi & Inovasi Digital Selangor 2024 (GTIDS'24)</p>
-                </div>
-              </div>
-            </div>
+        <!-- Award 1 -->
+<div class="col-md-4">
+  <div class="card border-dark h-100 shadow-sm">
+    <!-- Trigger Modal on Click -->
+    <a href="#" data-bs-toggle="modal" data-bs-target="#awardModal1">
+      <img src="assets/img/awards/platinum_award.png"
+           class="card-img-top img-fluid w-100"
+           style="object-fit: cover; height: 300px;"
+           alt="Platinum Award" />
+    </a>
+    <div class="card-body text-center">
+      <h5 class="card-title fw-bold">PLATINUM AWARD (Johan)</h5>
+      <p class="card-text">Geran Teknologi & Inovasi Digital Selangor 2024 (GTIDS'24)</p>
+    </div>
+  </div>
+</div>
+        
+<!-- MODAL for Award 1 -->
+<div class="modal fade" id="awardModal1" tabindex="-1" aria-labelledby="awardModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="awardModalLabel1">Platinum Award - GTIDS'24</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/img/awards/platinum_award.png" class="img-fluid mb-3 rounded shadow" alt="Platinum Award">
+        <p class="text-muted">
+          This project received the <strong>Platinum Award (Johan)</strong> at <strong>Geran Teknologi & Inovasi Digital Selangor 2024</strong>. It featured a mobile AI system to detect microsleep using ML Kit and TTS integrated chatbot.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- Award 2 -->
             <div class="col-md-4 d-none d-md-block">
