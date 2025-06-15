@@ -227,47 +227,38 @@
   </div>
 </section>
 
-
-<!-- Awards & Recognition Section -->
-<section class="page-section bg-light pb-2" id="awards">
+<!-- Awards & Recognition Section (Updated, Compact & Scrollable with Modal) -->
+<section class="page-section bg-light py-5" id="awards">
   <div class="container">
     <h2 class="text-center text-uppercase mb-4">Awards & Recognition</h2>
 
-    <!-- Scroll Buttons -->
-    <div class="text-center mb-3">
-      <button class="btn btn-outline-dark me-2" onclick="scrollAwards(-300)">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="btn btn-outline-dark" onclick="scrollAwards(300)">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-
     <!-- Horizontal Scroll Container -->
     <div id="awardScroll" class="d-flex overflow-auto gap-3 pb-3">
-      <!-- Award 1 -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px;" data-bs-toggle="modal" data-bs-target="#awardModal1">
-        <h5 class="fw-bold">PLATINUM AWARD (Johan)</h5>
+
+      <!-- Award Card -->
+      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal1">
+        <h5 class="fw-bold mb-2">PLATINUM AWARD (Johan)</h5>
         <p class="mb-0">GTIDS 2024 – Geran Teknologi & Inovasi Digital Selangor</p>
       </div>
 
-      <!-- Award 2 -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px;" data-bs-toggle="modal" data-bs-target="#awardModal2">
-        <h5 class="fw-bold">GOLD - (PROJECT)</h5>
+      <!-- Award Card -->
+      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal2">
+        <h5 class="fw-bold mb-2">GOLD - (PROJECT)</h5>
         <p class="mb-0">JIIICAS 2024 – Johor International Innovation Invention & Symposium</p>
       </div>
 
-      <!-- Award 3 -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px;" data-bs-toggle="modal" data-bs-target="#awardModal3">
-        <h5 class="fw-bold">IJORTAS Publication</h5>
+      <!-- Award Card -->
+      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal3">
+        <h5 class="fw-bold mb-2">IJORTAS Publication</h5>
         <p class="mb-0">International Journal of Recent Technology & Applied Science 2024</p>
       </div>
 
-      <!-- Award 4 -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px;" data-bs-toggle="modal" data-bs-target="#awardModal4">
-        <h5 class="fw-bold">Best IoT Project</h5>
+      <!-- Award Card -->
+      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal4">
+        <h5 class="fw-bold mb-2">Best IoT Project</h5>
         <p class="mb-0">FYP 2018/2019 – FSKIK Exhibition, A2813 / Computer Science</p>
       </div>
+
     </div>
   </div>
 
@@ -333,14 +324,6 @@
   </div>
 </section>
 
-<script>
-  function scrollAwards(offset) {
-    document.getElementById("awardScroll").scrollBy({
-      left: offset,
-      behavior: 'smooth'
-    });
-  }
-</script>
 
 <!-- Publications Section -->
 <section class="page-section bg-light" id="publications">
