@@ -165,6 +165,7 @@ ial involvement<!DOCTYPE html>
 </div>
 
    <!-- About Me Section -->
+<!-- About Me Section -->
 <section class="page-section bg-light py-5" id="about">
   <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
     <h2 class="text-center text-uppercase mb-5">About Me</h2>
@@ -200,24 +201,42 @@ ial involvement<!DOCTYPE html>
           intuitive user experience.
         </p>
       </div>
-      <!-- Gallery Section -->
-<div class="mt-5">
-  <h4 class="text-center text-uppercase mb-4">Involvement Highlights</h4>
-  <div class="row g-3">
-    <div class="col-md-4">
-      <img src="assets/img/gallery/present_gtids.jpg" class="img-fluid rounded shadow-sm" alt="Presentation GTIDS">
     </div>
-    <div class="col-md-4">
-      <img src="assets/img/gallery/team_bernama.jpg" class="img-fluid rounded shadow-sm" alt="Team Bernama">
-    </div>
-    <div class="col-md-4">
-      <img src="assets/img/gallery/award_session.jpg" class="img-fluid rounded shadow-sm" alt="Award Session">
-    </div>
-  </div>
-</div>
+
+    <!-- Horizontal Scroll Gallery -->
+    <div class="mt-5">
+      <h4 class="text-center text-uppercase mb-4">Involvement Gallery</h4>
+      <div class="d-flex overflow-auto gap-3 pb-2 justify-content-start px-2">
+        <img src="assets/img/portfolio/gallery1.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 1" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
+        <img src="assets/img/portfolio/gallery2.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 2" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
+        <img src="assets/img/portfolio/gallery3.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 3" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Modal Viewer -->
+<div id="galleryModal" class="modal fade" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Gallery Image</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="img-fluid rounded shadow" alt="Full Image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById('modalImage').src = src;
+    var myModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+    myModal.show();
+  }
+</script>
 
   <!-- Special Involvement Task Section -->
 <section class="page-section bg-light py-5" id="special-involvement">
