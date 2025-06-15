@@ -1,4 +1,4 @@
-ial involvement<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -164,7 +164,6 @@ ial involvement<!DOCTYPE html>
   </div>
 </div>
 
-   <!-- About Me Section -->
 <!-- About Me Section -->
 <section class="page-section bg-light py-5" id="about">
   <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
@@ -203,13 +202,15 @@ ial involvement<!DOCTYPE html>
       </div>
     </div>
 
-    <!-- Horizontal Scroll Gallery -->
+    <!-- Involvement Film-Style Slider -->
     <div class="mt-5">
       <h4 class="text-center text-uppercase mb-4">Involvement Gallery</h4>
-      <div class="d-flex overflow-auto gap-3 pb-2 justify-content-start px-2">
-        <img src="assets/img/portfolio/gallery1.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 1" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
-        <img src="assets/img/portfolio/gallery2.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 2" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
-        <img src="assets/img/portfolio/gallery3.jpg" class="img-thumbnail shadow-sm gallery-thumb" alt="Gallery Image 3" style="min-width: 200px; max-height: 150px; cursor: pointer;" onclick="openModal(this.src)">
+      <div class="position-relative">
+        <div class="d-flex overflow-auto gap-3 pb-3 px-2" style="scroll-snap-type: x mandatory;">
+          <img src="assets/img/portfolio/gallery1.jpg" class="rounded shadow-sm" style="width: 120px; height: 180px; object-fit: cover; scroll-snap-align: start; cursor: pointer;" onclick="openModal(this.src)" alt="Gallery 1">
+          <img src="assets/img/portfolio/gallery2.jpg" class="rounded shadow-sm" style="width: 120px; height: 180px; object-fit: cover; scroll-snap-align: start; cursor: pointer;" onclick="openModal(this.src)" alt="Gallery 2">
+          <img src="assets/img/portfolio/gallery3.jpg" class="rounded shadow-sm" style="width: 120px; height: 180px; object-fit: cover; scroll-snap-align: start; cursor: pointer;" onclick="openModal(this.src)" alt="Gallery 3">
+        </div>
       </div>
     </div>
   </div>
