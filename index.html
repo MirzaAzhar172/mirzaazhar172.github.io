@@ -232,106 +232,88 @@
       <!-- Horizontal Divider -->
     <hr class="my-5" />
 
-    <!-- Awards & Recognition Section -->
-<section class="page-section bg-light" id="awards">
-  <div class="container">
-    <h2 class="text-center text-uppercase mb-5">Awards & Recognition</h2>
-
-    <!-- Carousel Wrapper -->
-    <div id="awardsCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-
-        <!-- Award 1 -->
-<div class="col-md-4">
-  <div class="card border-dark h-100 shadow-sm">
-    <!-- Trigger Modal on Click -->
-    <a href="#" data-bs-toggle="modal" data-bs-target="#awardModal1">
-      <img src=""
-           class=""
-           style="object-fit: cover; height: 300px;"
+  <!-- Awards Cards Section -->
+<div class="row justify-content-center">
+  <!-- Award Card 1 -->
+  <div class="col-md-4">
+    <div class="card border-dark h-100 shadow-sm">
+      <img src="assets/img/awards/platinum_award.png"
+           class="card-img-top img-fluid"
+           style="object-fit: cover; height: 250px;"
            alt="Platinum Award" />
-    </a>
-    <div class="card-body text-center">
-      <h5 class="card-title fw-bold">PLATINUM AWARD (Johan)</h5>
-      <p class="card-text">Geran Teknologi & Inovasi Digital Selangor 2024 (GTIDS'24)</p>
+      <div class="card-body text-center">
+        <h5 class="card-title fw-bold">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#awardsModal" class="stretched-link text-dark text-decoration-none">PLATINUM AWARD (Johan)</a>
+        </h5>
+        <p class="card-text">Geran Teknologi & Inovasi Digital Selangor 2024 (GTIDS'24)</p>
+      </div>
     </div>
   </div>
+
+  <!-- Award Card 2 -->
+  <div class="col-md-4">
+    <div class="card border-dark h-100 shadow-sm">
+      <img src="assets/img/awards/jiicas24.png"
+           class="card-img-top img-fluid"
+           style="object-fit: cover; height: 250px;"
+           alt="Gold Award" />
+      <div class="card-body text-center">
+        <h5 class="card-title fw-bold">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#awardsModal" class="stretched-link text-dark text-decoration-none">GOLD - (PROJECT)</a>
+        </h5>
+        <p class="card-text">JIIICAS 2024 – Johor International Innovation Invention & Symposium</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more cards here if needed... -->
 </div>
-        
-<!-- MODAL for Award 1 -->
-<div class="modal fade" id="awardModal1" tabindex="-1" aria-labelledby="awardModalLabel1" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+
+<!-- MODAL for All Awards (Carousel inside) -->
+<div class="modal fade" id="awardsModal" tabindex="-1" aria-labelledby="awardsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="awardModalLabel1">Platinum Award - GTIDS'24</h5>
+        <h5 class="modal-title" id="awardsModalLabel">Awards & Recognition</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body text-center">
-        <img src="assets/img/awards/platinum_award.png" class="img-fluid mb-3 rounded shadow" alt="Platinum Award">
-        <p class="text-muted">
-          This project received the <strong>Platinum Award (Johan)</strong> at <strong>Geran Teknologi & Inovasi Digital Selangor 2024</strong>. It featured a mobile AI system to detect microsleep using ML Kit and TTS integrated chatbot.
-        </p>
+      <div class="modal-body">
+
+        <!-- Carousel -->
+        <div id="awardsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img src="assets/img/awards/platinum_award.png" class="img-fluid rounded mb-3" style="max-height: 400px;" alt="Platinum Award">
+              <h5 class="fw-bold">PLATINUM AWARD (Johan)</h5>
+              <p class="text-muted">Geran Teknologi & Inovasi Digital Selangor 2024 (GTIDS'24)</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img src="assets/img/awards/jiicas24.png" class="img-fluid rounded mb-3" style="max-height: 400px;" alt="Gold Award">
+              <h5 class="fw-bold">GOLD - (PROJECT)</h5>
+              <p class="text-muted">Johor International Innovation Invention & Symposium 2024 (JIIICAS2024)</p>
+            </div>
+
+            <!-- Tambah slide jika ada -->
+          </div>
+
+          <!-- Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#awardsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#awardsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
 </div>
 
-            <!-- Award 2 -->
-            <div class="col-md-4 d-none d-md-block">
-              <div class="card border-dark h-100 shadow-sm">
-                <a href="assets/img/awards/jiicas24.png" target="_blank">
-                  <img src="assets/img/awards/jiicas24.png"
-                       class="card-img-top img-fluid w-100"
-                       style="object-fit: cover; height: 300px;"
-                       alt="Gold Award" />
-                </a>
-                <div class="card-body text-center">
-                  <h5 class="card-title fw-bold">GOLD - (PROJECT)</h5>
-                  <p class="card-text">Johor International Innovation Invention & Symposium 2024 (JIIICAS2024)</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="row justify-content-center">
-            <!-- Award 3 -->
-            <div class="col-md-4">
-              <div class="card border-dark h-100 shadow-sm">
-                <a href="assets/img/awards/ijortas.png" target="_blank">
-                  <img src="assets/img/awards/ijortas.png"
-                       class="card-img-top img-fluid w-100"
-                       style="object-fit: cover; height: 300px;"
-                       alt="IJORTAS Publication" />
-                </a>
-                <div class="card-body text-center">
-                  <h5 class="card-title fw-bold">Publications Journal</h5>
-                  <p class="card-text">IJORTAS (Intl. Journal of Recent Technology & Applied Science)</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Award 4 -->
-            <div class="col-md-4 d-none d-md-block">
-              <div class="card border-dark h-100 shadow-sm">
-                <a href="assets/img/awards/best_iot.png" target="_blank">
-                  <img src="assets/img/awards/best_iot.png"
-                       class="card-img-top img-fluid w-100"
-                       style="object-fit: cover; height: 300px;"
-                       alt="Best IoT Project" />
-                </a>
-                <div class="card-body text-center">
-                  <h5 class="card-title fw-bold">Best IoT Project</h5>
-                  <p class="card-text">FYP 2018/2019 – FSKIK Exhibition – A2813 / Computer Science</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
 
       <!-- Carousel Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#awardsCarousel" data-bs-slide="prev">
