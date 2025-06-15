@@ -7,7 +7,6 @@
     <meta name="author" content="Ahmad Mirza" />
     <title>Mirza Azhar - Network, Software, Mobile, IoT Developer</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <script src="">assets/img/header-bg.jpg</script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -23,12 +22,41 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto">
             <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portfolio">Publications</a></li>
-            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="#awards">Awards & Recognition</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experience">Work Experience</a></li>
-            <li class="nav-item"><a class="nav-link" href="#special-involvement">Involvement Task</a></li>
+
+            <!-- Dropdown: About -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#about">About Me</a></li>
+                <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+              </ul>
+            </li>
+
+            <!-- Dropdown: Achievements -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="achieveDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Achievements
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="achieveDropdown">
+                <li><a class="dropdown-item" href="#awards">Awards & Recognition</a></li>
+                <li><a class="dropdown-item" href="#publications">Publications</a></li>
+              </ul>
+            </li>
+
+            <!-- Dropdown: Career -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Career
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="careerDropdown">
+                <li><a class="dropdown-item" href="#experience">Work Experience</a></li>
+                <li><a class="dropdown-item" href="#special-involvement">Involvement Task</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
           </ul>
         </div>
       </div>
