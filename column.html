@@ -32,55 +32,120 @@
 </head>
 <body>
 
-  <div class="container py-5">
-    <h2 class="text-center mb-4">📣 Project Highlights & Blog</h2>
-    <p class="text-center text-muted mb-5">In-depth updates with visuals and reflections</p>
+ <section class="py-5 bg-light" id="project-news">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">
+        <i class="fas fa-bullhorn me-2 text-danger"></i> PROJECT HIGHLIGHTS & NEWS
+      </h2>
+      <p class="text-muted">A collection of achievements, demos, and collaboration updates</p>
+    </div>
 
     <!-- Entry 1 -->
-    <div class="project-entry">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-5">
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS Presentation" class="img-fluid">
-        </div>
-        <div class="col-md-7">
-          <h4 class="fw-bold">GTIDS Presentation at SUK Selangor</h4>
-          <p class="text-muted mb-2"><small>Status: ✅ Completed | Date: March 2024</small></p>
-          <p>Our team showcased the smartphone-based Anti-Microsleep system with an AI chatbot to the Innovation Director and MBI reps. The demo focused on real-time alerts and drowsiness detection using Google ML Kit. Productive engagement led to future collaboration potential.</p>
-        </div>
+    <div class="project-entry mb-4">
+      <div class="card shadow-sm p-3">
+        <h5 class="fw-bold">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalGTIDS" class="text-decoration-none text-dark">
+            📌 GTIDS Presentation at SUK Selangor
+          </a>
+        </h5>
+        <p>Our team showcased the smartphone-based Anti-Microsleep system with AI chatbot...</p>
       </div>
     </div>
 
     <!-- Entry 2 -->
-    <div class="project-entry">
-      <div class="row g-4 align-items-center flex-md-row-reverse">
-        <div class="col-md-5">
-          <img src="assets/img/portfolio/Gallery/bajet2024_pics.jpg" alt="Budget 2024" class="img-fluid">
-        </div>
-        <div class="col-md-7">
-          <h4 class="fw-bold">Budget 2024 Cybersecurity Monitoring</h4>
-          <p class="text-muted mb-2"><small>Status: ✅ Completed | Date: October 2024</small></p>
-          <p>Real-time cyber threat monitoring with BERNAMA’s TMK Cybersecurity unit during Malaysia’s Budget 2024. Used OpenCTI and Maltrail for live alert analysis, showcasing my ability to operate in high-pressure environments involving national infrastructure.</p>
-        </div>
+    <div class="project-entry mb-4">
+      <div class="card shadow-sm p-3">
+        <h5 class="fw-bold">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalBajet2024" class="text-decoration-none text-dark">
+            📌 Budget 2024 Cybersecurity Monitoring
+          </a>
+        </h5>
+        <p>Involved in real-time cyber threat monitoring during Malaysia's Budget 2024 under BERNAMA...</p>
       </div>
     </div>
 
     <!-- Entry 3 -->
-    <div class="project-entry">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-5">
-          <img src="assets/img/portfolio/Gallery/SEDA2024_pics.jpg" alt="SEDA ISES 2024" class="img-fluid">
-        </div>
-        <div class="col-md-7">
-          <h4 class="fw-bold">SEDA ISES 2024 Finalist</h4>
-          <p class="text-muted mb-2"><small>Status: 🕓 On-going | Final Presentation: August 2024</small></p>
-          <p>Represented UiTM for the Sustainable Energy Showcase (ISES 2024) with my Anti-Microsleep Alarm IoT system. Project combines TTS, ML vision, and real-time suggestions. Shortlisted to final stage, with potential prize worth RM15,000.</p>
-        </div>
+    <div class="project-entry mb-4">
+      <div class="card shadow-sm p-3">
+        <h5 class="fw-bold">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#modalSEDA" class="text-decoration-none text-dark">
+            📌 SEDA ISES 2024 Finalist
+          </a>
+        </h5>
+        <p>Represented UiTM for SEDA Innovation & Sustainable Energy Showcase 2024...</p>
       </div>
     </div>
 
-    <p class="text-center text-muted mt-5">More updates coming soon. Stay tuned!</p>
+    <div class="text-center mt-4 text-muted">
+      More updates will be added soon. Stay tuned!
+    </div>
   </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- MODALS -->
+
+<!-- GTIDS Modal -->
+<div class="modal fade" id="modalGTIDS" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">GTIDS Presentation at SUK Selangor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" class="img-fluid rounded mb-3" alt="GTIDS">
+        <p><strong>Status:</strong> Completed</p>
+        <p><strong>Date:</strong> March 2024</p>
+        <p>
+          Our team showcased the smartphone-based Anti-Microsleep system with AI chatbot to the Innovation Director and MBI reps. The demo focused on real-time alerts and drowsiness detection using Google ML Kit.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Budget Modal -->
+<div class="modal fade" id="modalBajet2024" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Budget 2024 Cybersecurity Monitoring</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/img/portfolio/Gallery/bajet2024_pics.jpg" class="img-fluid rounded mb-3" alt="Budget 2024">
+        <p><strong>Status:</strong> Completed</p>
+        <p><strong>Date:</strong> October 2024</p>
+        <p>
+          Involved in real-time cyber threat monitoring during Malaysia’s Budget 2024 under BERNAMA’s Cybersecurity Unit. Tools used include OpenCTI and Maltrail for live attack tracking and reporting.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEDA Modal -->
+<div class="modal fade" id="modalSEDA" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">SEDA ISES 2024 Finalist</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/img/portfolio/Gallery/SEDA2024_pics.jpg" class="img-fluid rounded mb-3" alt="SEDA ISES">
+        <p><strong>Status:</strong> Finalist</p>
+        <p><strong>Date:</strong> Ongoing until August 2024</p>
+        <p>
+          Represented UiTM for SEDA Innovation & Sustainable Energy Showcase 2024. Project: Anti-Microsleep Alarm with IoT and Computer Vision. Shortlisted to final stage for certificate & RM15,000 prize opportunity.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
