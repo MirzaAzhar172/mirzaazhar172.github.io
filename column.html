@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-   <style>
+  <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
@@ -112,12 +112,16 @@
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
     }
     .involvement-section h2 {
       text-align: center;
       font-weight: 700;
       position: relative;
       margin-bottom: 2rem;
+    }
+    .involvement-wrapper {
+      position: relative;
     }
     .involvement-gallery {
       display: flex;
@@ -127,20 +131,9 @@
       padding: 1rem 0;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
+      margin: 0 2rem;
     }
-    .involvement-section button {
-      background: #1f1f1f;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .involvement-section button:hover {
-      background: #333;
-    }
-   .involvement-item {
+    .involvement-item {
       min-width: 260px;
       border-radius: 12px;
       overflow: hidden;
@@ -153,9 +146,33 @@
       height: 180px;
       object-fit: cover;
     }
+    .involvement-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      color: #1f1f1f;
+      border: 1px solid #ccc;
+      padding: 0.4rem 0.6rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: background 0.2s, color 0.2s;
+      z-index: 10;
+    }
+    .involvement-arrow:hover {
+      background: #1f1f1f;
+      color: white;
+    }
+    .involvement-arrow.left {
+      left: 0;
+    }
+    .involvement-arrow.right {
+      right: 0;
+    }
   </style>
 </head>
-  
 <body>
   <div class="navbar">
     <div><a href="index.html">MIRZA AZHAR</a></div>
