@@ -153,6 +153,34 @@
       height: 180px;
       object-fit: cover;
     }
+     .involvement-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: white;
+    color: #1f1f1f;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.6rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background 0.2s, color 0.2s;
+  }
+  
+  .involvement-arrow:hover {
+    background: #1f1f1f;
+    color: white;
+  }
+  
+  .involvement-arrow.left {
+    left: -20px;
+  }
+  
+  .involvement-arrow.right {
+    right: -20px;
+  }
   </style>
 </head>
 <body>
