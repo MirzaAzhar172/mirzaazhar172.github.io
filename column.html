@@ -155,7 +155,6 @@
     }
   </style>
 </head>
-  
 <body>
   <div class="navbar">
     <div><a href="index.html">MIRZA AZHAR</a></div>
@@ -299,124 +298,95 @@
     <div class="divider"></div>
 
     <div class="involvement-section">
-      <h2>📸 Involvement Gallery</h2>
-      <!-- LEFT SCROLL BUTTON -->
-      <button class="involvement-arrow left" onclick="scrollGallery(-300)">&#8249;</button>
-    
-      <div class="involvement-gallery">
-        <div class="involvement-item" onclick="openModal('modalGTIDS')">
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-        </div>
-        <div class="involvement-item" onclick="openModal('modalIntern')">
-          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-        </div>
-        <div class="involvement-item" onclick="openModal('modalSULAM')">
-          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-        </div>
-        <div class="involvement-item" onclick="openModal('modalFskik')">
-          <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
-        </div>
-      </div>
-    
-      <!-- RIGHT SCROLL BUTTON -->
-      <button class="involvement-arrow right" onclick="scrollGallery(300)">&#8250;</button>
-    </div>
-    
-    <!-- Modals for Involvement Gallery -->
-    <div id="modalGTIDS" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+    <h2>📸 Involvement Gallery</h2>
+       <!-- LEFT SCROLL BUTTON -->
+    <button onclick="scrollGallery(-300)">&#8249;</button>
+      
+    <div class="involvement-gallery">
+      <div class="involvement-item" onclick="openModal('modalGTIDS')">
         <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-        <h3>GTIDS Presentation at SUK Selangor</h3>
-        <p><strong>Date:</strong> February 2025</p>
-        <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
       </div>
-    </div>
-    
-    <div id="modalIntern" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+      <div class="involvement-item" onclick="openModal('modalIntern')">
         <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-        <h3>Internship at BERNAMA Cybersecurity Unit</h3>
-        <p><strong>Date:</strong> January 2025</p>
-        <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
       </div>
-    </div>
-    
-    <div id="modalSULAM" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+      <div class="involvement-item" onclick="openModal('modalSULAM')">
         <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-        <h3>SULAM 2024 Digital Outreach Project</h3>
-        <p><strong>Date:</strong> March 2024</p>
-        <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
       </div>
-    </div>
-    
-    <div id="modalFskik" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modalFskik')">&times;</span>
+      <div class="involvement-item" onclick="openModal('modalFskik')">
         <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
-        <h3>FSKIK-FYP Exhibition A2813 - UPSI</h3>
-        <p><strong>Date:</strong> February 2020</p>
-        <p>Developed an IoT-based prototype for microsleep detection using facial landmark recognition. Demonstrated at UPSI final year project exhibition and received department recognition.</p>
       </div>
+         <!-- RIGHT SCROLL BUTTON -->
+      <button onclick="scrollGallery(300)">&#8250;</button>
     </div>
-    
-    <script>
-      function openModal(id) {
-        document.getElementById(id).style.display = "flex";
-      }
-      function closeModal(id) {
-        document.getElementById(id).style.display = "none";
-      }
-      window.onclick = function(event) {
-        const modals = document.querySelectorAll('.modal');
-        modals.forEach(modal => {
-          if (event.target === modal) {
-            modal.style.display = "none";
-          }
-        });
-      }
-    
-      function scrollGallery(offset) {
-        document.querySelector('.involvement-gallery').scrollBy({
-          left: offset,
-          behavior: 'smooth'
-        });
-      }
-    </script>
-    
-    <style>
-      .involvement-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        background: white;
-        color: #1f1f1f;
-        border: 1px solid #ccc;
-        padding: 0.4rem 0.6rem;
-        border-radius: 50%;
-        font-size: 1.2rem;
-        cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        transition: background 0.2s, color 0.2s;
-      }
-    
-      .involvement-arrow:hover {
-        background: #1f1f1f;
-        color: white;
-      }
-    
-      .involvement-arrow.left {
-        left: -20px;
-      }
-    
-      .involvement-arrow.right {
-        right: -20px;
-      }
-    </style>
-    
-    </body>
+  </div>
+
+  <!-- Modals for Involvement Gallery -->
+  <div id="modalGTIDS" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+      <h3>GTIDS Presentation at SUK Selangor</h3>
+      <p><strong>Date:</strong> February 2025</p>
+      <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
+    </div>
+  </div>
+
+  <div id="modalIntern" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+      <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+      <p><strong>Date:</strong> January 2025</p>
+      <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
+    </div>
+  </div>
+
+  <div id="modalSULAM" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+      <h3>SULAM 2024 Digital Outreach Project</h3>
+      <p><strong>Date:</strong> March 2024</p>
+      <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
+    </div>
+  </div>
+
+    <div id="modalFskik" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalFskik')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
+    <h3>FSKIK-FYP Exhibition A2813 - UPSI</h3>
+    <p><strong>Date:</strong> February 2020</p>
+    <p>Developed an IoT-based prototype for microsleep detection using facial landmark recognition. Demonstrated at UPSI final year project exhibition and received department recognition.</p>
+  </div>
+</div>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+  <script>
+  function scrollGallery(offset) {
+    document.querySelector('.involvement-gallery').scrollBy({
+      left: offset,
+      behavior: 'smooth'
+    });
+  }
+</script>
+</body>
+</html>
+
+</body>
 </html>
