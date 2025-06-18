@@ -121,11 +121,15 @@
     }
     .involvement-gallery {
       display: flex;
+      flex-wrap: nowrap;
       overflow-x: auto;
       gap: 1rem;
-      padding-bottom: 1rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
     }
-    .involvement-item {
+
+   .involvement-item {
       min-width: 260px;
       border-radius: 12px;
       overflow: hidden;
