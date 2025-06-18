@@ -215,6 +215,23 @@
           </div>
         </div>
       </div>
+      <div class="col-auto">
+        <div class="portfolio-item">
+               <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+                 <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                 </div>
+                <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                    <source src="assets/videos/demo_microsleep.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                 </video>
+               </a>
+                <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Microsleep IoT System Demo</div>
+                 <div class="portfolio-caption-subheading text-muted">June 2025</div>
+               </div>
+          </div>
+       </div>
     </div>
   </div>
 
@@ -260,6 +277,38 @@
     <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
     <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime’s search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
     <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
+  </div>
+</div>
+  <div id="newsModalMicrosleepDemo" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
+    <video controls style="width: 100%; border-radius: 8px; margin-bottom: 1rem;" poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+      <source src="assets/videos/demo_microsleep.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Microsleep Detection System - IoT Prototype</h3>
+    <p><strong>Date:</strong> June 2025</p>
+
+    <h4>🔧 Project Highlights:</h4>
+    <ul>
+      <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
+      <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
+      <li>Speech alerts via eSpeak (e.g., “<em>Danger!! WAKE UP!</em>” and “<em>Stop Driving! You need to take some fresh air.</em>”)</li>
+      <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
+    </ul>
+
+    <h4>🎯 Objectives:</h4>
+    <ul>
+      <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
+      <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
+      <li>Test the usability and effectiveness of the system.</li>
+    </ul>
+
+    <h4>💡 Problem Statement:</h4>
+    <ul>
+      <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
+      <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
+    </ul>
   </div>
 </div>
 
