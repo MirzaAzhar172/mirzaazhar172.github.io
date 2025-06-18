@@ -171,20 +171,41 @@
   </nav>
 
   <<div class="container whats-new-section">
-    <h2 class="whats-new-header">📰 What's New</h2>
-    <div class="news-cards">
-      <div class="news-card" onclick="openModal('newsModal1')">
-        <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Post">
-        <div class="news-card-content">
-          <h4>Sharing about OpenCTI for Cyber Threat Intel</h4>
-          <p>June 2025</p>
+   <div class="container">
+    <div class="news-header">
+      <h2>What's New</h2>
+      <h3>Blog posts, tutorials & dev notes</h3>
+    </div>
+    <div class="row">
+      <!-- News Post 1 -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#newsModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Post" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Sharing about OpenCTI for Cyber Threat Intel</div>
+            <div class="portfolio-caption-subheading text-muted">June 2025</div>
+          </div>
         </div>
       </div>
-      <div class="news-card" onclick="openModal('newsModal2')">
-        <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Code">
-        <div class="news-card-content">
-          <h4>AI Microsleep Detection – Behind the Code</h4>
-          <p>May 2025</p>
+
+      <!-- News Post 2 -->
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#newsModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">AI Microsleep Detection – Behind the Code</div>
+            <div class="portfolio-caption-subheading text-muted">May 2025</div>
+          </div>
         </div>
       </div>
     </div>
