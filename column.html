@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
@@ -50,6 +50,62 @@
       font-weight: 400;
       font-style: italic;
     }
+    .whatsnew-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+    .whatsnew-scroll .col-auto {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: 280px;
+    }
+    .portfolio-item {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-link {
+      position: relative;
+      display: block;
+    }
+    .portfolio-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .portfolio-link:hover .portfolio-hover {
+      opacity: 1;
+    }
+    .portfolio-caption {
+      padding: 1rem;
+      text-align: center;
+    }
+    .portfolio-caption-heading {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .portfolio-caption-subheading {
+      font-size: 0.875rem;
+      color: #666;
+    }
     .involvement-section {
       margin-top: 4rem;
       background: #fff;
@@ -65,16 +121,27 @@
     }
     .involvement-gallery {
       display: flex;
+      flex-wrap: nowrap;
       overflow-x: auto;
       gap: 1rem;
       padding: 1rem 0;
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
     }
-    .involvement-item {
+    .involvement-section button {
+      background: #1f1f1f;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .involvement-section button:hover {
+      background: #333;
+    }
+   .involvement-item {
       min-width: 260px;
-      flex: 0 0 auto;
-      scroll-snap-align: start;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -88,6 +155,7 @@
     }
   </style>
 </head>
+  
 <body>
   <div class="navbar">
     <div><a href="index.html">MIRZA AZHAR</a></div>
@@ -176,7 +244,7 @@
 <div id="newsModalOpenCTI" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('newsModalOpenCTI')">&times;</span>
-    <img src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI">
+    <img src="assets/img/portfolio/Gallery/opencti_logo.png" alt="OpenCTI">
     <h3>What is OpenCTI?</h3>
     <p><strong>Date:</strong> July 2025</p>
     <p>OpenCTI (Open Cyber Threat Intelligence Platform) is an open-source platform designed to manage and share cyber threat intelligence (CTI). It provides structured and contextualized information such as indicators of compromise (IOCs), attack patterns, threat actors, malware, and more.</p>
@@ -187,7 +255,7 @@
 <div id="newsModalMaltrail" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('newsModalMaltrail')">&times;</span>
-    <img src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail with Arkime">
+    <img src="assets/img/portfolio/Gallery/maltrail_arkime.png" alt="Maltrail with Arkime">
     <h3>Maltrail and How It Works with Arkime</h3>
     <p><strong>Date:</strong> July 2025</p>
     <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
@@ -318,6 +386,37 @@
         });
       }
     </script>
-  </body>
+    
+    <style>
+      .involvement-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: white;
+        color: #1f1f1f;
+        border: 1px solid #ccc;
+        padding: 0.4rem 0.6rem;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: background 0.2s, color 0.2s;
+      }
+    
+      .involvement-arrow:hover {
+        background: #1f1f1f;
+        color: white;
+      }
+    
+      .involvement-arrow.left {
+        left: -20px;
+      }
+    
+      .involvement-arrow.right {
+        right: -20px;
+      }
+    </style>
+    
+    </body>
 </html>
-
