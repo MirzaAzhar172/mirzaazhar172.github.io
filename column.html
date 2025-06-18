@@ -173,6 +173,20 @@
     <div class="whatsnew-scroll">
       <div class="col-auto">
         <div class="portfolio-item">
+          <a class="portfolio-link" href="#" onclick="openModal('modalDrowyLogic')">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-code fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/drowyapp.png" alt="Flutter Drowy Logic">
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Flutter Variable & Conditional Logic in Drowy App</div>
+            <div class="portfolio-caption-subheading text-muted">2025 Notes</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <div class="portfolio-item">
           <a class="portfolio-link" href="#" onclick="openModal('newsModalGTIDSFlow')">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -194,7 +208,7 @@
           <img class="img-fluid" src="assets/img/portfolio/Gallery/avatarchatbot.jpg" alt="EVO City AI Chatbox" />
         </a>
         <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">Multilingual Avatar A.I + Drowsiness Detection for Evocity Apps</div>
+          <div class="portfolio-caption-heading">Combination Multilanguage A.I and Detector for Drowsy</div>
           <div class="portfolio-caption-subheading text-muted">June 2025</div>
         </div>
       </div>
@@ -249,6 +263,45 @@
 
     <!-- What's New Modals -->
 <div id="newsModalGTIDSFlow" class="modal">
+  <div id="modalDrowyLogic" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalDrowyLogic')">&times;</span>
+      <h3>Flutter Variable & Conditional Logic in Drowy App</h3>
+      <p>This is a quick guide and reflection of how variables and logic are structured in my app.</p>
+      <h4>🔸 Main Variables</h4>
+      <ul>
+        <li>bool isDrowsy = false;</li>
+        <li>bool isPopupVisible = false;</li>
+        <li>bool isDetectionEnabled = true;</li>
+        <li>int yawnCount = 0;</li>
+      </ul>
+      <h4>🔁 Conditional Logic</h4>
+      <pre><code>if (isDrowsy) {
+  player.play('alarm.mp3');
+} else {
+  player.stop();
+}
+
+if (isYawning && yawnCount >= 3) {
+  showWarningPopup();
+}
+
+if (isDrowsy || isYawning) {
+  player.play('alarm.mp3');
+}</code></pre>
+      <h4>🛑 Pausing & Resuming</h4>
+      <pre><code>// Pause if popup is active
+if (isPopupVisible) {
+  return;
+}
+
+// Resume detection
+if (!isPopupVisible) {
+  startDetection();
+}</code></pre>
+    </div>
+  </div>
+  
   <div class="modal-content">
     <span class="close" onclick="closeModal('newsModalGTIDSFlow')">&times;</span>
     <img src="assets/img/portfolio/Gallery/microsleepflow.png" alt="GTIDS Flowchart" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
