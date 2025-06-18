@@ -32,6 +32,11 @@
       margin: 3rem auto;
       padding: 0 1rem;
     }
+    .divider {
+      height: 2px;
+      background-color: #ddd;
+      margin: 3rem 0;
+    }
     .year-header {
       font-size: 1.5rem;
       font-weight: 700;
@@ -87,23 +92,30 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
-    .slider-container {
+    .slider-section {
+      margin-top: 3rem;
+    }
+    .slider-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .gallery-grid {
       display: flex;
-      align-items: center;
-      overflow-x: auto;
       gap: 1rem;
-      padding: 1rem 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
-    .slider-item {
-      min-width: 220px;
+    .gallery-item {
+      width: calc(33% - 1rem);
       background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      border-radius: 12px;
       overflow: hidden;
-      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .slider-item img {
+    .gallery-item img {
       width: 100%;
+      height: auto;
       display: block;
     }
     .whats-new-section h2 {
@@ -153,18 +165,23 @@
       </div>
     </div>
 
-    <h1 style="text-align:center; font-weight:700; margin-top:4rem;">PROJECT HIGHLIGHTS & NEWS</h1>
+    <div class="divider"></div>
+
+    <h1 style="text-align:center; font-weight:700;">PROJECT HIGHLIGHTS & NEWS</h1>
     <p style="text-align:center; color:#666;">A collection of achievements, demos, and collaboration updates</p>
 
-    <div class="slider-container">
-      <div class="slider-item">
-        <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-      </div>
-      <div class="slider-item">
-        <img src="assets/img/portfolio/Gallery/bajet2024_pics.jpg" alt="Bajet2024">
-      </div>
-      <div class="slider-item">
-        <img src="assets/img/portfolio/Gallery/SEDA2024_pics.jpg" alt="SEDA2024">
+    <div class="slider-section">
+      <h2 class="slider-title">📸 Involvement Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/portfolio/Gallery/bajet2024_pics.jpg" alt="Bajet 2024">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/img/portfolio/Gallery/SEDA2024_pics.jpg" alt="SEDA 2024">
+        </div>
       </div>
     </div>
 
