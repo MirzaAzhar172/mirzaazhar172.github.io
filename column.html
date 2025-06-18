@@ -288,6 +288,9 @@
 
     <div class="involvement-section">
     <h2>📸 Involvement Gallery</h2>
+       <!-- LEFT SCROLL BUTTON -->
+    <button onclick="scrollGallery(-300)">&#8249;</button>
+      
     <div class="involvement-gallery">
       <div class="involvement-item" onclick="openModal('modalGTIDS')">
         <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
@@ -301,7 +304,8 @@
       <div class="involvement-item" onclick="openModal('modalFskik')">
         <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
       </div>
-
+         <!-- RIGHT SCROLL BUTTON -->
+      <button onclick="scrollGallery(300)">&#8250;</button>
     </div>
   </div>
 
@@ -345,9 +349,6 @@
     <p>Developed an IoT-based prototype for microsleep detection using facial landmark recognition. Demonstrated at UPSI final year project exhibition and received department recognition.</p>
   </div>
 </div>
-
- <!-- Footer Contact Info -->
-
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "flex";
@@ -364,6 +365,18 @@
       });
     }
   </script>
+
+  <script>
+  function scrollGallery(offset) {
+    document.querySelector('.involvement-gallery').scrollBy({
+      left: offset,
+      behavior: 'smooth'
+    });
+  }
+</script>
+</body>
+</html>
+
 </body>
 </html>
 
