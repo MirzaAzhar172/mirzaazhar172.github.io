@@ -188,11 +188,10 @@
 </head>
 <body>
   <!-- Content continues unchanged -->
-
 </head>
 <body>
   <div class="navbar">
-    <div><a href="index.html">Mirza Azhar</a></div>
+    <div><a href="index.html">MIRZA AZHAR</a></div>
     <div>
       <a href="index.html#portfolio">Projects</a>
       <a href="index.html#about">About</a>
@@ -237,6 +236,69 @@
         </div>
       </div>
     </div>
+
+    <!-- What's New Modals -->
+<div id="newsModal1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModal1')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Blog" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+    <h3>Sharing about OpenCTI for Cyber Threat Intel</h3>
+    <p><strong>Date:</strong> June 2025</p>
+    <p>
+      In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events.
+      This helps build secure monitoring systems tailored to government agencies and enhances incident response strategies within SOC environments.
+      <br><br>
+      I also shared practical examples of STIX enrichment and threat actor correlation across multiple feeds, and how to automate early warning systems.
+    </p>
+  </div>
+</div>
+
+<div id="newsModal2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModal2')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+    <h3>AI Microsleep Detection – Behind the Code</h3>
+    <p><strong>Date:</strong> May 2025</p>
+    <p>
+      This blog offers a behind-the-scenes insight into developing the AI-powered microsleep detection app using Google ML Kit.
+      It dives into model tuning, UI structure, local database management and deploying real-time alerts with audio and Waze navigation integration.
+      <br><br>
+      It also explains how face landmarks were utilized to detect yawns and drowsiness, and how performance was optimized for dark conditions.
+    </p>
+  </div>
+</div>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+</style>
 
     <div class="divider"></div>
 
