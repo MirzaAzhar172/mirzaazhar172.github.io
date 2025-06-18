@@ -137,6 +137,34 @@
       border-radius: 8px;
       margin-bottom: 1rem;
     }
+    .involvement-section {
+      margin-top: 4rem;
+    }
+    .involvement-section h2 {
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .involvement-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+    .involvement-item {
+      min-width: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      background: white;
+    }
+    .involvement-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
     .footer {
       background-color: #1f1f1f;
       color: white;
@@ -198,6 +226,23 @@
             <div class="portfolio-caption-heading">AI Microsleep Detection – Behind the Code</div>
             <div class="portfolio-caption-subheading text-muted">May 2025</div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="involvement-section">
+      <h2>📸 Involvement Gallery</h2>
+      <div class="involvement-gallery">
+        <div class="involvement-item" onclick="openModal('newsModal1')">
+          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+        </div>
+        <div class="involvement-item" onclick="openModal('newsModal2')">
+          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+        </div>
+        <div class="involvement-item" onclick="openModal('newsModal3')">
+          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
         </div>
       </div>
     </div>
