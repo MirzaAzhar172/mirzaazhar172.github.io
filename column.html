@@ -204,67 +204,61 @@
   <div class="container">
     <div class="news-header">
       <h2>What's New</h2>
-      <h3>Blog posts, tutorials & dev notes</h3>
+      <h3>Technical Blog posts, tutorials & dev notes</h3>
     </div>
     <div class="row">
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('newsModal1')">
+          <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
             </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Post" />
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti_logo.png" alt="OpenCTI" />
           </a>
           <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Sharing about OpenCTI for Cyber Threat Intel</div>
-            <div class="portfolio-caption-subheading text-muted">June 2025</div>
+            <div class="portfolio-caption-heading">What is OpenCTI?</div>
+            <div class="portfolio-caption-subheading text-muted">July 2025</div>
           </div>
         </div>
       </div>
+
       <div class="col-lg-4 col-sm-6 mb-4">
         <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('newsModal2')">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">AI Microsleep Detection – Behind the Code</div>
-            <div class="portfolio-caption-subheading text-muted">May 2025</div>
-          </div>
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
         </div>
+        <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail_arkime.png" alt="Maltrail Arkime" />
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Maltrail + Arkime Integration</div>
+        <div class="portfolio-caption-subheading text-muted">July 2025</div>
+      </div>
+    </div>
       </div>
     </div>
 
     <!-- What's New Modals -->
-<div id="newsModal1" class="modal">
+<div id="newsModalOpenCTI" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('newsModal1')">&times;</span>
-    <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Blog" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-    <h3>Sharing about OpenCTI for Cyber Threat Intel</h3>
-    <p><strong>Date:</strong> June 2025</p>
-    <p>
-      In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events.
-      This helps build secure monitoring systems tailored to government agencies and enhances incident response strategies within SOC environments.
-      <br><br>
-      I also shared practical examples of STIX enrichment and threat actor correlation across multiple feeds, and how to automate early warning systems.
-    </p>
+    <span class="close" onclick="closeModal('newsModalOpenCTI')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/opencti_logo.png" alt="OpenCTI">
+    <h3>What is OpenCTI?</h3>
+    <p><strong>Date:</strong> July 2025</p>
+    <p>OpenCTI (Open Cyber Threat Intelligence Platform) is an open-source platform designed to manage and share cyber threat intelligence (CTI). It provides structured and contextualized information such as indicators of compromise (IOCs), attack patterns, threat actors, malware, and more.</p>
+    <p>During my internship, I used OpenCTI to monitor live threat feeds and correlate data from different sources. The platform supports STIX/TAXII, integrates with MITRE ATT&CK, and helps visualize relationships between threats and assets. It is essential for any SOC team looking to automate, analyze, and share threat intelligence effectively.</p>
   </div>
 </div>
 
-<div id="newsModal2" class="modal">
+<div id="newsModalMaltrail" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal('newsModal2')">&times;</span>
-    <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-    <h3>AI Microsleep Detection – Behind the Code</h3>
-    <p><strong>Date:</strong> May 2025</p>
-    <p>
-      This blog offers a behind-the-scenes insight into developing the AI-powered microsleep detection app using Google ML Kit.
-      It dives into model tuning, UI structure, local database management and deploying real-time alerts with audio and Waze navigation integration.
-      <br><br>
-      It also explains how face landmarks were utilized to detect yawns and drowsiness, and how performance was optimized for dark conditions.
-    </p>
+    <span class="close" onclick="closeModal('newsModalMaltrail')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/maltrail_arkime.png" alt="Maltrail with Arkime">
+    <h3>Maltrail and How It Works with Arkime</h3>
+    <p><strong>Date:</strong> July 2025</p>
+    <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
+    <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime’s search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
+    <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
   </div>
 </div>
 
