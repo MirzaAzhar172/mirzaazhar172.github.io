@@ -100,35 +100,51 @@
       font-weight: 700;
       margin-bottom: 1rem;
     }
-    .gallery-grid {
+    .gallery-scroll {
       display: flex;
+      overflow-x: auto;
       gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      padding: 1rem 0;
     }
     .gallery-item {
-      width: calc(33% - 1rem);
+      min-width: 260px;
+      height: 180px;
       background: white;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
     .gallery-item img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
+    }
+    .whats-new-section {
+      margin-bottom: 3rem;
     }
     .whats-new-section h2 {
       text-align: center;
-      margin-top: 40px;
       font-weight: 700;
+      position: relative;
+    }
+    .whats-new-section h2::after {
+      content: "";
+      width: 80px;
+      height: 3px;
+      background: #ccc;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
     }
     .blog-post {
       background: #ffffff;
       padding: 1.5rem;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       border-radius: 12px;
+      cursor: pointer;
     }
     .blog-post h3 {
       margin-bottom: 0.5rem;
@@ -153,12 +169,12 @@
   <div class="container">
     <div class="whats-new-section">
       <h2>📰 What's New</h2>
-      <div class="blog-post">
+      <div class="blog-post" onclick="openModal('modal4')">
         <h3>📢 Sharing about OpenCTI for Cyber Threat Intel</h3>
         <small>June 2025</small>
         <p>In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events. This helps build secure monitoring systems tailored to government agencies.</p>
       </div>
-      <div class="blog-post">
+      <div class="blog-post" onclick="openModal('modal5')">
         <h3>🧠 AI Microsleep Detection – Behind the Code</h3>
         <small>May 2025</small>
         <p>I shared technical insights on using Google ML Kit in detecting facial signs of drowsiness. The blog also covers optimization tricks and dark mode accuracy improvements for real-time mobile inference.</p>
@@ -172,14 +188,14 @@
 
     <div class="slider-section">
       <h2 class="slider-title">📸 Involvement Gallery</h2>
-      <div class="gallery-grid">
-        <div class="gallery-item">
+      <div class="gallery-scroll">
+        <div class="gallery-item" onclick="openModal('modal1')">
           <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openModal('modal2')">
           <img src="assets/img/portfolio/Gallery/bajet2024_pics.jpg" alt="Bajet 2024">
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item" onclick="openModal('modal3')">
           <img src="assets/img/portfolio/Gallery/SEDA2024_pics.jpg" alt="SEDA 2024">
         </div>
       </div>
@@ -230,6 +246,24 @@
       <h3>SEDA ISES 2024 Finalist</h3>
       <p>Status: Finalist</p>
       <p>Represented UiTM for SEDA Innovation & Sustainable Energy Showcase 2024. Project: Anti-Microsleep Alarm with IoT and Computer Vision. Shortlisted to final stage for certificate & RM15,000 prize opportunity.</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal4')">&times;</span>
+      <h3>Sharing about OpenCTI for Cyber Threat Intel</h3>
+      <p><strong>Date:</strong> June 2025</p>
+      <p>In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events. This helps build secure monitoring systems tailored to government agencies.</p>
+    </div>
+  </div>
+
+  <div id="modal5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal5')">&times;</span>
+      <h3>AI Microsleep Detection – Behind the Code</h3>
+      <p><strong>Date:</strong> May 2025</p>
+      <p>I shared technical insights on using Google ML Kit in detecting facial signs of drowsiness. The blog also covers optimization tricks and dark mode accuracy improvements for real-time mobile inference.</p>
     </div>
   </div>
 
