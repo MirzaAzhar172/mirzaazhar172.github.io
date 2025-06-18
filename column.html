@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+ <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
@@ -50,27 +50,18 @@
       font-weight: 400;
       font-style: italic;
     }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
     .whatsnew-scroll {
       display: flex;
       overflow-x: auto;
-      gap: 1rem;
+      gap: 2rem;
       padding: 1rem 0;
       scroll-snap-type: x mandatory;
+      justify-content: center;
     }
-    .whatsnew-scroll .col-lg-4 {
+    .whatsnew-scroll .col-auto {
       flex: 0 0 auto;
-      width: 300px;
       scroll-snap-align: start;
-    }
-    .col-lg-4 {
-      flex: 0 0 30%;
-      max-width: 30%;
+      width: 280px;
     }
     .portfolio-item {
       background: #fff;
@@ -85,13 +76,6 @@
     .portfolio-link {
       position: relative;
       display: block;
-    }
-    .portfolio-item img {
-      width: 100%;
-      max-width: 260px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
     }
     .portfolio-hover {
       position: absolute;
@@ -122,89 +106,6 @@
       font-size: 0.875rem;
       color: #666;
     }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 600px;
-      max-height: 90vh;
-      overflow-y: auto;
-      position: relative;
-    }
-    .close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    .involvement-section {
-      margin-top: 4rem;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-    .involvement-section h2 {
-      text-align: center;
-      font-weight: 700;
-      position: relative;
-      margin-bottom: 2rem;
-    }
-    .involvement-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding-bottom: 1rem;
-    }
-    .involvement-item {
-      min-width: 260px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      cursor: pointer;
-      background: white;
-    }
-    .involvement-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .footer {
-      background-color: #1f1f1f;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: 4rem;
-    }
-    .whatsnew-scroll {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      gap: 1.5rem;
-      padding-bottom: 1rem;
-    }
-    .footer a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -227,22 +128,22 @@
       <h2>What's New</h2>
       <h3>Technical Blog posts, tutorials & dev notes</h3>
     </div>
-    <div class="row">
-       <div class="col-auto mb-4">
+    <div class="whatsnew-scroll">
+      <div class="col-auto">
         <div class="portfolio-item">
           <a class="portfolio-link" href="#" onclick="openModal('newsModalGTIDSFlow')">
-        <div class="portfolio-hover">
-        <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-      </div>
-          <img class="img-fluid" src="assets/img/portfolio/Gallery/gtids_flow_thumb.jpg" alt="GTIDS Flow" />
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/gtids_flow_thumb.jpg" alt="GTIDS Flow" />
           </a>
           <div class="portfolio-caption">
-       <div class="portfolio-caption-heading">GTIDS24: Anti-Microsleep App Flow (with EvoCity)</div>
-    <div class="portfolio-caption-subheading text-muted">July 2025</div>
-    </div>
-  </div>
-        
-       <div class="col-auto mb-4">
+            <div class="portfolio-caption-heading">GTIDS24: Anti-Microsleep App Flow (with EvoCity)</div>
+            <div class="portfolio-caption-subheading text-muted">July 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-auto">
         <div class="portfolio-item">
           <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
             <div class="portfolio-hover">
@@ -256,22 +157,22 @@
           </div>
         </div>
       </div>
-
-       <div class="col-auto mb-4">
+      <div class="col-auto">
         <div class="portfolio-item">
-      <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
-        <div class="portfolio-hover">
-          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+          <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Maltrail + Arkime Integration</div>
+            <div class="portfolio-caption-subheading text-muted">July 2025</div>
+          </div>
         </div>
-        <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
-      </a>
-      <div class="portfolio-caption">
-        <div class="portfolio-caption-heading">Maltrail + Arkime Integration</div>
-        <div class="portfolio-caption-subheading text-muted">July 2025</div>
       </div>
     </div>
-      </div>
-    </div>
+  </div>
 
     <!-- What's New Modals -->
 <div id="newsModalGTIDSFlow" class="modal">
