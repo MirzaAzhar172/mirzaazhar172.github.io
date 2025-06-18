@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
+   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
@@ -54,8 +54,9 @@
       display: flex;
       overflow-x: auto;
       gap: 2rem;
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
     }
     .whatsnew-scroll .col-auto {
       flex: 0 0 auto;
@@ -104,6 +105,38 @@
     .portfolio-caption-subheading {
       font-size: 0.875rem;
       color: #666;
+    }
+    .involvement-section {
+      margin-top: 4rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .involvement-section h2 {
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .involvement-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+    .involvement-item {
+      min-width: 260px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      background: white;
+    }
+    .involvement-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
   </style>
 </head>
