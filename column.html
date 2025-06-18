@@ -241,51 +241,97 @@
     <div class="divider"></div>
 
     <div class="involvement-section">
-      <h2>📸 Involvement Gallery</h2>
-      <div class="involvement-gallery">
-        <div class="involvement-item" onclick="openModal('newsModal1')">
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-        </div>
-        <div class="involvement-item" onclick="openModal('newsModal2')">
-          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-        </div>
-        <div class="involvement-item" onclick="openModal('newsModal3')">
-          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-        </div>
+    <h2>📸 Involvement Gallery</h2>
+    <div class="involvement-gallery">
+      <div class="involvement-item" onclick="openModal('modalGTIDS')">
+        <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+      </div>
+      <div class="involvement-item" onclick="openModal('modalIntern')">
+        <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+      </div>
+      <div class="involvement-item" onclick="openModal('modalSULAM')">
+        <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
       </div>
     </div>
   </div>
 
-  <!-- Modal News 1 -->
-  <div id="newsModal1" class="modal">
+  <!-- Modals for Involvement Gallery -->
+  <div id="modalGTIDS" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('newsModal1')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Blog">
-      <h3>Sharing about OpenCTI for Cyber Threat Intel</h3>
-      <p><strong>Date:</strong> June 2025</p>
-      <p>In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events. This helps build secure monitoring systems tailored to government agencies and enhances incident response strategies within SOC environments.</p>
+      <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+      <h3>GTIDS Presentation at SUK Selangor</h3>
+      <p><strong>Date:</strong> February 2025</p>
+      <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
     </div>
   </div>
 
-  <!-- Modal News 2 -->
-  <div id="newsModal2" class="modal">
+  <div id="modalIntern" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('newsModal2')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog">
-      <h3>AI Microsleep Detection – Behind the Code</h3>
-      <p><strong>Date:</strong> May 2025</p>
-      <p>This blog offers a behind-the-scenes insight into developing the AI-powered microsleep detection app using Google ML Kit. It dives into model tuning, UI structure, local database management and deploying real-time alerts with audio and Waze navigation integration.</p>
+      <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+      <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+      <p><strong>Date:</strong> January 2025</p>
+      <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
     </div>
   </div>
 
-  <div class="footer">
-    <p>&copy; 2025 Ahmad Mirza Azhar. All rights reserved.</p>
-    <div>
-      <a href="mailto:mirzaazhar3234@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://github.com/mirzaazhar172" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  <div id="modalSULAM" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+      <h3>SULAM 2024 Digital Outreach Project</h3>
+      <p><strong>Date:</strong> March 2024</p>
+      <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
     </div>
   </div>
+
+ <!-- Footer Contact Info -->
+  <footer class="py-4 text-white" style="background-color: #1f1f1f; margin-top: 4rem;">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 small">
+            <!-- Email -->
+            <div>
+              <i class="fas fa-envelope me-1"></i>
+              <a href="mailto:mirzaazhar3234@gmail.com" class="text-white text-decoration-none" target="_blank">
+                mirzaazhar3234@gmail.com
+              </a>
+            </div>
+
+            <div class="vr d-none d-md-block"></div>
+
+            <!-- GitHub -->
+            <div>
+              <i class="fab fa-github me-1"></i>
+              <a href="https://github.com/mirzaazhar172" class="text-white text-decoration-none" target="_blank">
+                GitHub
+              </a>
+            </div>
+
+            <div class="vr d-none d-md-block"></div>
+
+            <!-- LinkedIn -->
+            <div>
+              <i class="fab fa-linkedin me-1"></i>
+              <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" class="text-white text-decoration-none" target="_blank">
+                LinkedIn
+              </a>
+            </div>
+
+            <div class="vr d-none d-md-block"></div>
+
+            <!-- Copyright -->
+            <div>
+              <p class="mb-0">© 2025 Ahmad Mirza Azhar. All rights reserved.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     function openModal(id) {
@@ -305,3 +351,4 @@
   </script>
 </body>
 </html>
+
