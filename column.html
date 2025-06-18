@@ -170,20 +170,46 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="whats-new-section">
-      <h2>📰 What's New</h2>
-      <div class="blog-post" onclick="openModal('modal4')">
-        <h3>📢 Sharing about OpenCTI for Cyber Threat Intel</h3>
-        <small>June 2025</small>
-        <p>In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events. This helps build secure monitoring systems tailored to government agencies.</p>
+  <<div class="container whats-new-section">
+    <h2 class="whats-new-header">📰 What's New</h2>
+    <div class="news-cards">
+      <div class="news-card" onclick="openModal('newsModal1')">
+        <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Post">
+        <div class="news-card-content">
+          <h4>Sharing about OpenCTI for Cyber Threat Intel</h4>
+          <p>June 2025</p>
+        </div>
       </div>
-      <div class="blog-post" onclick="openModal('modal5')">
-        <h3>🧠 AI Microsleep Detection – Behind the Code</h3>
-        <small>May 2025</small>
-        <p>I shared technical insights on using Google ML Kit in detecting facial signs of drowsiness. The blog also covers optimization tricks and dark mode accuracy improvements for real-time mobile inference.</p>
+      <div class="news-card" onclick="openModal('newsModal2')">
+        <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Code">
+        <div class="news-card-content">
+          <h4>AI Microsleep Detection – Behind the Code</h4>
+          <p>May 2025</p>
+        </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modals for What's New -->
+  <div id="newsModal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('newsModal1')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/opencti_post.jpg" alt="OpenCTI Blog">
+      <h3>Sharing about OpenCTI for Cyber Threat Intel</h3>
+      <p><strong>Date:</strong> June 2025</p>
+      <p>In this post, I explored how to use OpenCTI for real-time cyber threat monitoring and how it was applied during national-level events. This helps build secure monitoring systems tailored to government agencies and enhances incident response strategies within SOC environments.</p>
+    </div>
+  </div>
+
+  <div id="newsModal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('newsModal2')">&times;</span>
+      <img src="assets/img/portfolio/Gallery/microsleep_blog.jpg" alt="Microsleep Blog">
+      <h3>AI Microsleep Detection – Behind the Code</h3>
+      <p><strong>Date:</strong> May 2025</p>
+      <p>This blog offers a behind-the-scenes insight into developing the AI-powered microsleep detection app using Google ML Kit. It dives into model tuning, UI structure, local database management and deploying real-time alerts with audio and Waze navigation integration.</p>
+    </div>
+  </div>
 
     <div class="divider"></div>
 
