@@ -260,46 +260,6 @@
          </div>
     </div>
   </div>
-
-  <!-- Modal for Flutter Drowy Logic -->
-    <div id="modalDrowyLogic" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modalDrowyLogic')">&times;</span>
-        <h3>Flutter Variable & Conditional Logic in Drowy App</h3>
-        <p>This is a quick guide and reflection of how variables and logic are structured in my app.</p>
-        <h4>🔸 Main Variables</h4>
-        <ul>
-          <li>bool isDrowsy = false;</li>
-          <li>bool isPopupVisible = false;</li>
-          <li>bool isDetectionEnabled = true;</li>
-          <li>int yawnCount = 0;</li>
-        </ul>
-        <h4>🔁 Conditional Logic</h4>
-        <pre><code>if (isDrowsy) {
-    player.play('alarm.mp3');
-  } else {
-    player.stop();
-  }
-  
-  if (isYawning && yawnCount >= 3) {
-    showWarningPopup();
-  }
-  
-  if (isDrowsy || isYawning) {
-    player.play('alarm.mp3');
-  }</code></pre>
-        <h4>🛑 Pausing & Resuming</h4>
-        <pre><code>// Pause if popup is active
-  if (isPopupVisible) {
-    return;
-  }
-  
-  // Resume detection
-  if (!isPopupVisible) {
-    startDetection();
-  }</code></pre>
-      </div>
-    </div>
   
   <div class="modal-content">
     <span class="close" onclick="closeModal('newsModalGTIDSFlow')">&times;</span>
