@@ -905,66 +905,108 @@ if (!isPopupVisible) {
 
 <div class="divider"></div>
 
-<div class="video-section container">
-  <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
-  <div class="whatsnew-scroll">
-
-    <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+    <!-- 🎬 Video Highlights Scrollable -->
+    <div class="video-section container">
+      <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
+    
+      <div class="video-scroll-wrapper">
+        <div class="video-scroll-inner">
+          <!-- Video 1 -->
+          <div class="portfolio-item">
+            <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+              </div>
+              <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+                <source src="assets/videos/seda2024.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+              <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+            </div>
           </div>
-          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-            <source src="assets/videos/seda2024.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-          <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+    
+          <!-- Video 2 -->
+          <div class="portfolio-item">
+            <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+              </div>
+              <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
+              <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
+            </div>
+          </div>
+    
+          <!-- Video 3 -->
+          <div class="portfolio-item">
+            <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+              </div>
+              <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+              </video>
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
+              <div class="portfolio-caption-subheading text-muted">August 2024</div>
+            </div>
+          </div>
+    
         </div>
       </div>
     </div>
 
-    <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-          </div>
-          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-            <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
-          <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-          </div>
-          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-            <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
-          <div class="portfolio-caption-subheading text-muted">August 2024</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
+    <!-- Add this CSS to your style section -->
+    <style>
+    .video-scroll-wrapper {
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    
+    .video-scroll-inner {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+    
+    .video-scroll-inner .portfolio-item {
+      flex: 0 0 auto;
+      width: 320px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    
+    .video-scroll-inner video {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      display: block;
+    }
+    
+    .portfolio-caption {
+      padding: 12px;
+      text-align: left;
+    }
+    
+    .portfolio-caption-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .portfolio-caption-subheading {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    </style>
 
 <!-- Modal for SEDA2024 -->
 <div id="newsModalSEDA" class="modal">
