@@ -202,21 +202,39 @@
   </select>
 </div>
 
-<div class="whatsnew-scroll">
-  <div class="col-auto" data-category="iot">
+  <div class="whatsnew-scroll">
+  <div class="col-auto" data-category="cybersecurity">
     <div class="portfolio-item">
-      <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
         <div class="portfolio-hover">
-          <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
         </div>
-        <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-          <source src="assets/videos/seda2024.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <div style="position: relative;">
+          <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI" />
+          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
+        </div>
       </a>
       <div class="portfolio-caption">
-        <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-        <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+        <div class="portfolio-caption-heading">OpenCTI: Threat Intelligence Platform for Cybersecurity Monitoring & Analysis</div>
+        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="cybersecurity">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+        </div>
+        <div style="position: relative;">
+          <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
+          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
+        </div>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Maltrail + Arkime: Real-Time Suspicious Traffic Detection & Packet Investigation</div>
+        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
       </div>
     </div>
   </div>
@@ -266,42 +284,6 @@
     </div>
   </div>
 
-  <div class="col-auto" data-category="cybersecurity">
-    <div class="portfolio-item">
-      <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
-        <div class="portfolio-hover">
-          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div style="position: relative;">
-          <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI" />
-          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
-        </div>
-      </a>
-      <div class="portfolio-caption">
-        <div class="portfolio-caption-heading">OpenCTI: Threat Intelligence Platform for Cybersecurity Monitoring & Analysis</div>
-        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-auto" data-category="cybersecurity">
-    <div class="portfolio-item">
-      <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
-        <div class="portfolio-hover">
-          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-        </div>
-        <div style="position: relative;">
-          <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
-          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
-        </div>
-      </a>
-      <div class="portfolio-caption">
-        <div class="portfolio-caption-heading">Maltrail + Arkime: Real-Time Suspicious Traffic Detection & Packet Investigation</div>
-        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
-      </div>
-    </div>
-  </div>
-
   <div class="col-auto" data-category="iot">
     <div class="portfolio-item">
       <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
@@ -320,6 +302,24 @@
     </div>
   </div>
 </div>
+    
+  <div class="col-auto" data-category="iot">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+        </div>
+        <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+          <source src="assets/videos/seda2024.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+        <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+      </div>
+    </div>
+  </div>
 
     <!--------Modal for SEDA2024----->
   <div id="newsModalSEDA" class="modal">
