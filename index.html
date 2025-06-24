@@ -1,648 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Ahmad Mirza Portfolio" />
-    <meta name="author" content="Ahmad Mirza" />
-    <title>Portfolio - Ahmad Mirza Azhar / Network, IoT, Flutter & Mobile app Dev</title>
-    
-     <!-- TAMBAH FAVICON NI -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/droid-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/droid-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/droid-128x128.png">
-    <!-- END FAVICON -->
-  
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-  </head>
-  <body id="page-top">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Guide / Notes - MIRZA AZHAR</title>
 
-    <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="#page-top">Mirza Azhar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-        Menu <i class="fas fa-bars ms-1"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav text-uppercase ms-auto">
-  
-          <!-- Blog/News Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              My Blog/News
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="blogDropdown">
-              <li><a class="dropdown-item" href="column.html">What's New</a></li>
-              <li><a class="dropdown-item" href="#guide">Quick Guide/Notes</a></li>
-            </ul>
-          </li>
-  
-          <!-- Projects -->
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Projects</a>
-          </li>
-  
-          <!-- About Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              About
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-              <li><a class="dropdown-item" href="#about">About Me</a></li>
-            </ul>
-          </li>
-  
-          <!-- Achievements Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="achieveDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Achievements
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="achieveDropdown">
-              <li><a class="dropdown-item" href="#awards">Awards</a></li>
-              <li><a class="dropdown-item" href="#publications">Publications</a></li>
-            </ul>
-          </li>
-  
-          <!-- Career Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="careerDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Career
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="careerDropdown">
-              <li><a class="dropdown-item" href="#experience">Experience</a></li>
-              <li><a class="dropdown-item" href="#special-involvement">Involvement</a></li>
-            </ul>
-          </li>
-  
-        </ul>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/droid-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/droid-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/droid-128x128.png" />
+
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      color: #2c3e50;
+      font-size: 14px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    button {
+      font-family: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1f1f1f;
+      padding: 0.6rem 1.2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+    .navbar a {
+      color: white;
+      margin: 0 0.6rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #667eea;
+    }
+    .navbar > div:first-child a {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    /* Main content container */
+    .main-content {
+      flex: 1;
+      padding: 40px 15px;
+      display: flex;
+      justify-content: center;
+    }
+    .quick-guide-container {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 20px 30px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+    .header p {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+
+    /* Guide cards grid */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    /* Individual guide card */
+    .guide-card {
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border-radius: 12px;
+      padding: 18px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      font-size: 0.9rem;
+    }
+    .guide-card:hover {
+      transform: translateY(-3px);
+      border-color: #667eea;
+      box-shadow: 0 12px 25px rgba(102, 126, 234, 0.15);
+    }
+    .guide-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .guide-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    /* Card header */
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      color: white;
+      font-size: 1.2rem;
+      user-select: none;
+    }
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2c3e50;
+      user-select: none;
+    }
+
+    /* Card description */
+    .card-description {
+      color: #7f8c8d;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      user-select: none;
+      flex-grow: 1;
+    }
+
+    /* Card actions */
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      user-select: none;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      text-decoration: none;
+      user-select: none;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 12px rgba(102, 126, 234, 0.25);
+    }
+    .btn-secondary {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      border: 1px solid #667eea;
+    }
+    .btn-secondary:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    /* Expanded content (hidden by default) */
+    .expanded-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #5a6a7a;
+    }
+    .expanded-content.active {
+      max-height: 1200px; /* enough for content */
+    }
+
+    /* Networking notes styles */
+    .networking-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .network-topic {
+      background: linear-gradient(145deg, #f8f9ff, #ffffff);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+      font-size: 0.9rem;
+    }
+    .network-topic:hover {
+      border-color: rgba(102, 126, 234, 0.3);
+      transform: translateY(-1.5px);
+      box-shadow: 0 6px 15px rgba(102, 126, 234, 0.1);
+    }
+    .topic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    .topic-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+    .topic-icon {
+      font-size: 1.1rem;
+    }
+    .expand-arrow {
+      transition: transform 0.3s ease;
+      color: #667eea;
+      user-select: none;
+      font-weight: 700;
+    }
+    .network-topic.expanded .expand-arrow {
+      transform: rotate(180deg);
+    }
+    .topic-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #7f8c8d;
+      line-height: 1.4;
+      font-size: 0.9rem;
+    }
+    .network-topic.expanded .topic-content {
+      max-height: 400px;
+    }
+    .topic-description {
+      margin-bottom: 12px;
+    }
+    .network-list {
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.9rem;
+    }
+    .network-list ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .network-list li {
+      margin-bottom: 5px;
+      line-height: 1.4;
+      color: #34495e;
+    }
+
+    .example-box {
+      background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      border-radius: 8px;
+      padding: 12px;
+      margin: 8px 0;
+      border-left: 4px solid #667eea;
+      color: #2c3e50;
+      font-size: 0.9rem;
+    }
+    .example-box strong {
+      font-weight: 700;
+    }
+
+    /* Programming notes card content */
+    .programming-content {
+      color: #7f8c8d;
+      line-height: 1.4;
+      font-size: 0.9rem;
+    }
+    .programming-content h4 {
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+    .programming-content ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+    .programming-content li {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    .footer-fixed {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      width: 100%;
+      padding: 15px 20px;
+      margin-top: auto;
+      font-size: 12px;
+      color: white;
+      user-select: none;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+    .footer-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      padding: 3px 0;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .footer-item:hover {
+      color: #64b5f6 !important;
+      transform: translateY(-1px);
+    }
+    .footer-item i {
+      font-size: 14px;
+      opacity: 0.9;
+      width: 18px;
+      text-align: center;
+    }
+    .footer-divider {
+      width: 1px;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0 4px;
+    }
+    .footer-copyright {
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      font-size: 11px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 1.6rem;
+      }
+      .footer-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+      .footer-divider {
+        display: none;
+      }
+      .footer-item {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div><a href="index.html">MIRZA AZHAR</a></div>
+    <div>
+      <a href="index.html#portfolio">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#awards">Achievements</a>
+      <a href="index.html#experience">Career</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="quick-guide-container">
+      <div class="header">
+        <h1>🚀 Quick Guide / Cheat Sheet</h1>
+        <p>For personal documentation & reference, and also notes to help other readers with IT field references and polish basic knowledge in I.T</p>
       </div>
-    </div>
-  </nav>
 
-    <!-- Header -->
-  <header class="masthead" style="background-image: url('assets/img/header-bg.jpg'); background-size: cover; background-position: center;">
-    <div class="container py-5">
-      <div class="masthead-subheading text-white">Hi, I'm Ahmad Mirza</div>
-      <div class="masthead-heading text-uppercase text-white">Flutter, AI & IoT Developer</div>
-      <a class="btn btn-primary btn-xl text-uppercase mt-4" href="#portfolio">My Projects</a>
-    </div>
-  </header>
+      <div class="guide-grid">
 
-    <!-- My Projects Section -->
-  <section class="page-section py-5" id="portfolio" style="
-      background-image: url('assets/img/bg_projects_wallpaper.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    ">
-      <div class="container">
-      <!-- THIS stays solid white -->
-      <div class="p-4 rounded shadow-sm" style="background-color: #ffffff;">
-        <div class="text-center mb-5">
-          <h2 class="section-heading text-uppercase">My Projects</h2>
-          <h3 class="section-subheading text-muted">Some personal & university works.</h3>
-        </div>
-
-      <div class="row">
-        <!-- Project 1 -->
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="portfolio-item">
-            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#projectModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/portfolio/My Projects/Mudah_Alih_Microsleep.png" alt="Microsleep App" />
+        <!-- Networking Guide Card -->
+        <div class="guide-card" onclick="toggleContent('quick-notes')">
+          <div class="card-header">
+            <div class="card-icon">🌐</div>
+            <div class="card-title">Basic Computer Network for Dummies (Bahasa Melayu Rojak)</div>
+          </div>
+          <div class="card-description">
+            Panduan lengkap networking basics - dari konsep asas hingga protocol advanced dalam bahasa rojak yang mudah faham.
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="event.stopPropagation(); toggleContent('quick-notes')">
+              📖 Baca Networking Notes
+            </button>
+            <a href="notes/networking.pdf" class="btn btn-secondary" download>
+              📄 Download PDF
             </a>
-            <div class="portfolio-caption">
-              <div class="portfolio-caption-heading">Aplikasi Mudah Alih Anti-Microsleep / Avatar AI Chatbot</div>
-              <div class="portfolio-caption-subheading text-muted">Flutter + AI + TTS + Google ML Kit + sqflite</div>
+          </div>
+          <div class="expanded-content" id="quick-notes">
+            <div class="networking-sections">
+
+              <div class="network-topic" onclick="toggleTopic(this)">
+                <div class="topic-header">
+                  <div class="topic-title">
+                    <span class="topic-icon">🌐</span>
+                    <span>Apa Itu Network?</span>
+                  </div>
+                  <span class="expand-arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                  <div class="topic-description">
+                    Network ni macam jalan raya untuk komputer. Bila dua atau lebih komputer bersambung, dia boleh share info, file, internet, printer, etc.
+                  </div>
+                  <div class="example-box">
+                    <strong>Contoh:</strong> Laptop kau connect ke WiFi rumah - itu dah jadi satu network. Boleh share printer dengan PC lain.
+                  </div>
+                </div>
+              </div>
+
+              <div class="network-topic" onclick="toggleTopic(this)">
+                <div class="topic-header">
+                  <div class="topic-title">
+                    <span class="topic-icon">📡</span>
+                    <span>Jenis-jenis Network</span>
+                  </div>
+                  <span class="expand-arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                  <div class="network-list">
+                    <ul>
+                      <li><strong>LAN (Local Area Network):</strong> Kecil je. Contoh: dalam rumah, sekolah, pejabat kecik.</li>
+                      <li><strong>WAN (Wide Area Network):</strong> Sambungkan banyak LAN dari tempat berbeza. Contoh: Internet.</li>
+                      <li><strong>PAN (Personal Area Network):</strong> Kecil dan peribadi. Contoh: Bluetooth phone ke headphone.</li>
+                      <li><strong>MAN (Metropolitan Area Network):</strong> Cover satu bandar. Macam network provider dalam satu kawasan.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tambah topik lain di sini jika mahu -->
+
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="portfolio-item">
-            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#projectModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/portfolio/My Projects/micro_1.jpg.png" alt="Microsleep IoT" />
+        <!-- Programming Guide Card -->
+        <div class="guide-card" onclick="toggleContent('programming-notes')">
+          <div class="card-header">
+            <div class="card-icon">💻</div>
+            <div class="card-title">Programming Cheat Sheet</div>
+          </div>
+          <div class="card-description">
+            Quick reference untuk programming tasks harian, syntax dan tools yang biasa digunakan.
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="event.stopPropagation(); toggleContent('programming-notes')">
+              📖 Baca Programming Notes
+            </button>
+            <a href="notes/programming.pdf" class="btn btn-secondary" download>
+              📄 Download PDF
             </a>
-            <div class="portfolio-caption">
-              <div class="portfolio-caption-heading">IoT - Microsleep Alarm for Driver</div>
-              <div class="portfolio-caption-subheading text-muted">Python + OpenCV + MQTT + Slack API + MongoDB</div>
+          </div>
+          <div class="expanded-content" id="programming-notes">
+            <div class="programming-content">
+              <h4>Git Commands</h4>
+              <ul>
+                <li><code>git clone [url]</code> - Clone repo dari remote ke local.</li>
+                <li><code>git add .</code> - Stage semua perubahan.</li>
+                <li><code>git commit -m "message"</code> - Commit dengan mesej.</li>
+                <li><code>git push</code> - Push commit ke remote.</li>
+                <li><code>git pull</code> - Tarik update dari remote.</li>
+              </ul>
+
+              <h4>Python Basics</h4>
+              <ul>
+                <li>Indentation penting dalam Python.</li>
+                <li>Gunakan <code>def</code> untuk fungsi.</li>
+                <li>List comprehensions memudahkan loop.</li>
+              </ul>
+
+              <h4>Web Development Essentials</h4>
+              <ul>
+                <li>HTML untuk struktur.</li>
+                <li>CSS untuk gaya.</li>
+                <li>JavaScript untuk interaktiviti.</li>
+              </ul>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="col-lg-4 col-sm-6 mb-4">
-          <div class="portfolio-item">
-            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#projectModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-              </div>
-              <img class="img-fluid" src="assets/img/portfolio/My Projects/smartphone_car.png" alt="Smartphone Car IoT" />
-            </a>
-            <div class="portfolio-caption">
-              <div class="portfolio-caption-heading">IoT - Smartphone Car Control</div>
-              <div class="portfolio-caption-subheading text-muted">C++ + Arduino + ESP8266 + Blynk</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Modals -->
-<!-- Project Modal 1 -->
-<div class="modal fade" id="projectModal1" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Microsleep Detection App with Avatar AI</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img src="assets/img/portfolio/My Projects/Mudah_Alih_Microsleep.png" class="img-fluid rounded mb-3" alt="Microsleep App">
-        <p>This app detects yawning, drowsiness, and microsleep using Google ML Kit. Integrated with an AI avatar chatbot that gives real-time alerts and safe-point suggestions. Developed using Flutter, TTS, Firebase, and Waze API.</p>
-        <a href="https://github.com/MirzaAzhar172/EVOCITY_Drowsiness-Detection-with-A.I-Chatbox_Avatar
-" target="_blank" class="btn btn-dark">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Project Modal 2 -->
-<div class="modal fade" id="projectModal2" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">IoT Microsleep Alarm for Driver</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img src="assets/img/portfolio/My Projects/micro_1.jpg.png" class="img-fluid rounded mb-3" alt="Microsleep IoT">
-        <p>This system uses OpenCV and face landmarks to detect driver microsleep, triggering alerts via MQTT and Slack API. Designed for road safety using real-time IoT integration.</p>
-        <a href="https://github.com/MirzaAzhar172/FYP_DrowinessYawnDetection-Face" target="_blank" class="btn btn-dark">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Project Modal 3 -->
-<div class="modal fade" id="projectModal3" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">IoT Smartphone-Controlled Car</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body text-center">
-        <img src="assets/img/portfolio/My Projects/smartphone_car.png" class="img-fluid rounded mb-3" alt="Smart Car IoT">
-        <p>This prototype car is built using NodeMCUv2, controlled via smartphone using Blynk. Features include LED, ultrasonic sensor, 2WD motor control, and WiFi-based mobility commands.</p>
-        <a href="https://www.researchgate.net/publication/355840580_SMARTPHONE_CONTROL_CArMirzaAzhar" target="_blank" class="btn btn-dark">
-          <i class="fab fa-github"></i> Visit ResearchGate for Full Report
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- About Me Section -->
-<section class="page-section bg-light py-5" id="about">
-  <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
-    <h2 class="text-center text-uppercase mb-5">About Me</h2>
-    <div class="row align-items-center">
-      <!-- Profile Picture -->
-      <div class="col-md-4 text-center mb-3 mb-md-0">
-        <img
-          src="assets/img/portfolio/AboutMe/mirza_profilepic.jpg"
-          class="img-fluid rounded-circle shadow"
-          alt="Profile Picture"
-          style="width: 250px; height: 250px; object-fit: cover;"
-        />
-      </div>
-
-      <!-- Vertical Divider -->
-      <div class="col-md-1 d-none d-md-block">
-        <div style="border-left: 2px solid #ccc; height: 250px;"></div>
-      </div>
-
-      <!-- Description -->
-      <div class="col-md-7">
-        <p>
-          I’m Ahmad Mirza, a passionate mobile app developer with a strong
-          foundation in computer networks. Currently a Research Assistant at UiTM,
-          I specialize in building intelligent mobile systems using Flutter and AI
-          frameworks. I’ve led the development of a microsleep detection system
-          integrated with a chatbot, delivering impactful real-time solutions for
-          safety and engagement.
-        </p>
-        <p>
-          I have experience in backend development, UI/UX design, and deploying
-          responsive applications. I value clean design, smart logic, and
-          intuitive user experience.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
- <!-- Work Experience Section -->
-<section class="page-section bg-light py-5" id="experience">
-  <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
-    <h2 class="text-center text-uppercase mb-5">Work Experience</h2>
-    <div class="row">
-
-      <!-- Job 1: Research Assistant -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 border-dark">
-          <div class="card-body">
-            <h5 class="card-title">Research Assistant (RA)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Universiti Teknologi MARA (UiTM)</h6>
-            <p class="card-text">
-              <i class="fas fa-calendar-alt"></i> Feb 2025 – Jul 2025<br />
-              <i class="fas fa-map-marker-alt"></i> Shah Alam, Selangor
-            </p>
-            <ul>
-              <li>Developed Flutter-based mobile app with microsleep detection.</li>
-              <li>Integrated AI chatbot, Google ML Kit, TTS, Firebase & Waze API.</li>
-              <li>Prepared technical documentation and publications.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 2: Internship - TMK BERNAMA -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 border-dark">
-          <div class="card-body">
-            <h5 class="card-title">Internship Trainee - Cybersecurity (TMK)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">BERNAMA (Malaysian National News Agency)</h6>
-            <p class="card-text">
-              <i class="fas fa-calendar-alt"></i> Sept 2024 – Jan 2025<br />
-              <i class="fas fa-map-marker-alt"></i> Kuala Lumpur
-            </p>
-            <ul>
-              <li>Monitored network security using OpenCTI, Maltrail & Arkime.</li>
-              <li>Configured Aruba switch (VLAN, SNMP, IP routing).</li>
-              <li>Performed daily IT support & preventive maintenance.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 3: IT Support - Jamu Ratu Malaya -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 border-dark">
-          <div class="card-body">
-            <h5 class="card-title">IT Support (Technical)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Jamu Ratu Malaya</h6>
-            <p class="card-text">
-              <i class="fas fa-calendar-alt"></i> Mar 2021 – May 2021<br />
-              <i class="fas fa-map-marker-alt"></i> Selangor
-            </p>
-            <ul>
-              <li>Set up PCs, cabling & installed Windows OS for staff.</li>
-              <li>Designed mobile applications for internal use.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 4: Internship - Media Prima -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100 border-dark">
-          <div class="card-body">
-            <h5 class="card-title">Internship Trainee (IT Support)</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Media Prima Berhad</h6>
-            <p class="card-text">
-              <i class="fas fa-calendar-alt"></i> Jul 2020 – Oct 2020<br />
-              <i class="fas fa-map-marker-alt"></i> Kuala Lumpur
-            </p>
-            <ul>
-              <li>Managed Dalet system database and PSA video editing.</li>
-              <li>Learned broadcast server infrastructure and CVTR linkups.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Special Involvement Task Section -->
-<section class="page-section bg-light py-5" id="special-involvement">
-  <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
-    <h2 class="text-center text-uppercase mb-4">Special Involvement Task</h2>
-
-    <!-- Horizontal Cards Row -->
-    <div class="row justify-content-center">
-
-      <!-- Task Card: BAJET 2024 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-dark shadow-sm text-center" data-bs-toggle="modal" data-bs-target="#taskModal1" style="cursor: pointer;">
-          <div class="card-body">
-            <h5 class="fw-bold mb-2">BAJET 2024</h5>
-            <p class="mb-0">Live cyber monitoring & analysis for Bernama</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Task Card: News Asset -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-dark shadow-sm text-center" data-bs-toggle="modal" data-bs-target="#taskModal2" style="cursor: pointer;">
-          <div class="card-body">
-            <h5 class="fw-bold mb-2">News Asset</h5>
-            <p class="mb-0">Assisted with asset tagging & digital archiving</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Task Card: Presentation with SUK -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 border-dark shadow-sm text-center" data-bs-toggle="modal" data-bs-target="#taskModal3" style="cursor: pointer;">
-          <div class="card-body">
-            <h5 class="fw-bold mb-2">Presentation with SUK</h5>
-            <p class="mb-0">Showcased project at Selangor State Secretary Office</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Modal: BAJET 2024 -->
-<div class="modal fade" id="taskModal1" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Involvement in BAJET 2024</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <img src="assets/img/portfolio/involve_task/bajet2024.jpg" class="img-fluid rounded mb-3" alt="BAJET 2024">
-      <div class="modal-body text-center">
-        <p>
-          Participated in live cybersecurity operations for <strong>BAJET 2024</strong> under Bernama's Cybersecurity Unit.
-          Responsibilities included real-time traffic monitoring, incident reporting, and digital protection for national broadcast content.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: News Asset -->
-<div class="modal fade" id="taskModal2" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">News Asset Involvement</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <img src="assets/img/portfolio/involve_task/news_asset.jpg" class="img-fluid rounded mb-3" alt="News Asset">
-      <div class="modal-body text-center">
-        <p>
-          Contributed to <strong>news asset tagging</strong>, digital archiving, and metadata management
-          for Bernama's media library. This task supported better categorization and retrieval of national content.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal: Presentation with SUK Selangor -->
-<div class="modal fade" id="taskModal3" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Presentation with SUK Selangor</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <img src="assets/img/portfolio/involve_task/suk_present.jpg" class="img-fluid rounded mb-3" alt="SUK Presentation">
-      <div class="modal-body text-center">
-        <p>
-          Presented the microsleep detection system with supervisors during a <strong>GTIDS session</strong> at the Selangor State Secretary’s Office (SUK Selangor).
-          Earned positive feedback from the Director of Innovation and explored collaboration potential with <strong>MBI Selangor</strong>.
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Awards & Recognition Section (Updated, Minimal Container) -->
-<section class="page-section bg-light py-5" id="awards">
-  <div class="container rounded shadow-sm p-4" style="background-color: #ffffff;">
-    <h2 class="text-center text-uppercase mb-4">Awards & Recognition</h2>
-
-    <!-- Horizontal Scroll Container -->
-    <div id="awardScroll" class="d-flex overflow-auto gap-3 pb-3">
-
-      <!-- Award Card -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal1">
-        <h5 class="fw-bold mb-2">PLATINUM AWARD (Johan)</h5>
-        <p class="mb-0">GTIDS 2024 – Geran Teknologi & Inovasi Digital Selangor</p>
-      </div>
-
-      <!-- Award Card -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal2">
-        <h5 class="fw-bold mb-2">GOLD - (PROJECT)</h5>
-        <p class="mb-0">JIIICAS 2024 – Johor International Innovation Invention & Symposium</p>
-      </div>
-
-      <!-- Award Card -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal3">
-        <h5 class="fw-bold mb-2">IJORTAS Publication</h5>
-        <p class="mb-0">International Journal of Recent Technology & Applied Science 2024</p>
-      </div>
-
-      <!-- Award Card -->
-      <div class="award-card flex-shrink-0 p-3 border rounded text-center" style="min-width: 300px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#awardModal4">
-        <h5 class="fw-bold mb-2">Best IoT Project</h5>
-        <p class="mb-0">FYP 2018/2019 – FSKIK Exhibition, A2813 / Computer Science</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Modals -->
-  <div class="modal fade" id="awardModal1" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Platinum Award - GTIDS 2024</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="assets/img/awards/platinum_award.png" class="img-fluid rounded mb-3" alt="Platinum Award">
-          <p>This project won the <strong>Platinum Award (Johan)</strong> at <strong>GTIDS 2024</strong> for developing a mobile AI-based microsleep detection system.</p>
-        </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="awardModal2" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Gold Project - JIIICAS 2024</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="assets/img/awards/jiicas24.png" class="img-fluid rounded mb-3" alt="Gold Project">
-          <p>This microsleep alarm system won <strong>Gold Award</strong> at <strong>JIIICAS 2024</strong> for innovation in driver safety with IoT integration.</p>
-        </div>
-      </div>
+  <div class="footer-fixed">
+    <div class="footer-inner">
+      <a href="#" class="footer-item"><i class="fab fa-github"></i> GitHub</a>
+      <div class="footer-divider"></div>
+      <a href="#" class="footer-item"><i class="fab fa-twitter"></i> Twitter</a>
+      <div class="footer-divider"></div>
+      <span class="footer-copyright">© 2025 Mirza Azhar</span>
     </div>
   </div>
 
-  <div class="modal fade" id="awardModal3" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Publication - IJORTAS</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="assets/img/awards/ijortas.png" class="img-fluid rounded mb-3" alt="IJORTAS">
-          <p>Published in the <strong>International Journal of Recent Technology & Applied Science</strong> (IJORTAS) based on the microsleep mobile system research.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script>
+    // Toggle expanded content (notes) - only one open at a time
+    function toggleContent(id) {
+      const allContents = document.querySelectorAll('.expanded-content');
+      allContents.forEach(content => {
+        if(content.id === id) {
+          content.classList.toggle('active');
+        } else {
+          content.classList.remove('active');
+        }
+      });
+    }
 
-  <div class="modal fade" id="awardModal4" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Best IoT Project - FSKIK</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img src="assets/img/awards/best_iot.png" class="img-fluid rounded mb-3" alt="Best IoT Project">
-          <p>This project won <strong>Best IoT Project</strong> at FSKIK Exhibition 2019 for developing a prototype IoT-based alert system for drivers.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    // Toggle individual topic inside networking notes
+    function toggleTopic(element) {
+      element.classList.toggle('expanded');
+    }
 
-
-<!-- Publications Section -->
-<section class="page-section bg-light py-5" id="publications">
-  <div class="container">
-    <h2 class="text-center text-uppercase mb-5">Publications</h2>
-    <div class="d-flex justify-content-center overflow-auto gap-3 pb-3">
-
-      <!-- Publication 1 -->
-      <div class="flex-shrink-0 p-3 border rounded text-start" style="min-width: 300px; max-width: 350px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h5 class="fw-bold mb-2">IoT Alarm System: Detecting & Preventing Microsleep EventsT</h5>
-        <p class="mb-1">
-          <strong>Ahmad Mirza Azhar, Dr. Norkhushaini Binti Awang</strong> et al. (2024)<br>
-          <em>JIIICaS 2024 – Johor International Innovation Symposium</em>
-        </p>
-        <a href="https://example.com/publication1" class="btn btn-sm btn-outline-dark mt-2" target="_blank">View Full Paper</a>
-      </div>
-
-      <!-- Publication 2 -->
-      <div class="flex-shrink-0 p-3 border rounded text-start" style="min-width: 300px; max-width: 350px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h5 class="fw-bold mb-2">IoT-Based Solar Energy</h5>
-        <p class="mb-1">
-          <strong>Dr. Ismail Yusuf Panessai, Ahmad Mirza, Ericka Ensimau, Kaiyisah Baiduri</strong> et al. (2021)<br>
-          <em>IJORTAS – Intl. Journal of Recent Technology & Applied Sciences</em>
-        </p>
-        <a href="https://lamintang.org/journal/index.php/ijortas/article/view/257" class="btn btn-sm btn-outline-dark mt-2" target="_blank">View Proceedings</a>
-      </div>
-
-      <!-- Publication 3 -->
-      <div class="flex-shrink-0 p-3 border rounded text-start" style="min-width: 300px; max-width: 350px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h5 class="fw-bold mb-2">Intelligent Egg Incubator (IoT)</h5>
-        <p class="mb-1">
-          <strong>Dr. Ismail Yusuf Panessai, Kaiyisah Baiduri, Ericka Ensimau, Ahmad Mirza</strong> et al. (2021)<br>
-          <em>IJORTAS – Intl. Journal of Recent Technology & Applied Sciences</em>
-        </p>
-        <a href="https://lamintang.org/journal/index.php/ijortas/article/view/257" class="btn btn-sm btn-outline-dark mt-2" target="_blank">View Proceedings</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-  
-      <!-- Carousel Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#publicationsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#publicationsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </div>
-</section>
-
-  <!-- Footer Contact Info -->
-<section class="py-3 text-white" style="background-color: #1f1f1f;">
-  <div class="container text-center">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 small">
-          
-          <!-- Email -->
-          <div>
-            <i class="fas fa-envelope me-1"></i>
-            <a href="mailto:mirzaazhar3234@gmail.com" class="text-white text-decoration-none" target="_blank">
-              mirzaazhar3234@gmail.com
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="vr d-none d-md-block"></div>
-
-          <!-- GitHub -->
-          <div>
-            <i class="fab fa-github me-1"></i>
-            <a href="https://github.com/mirzaazhar172" class="text-white text-decoration-none" target="_blank">
-              GitHub
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="vr d-none d-md-block"></div>
-
-          <!-- LinkedIn -->
-          <div>
-            <i class="fab fa-linkedin me-1"></i>
-            <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" class="text-white text-decoration-none" target="_blank">
-              LinkedIn
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="vr d-none d-md-block"></div>
-
-          <!-- Copyright -->
-          <div>
-            <p class="mb-0">© 2025 Ahmad Mirza Azhar. All rights reserved.</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </body>
+    // Prevent card click when clicking buttons inside
+    document.querySelectorAll('.guide-card .btn').forEach(btn => {
+      btn.addEventListener('click', e => e.stopPropagation());
+    });
+  </script>
+</body>
 </html>
