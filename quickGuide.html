@@ -321,12 +321,17 @@
 
     /* Footer */
     .footer-fixed {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-      width: 100%;
-      padding: 40px 20px;
-      margin-top: auto;
+      background: #1a1a1a;
       color: white;
+      width: 100%;
+      padding: 20px;
+      font-size: 14px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
     }
+
     .footer-inner {
       display: flex;
       justify-content: center;
@@ -526,14 +531,24 @@
   </div>
 
   <div class="footer-fixed">
-    <div class="footer-inner">
-      <a href="#" class="footer-item"><i class="fab fa-github"></i> GitHub</a>
-      <div class="footer-divider"></div>
-      <a href="#" class="footer-item"><i class="fab fa-twitter"></i> Twitter</a>
-      <div class="footer-divider"></div>
-      <span class="footer-copyright">© 2025 Mirza Azhar</span>
-    </div>
+  <div class="footer-inner">
+    <a href="mailto:mirzaazhar3234@gmail.com" class="footer-item">
+      <i class="fas fa-envelope"></i> mirzaazhar3234@gmail.com
+    </a>
+    <div class="footer-divider"></div>
+    <a href="https://github.com/yourusername" target="_blank" class="footer-item">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <div class="footer-divider"></div>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="footer-item">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <div class="footer-divider"></div>
+    <span class="footer-copyright">
+      © 2025 Ahmad Mirza Azhar. All rights reserved.
+    </span>
   </div>
+</div>
 
   <script>
     // Toggle expanded content (notes)
