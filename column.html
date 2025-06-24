@@ -321,6 +321,21 @@
     </div>
   </div>
 
+      <script>
+  function filterNews() {
+    const category = document.getElementById("categoryFilter").value;
+    const items = document.querySelectorAll(".whatsnew-scroll .col-auto");
+    items.forEach(item => {
+      const type = item.getAttribute("data-category");
+      if (category === "all" || type === category) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+</script>
+
     <!--------Modal for SEDA2024----->
   <div id="newsModalSEDA" class="modal">
   <div class="modal-content">
@@ -676,21 +691,6 @@ if (!isPopupVisible) {
     document.querySelector('.involvement-gallery').scrollBy({
       left: offset,
       behavior: 'smooth'
-    });
-  }
-</script>
-
-  <script>
-  function filterNews() {
-    const category = document.getElementById("categoryFilter").value;
-    const items = document.querySelectorAll(".whatsnew-scroll .col-auto");
-    items.forEach(item => {
-      const type = item.getAttribute("data-category");
-      if (category === "all" || type === category) {
-        item.style.display = "block";
-      } else {
-        item.style.display = "none";
-      }
     });
   }
 </script>
