@@ -11,7 +11,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/droid-128x128.png">
     <!-- END FAVICON -->
   
-  <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
    <style>
@@ -19,7 +18,11 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
       margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
+    
     .navbar {
       background-color: #1f1f1f;
       padding: 1rem;
@@ -28,825 +31,464 @@
       justify-content: space-between;
       align-items: center;
     }
+    
     .navbar a {
       color: white;
       margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
     }
-    .container {
-      max-width: 1140px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+
+    .main-content {
+      flex: 1;
+      padding: 60px 20px;
     }
-    .divider {
-      height: 2px;
-      background-color: #ddd;
-      margin: 3rem 0;
+
+    .quick-guide-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
     }
-    .news-header {
-      text-align: center;
-      margin-bottom: 3rem;
+
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
     }
-    .news-header h2 {
-      font-weight: 700;
-      text-transform: uppercase;
+
+    .header h1 {
+        color: #2c3e50;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
-    .news-header h3 {
-      color: #666;
-      font-weight: 400;
-      font-style: italic;
+
+    .header p {
+        color: #7f8c8d;
+        font-size: 1.1rem;
     }
-    .whatsnew-scroll {
-      display: flex;
-      overflow-x: auto;
-      gap: 2rem;
-      padding: 1rem 2rem;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
+
+    .guide-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        margin-bottom: 30px;
     }
-    .whatsnew-scroll .col-auto {
-      flex: 0 0 auto;
-      scroll-snap-align: start;
-      width: 280px;
+
+    .guide-card {
+        background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        border-radius: 15px;
+        padding: 25px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
     }
-    .portfolio-item {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      overflow: hidden;
-      transition: transform 0.3s ease;
+
+    .guide-card:hover {
+        transform: translateY(-5px);
+        border-color: #667eea;
+        box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
     }
-    .portfolio-item:hover {
-      transform: translateY(-5px);
+
+    .guide-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
     }
-    .portfolio-link {
-      position: relative;
-      display: block;
+
+    .guide-card:hover::before {
+        transform: scaleX(1);
     }
-    .portfolio-hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
     }
-    .portfolio-link:hover .portfolio-hover {
-      opacity: 1;
+
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        color: white;
+        font-size: 1.5rem;
     }
-    .portfolio-caption {
-      padding: 1rem;
-      text-align: center;
+
+    .card-title {
+        color: #2c3e50;
+        font-size: 1.4rem;
+        font-weight: 600;
     }
-    .portfolio-caption-heading {
-      font-size: 1rem;
-      font-weight: 700;
+
+    .card-description {
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 20px;
     }
-    .portfolio-caption-subheading {
-      font-size: 0.875rem;
-      color: #666;
+
+    .card-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
     }
-     /* Involvement Gallery Styles */
-        .involvement-section {
-            padding: 40px 20px;
-            background-color: white;
-            margin: 20px auto;
-            text-align: center;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
 
-        .involvement-scroll {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 20px 0;
-        }
-
-        .involvement-item {
-            min-width: 200px;
-            height: 150px;
-            cursor: pointer;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .involvement-item:hover {
-            transform: scale(1.05);
-        }
-
-        .involvement-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-        }
-
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        /* FIXED FOOTER STYLES */
-        .footer-fixed {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
-
-        .footer-content {
-            padding: 15px 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        .footer-inner {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 400;
-            transition: all 0.3s ease;
-            padding: 5px 0;
-        }
-
-        .footer-item:hover {
-            color: #64b5f6 !important;
-            transform: translateY(-1px);
-        }
-
-        .footer-item i {
-            font-size: 16px;
-            opacity: 0.9;
-            width: 18px;
-            text-align: center;
-        }
-
-        .footer-divider {
-            width: 1px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            margin: 0 5px;
-        }
-
-        .footer-copyright {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 13px;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .footer-inner {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .footer-divider {
-                display: none;
-            }
-            
-            .footer-item {
-                font-size: 13px;
-            }
-        }
-        /* Ensure footer sticks to bottom */
-        html, body {
-            height: 100%;
-        }
-     .filter-dropdown {
-      margin-bottom: 1rem;
-      text-align: center;
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
     }
-    .filter-dropdown select {
-      padding: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      font-family: 'Montserrat', sans-serif;
+
+    .btn-primary {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
     }
-    .new-badge {
-      background: red;
-      color: white;
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 6px;
-      position: absolute;
-      top: 8px;
-      right: 8px;
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
     }
-    .video-section {
-      margin-top: 4rem;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    .btn-secondary {
+        background: rgba(102, 126, 234, 0.1);
+        color: #667eea;
+        border: 1px solid #667eea;
     }
-    .video-section h2 {
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 2rem;
+
+    .btn-secondary:hover {
+        background: #667eea;
+        color: white;
     }
-    .video-section .whatsnew-scroll {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      padding-bottom: 1rem;
+
+    .expanded-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        margin-top: 15px;
     }
-    .video-section .col-auto {
-      flex: 0 0 auto;
-      width: 280px;
-      scroll-snap-align: start;
+
+    .expanded-content.active {
+        max-height: 1500px;
     }
-    .portfolio-item video {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
+
+    .step-list {
+        background: rgba(102, 126, 234, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 15px 0;
     }
-    /* Technical Skills Column*/
-     .skill-cloud-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 60px 0;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .skill-cloud-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
+    .step-list h4 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
 
-        .skill-cloud-content {
-            position: relative;
-            z-index: 2;
-        }
+    .step-list ol {
+        padding-left: 20px;
+    }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+    .step-list li {
+        color: #34495e;
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
 
-        .section-title h2 {
-            color: white;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
+    /* Networking Notes Specific Styles */
+    .networking-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-        .section-title p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+    .network-topic {
+        background: linear-gradient(145deg, #f8f9ff, #ffffff);
+        border-radius: 12px;
+        padding: 20px;
+        border: 1px solid rgba(102, 126, 234, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
 
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .network-topic:hover {
+        border-color: rgba(102, 126, 234, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+    }
 
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            padding: 12px 20px;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            position: relative;
-            overflow: hidden;
-        }
+    .topic-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
 
-        .skill-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
+    .topic-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #2c3e50;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
 
-        .skill-tag:hover::before {
-            left: 100%;
-        }
+    .topic-icon {
+        font-size: 1.2rem;
+    }
 
-        .skill-tag:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            border-color: rgba(255, 255, 255, 0.4);
-            color: white;
-        }
+    .expand-arrow {
+        transition: transform 0.3s ease;
+        color: #667eea;
+    }
 
-        .skill-tag i {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
+    .network-topic.expanded .expand-arrow {
+        transform: rotate(180deg);
+    }
 
-        /* Category specific colors */
-        .skill-mobile { background: rgba(33, 150, 243, 0.2); }
-        .skill-mobile:hover { background: rgba(33, 150, 243, 0.35); }
+    .topic-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
 
-        .skill-ai { background: rgba(76, 175, 80, 0.2); }
-        .skill-ai:hover { background: rgba(76, 175, 80, 0.35); }
+    .network-topic.expanded .topic-content {
+        max-height: 500px;
+    }
 
-        .skill-web { background: rgba(255, 152, 0, 0.2); }
-        .skill-web:hover { background: rgba(255, 152, 0, 0.35); }
+    .topic-description {
+        color: #7f8c8d;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
 
-        .skill-backend { background: rgba(156, 39, 176, 0.2); }
-        .skill-backend:hover { background: rgba(156, 39, 176, 0.35); }
+    .network-list {
+        background: rgba(102, 126, 234, 0.05);
+        border-radius: 8px;
+        padding: 15px;
+    }
 
-        .skill-database { background: rgba(244, 67, 54, 0.2); }
-        .skill-database:hover { background: rgba(244, 67, 54, 0.35); }
+    .network-list ul {
+        margin: 0;
+        padding-left: 20px;
+    }
 
-        .skill-design { background: rgba(233, 30, 99, 0.2); }
-        .skill-design:hover { background: rgba(233, 30, 99, 0.35); }
+    .network-list li {
+        color: #34495e;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
 
-        .skill-cloud { background: rgba(0, 188, 212, 0.2); }
-        .skill-cloud:hover { background: rgba(0, 188, 212, 0.35); }
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-        /* Animated floating effect */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-5px); }
-        }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
 
-        .skill-tag:nth-child(3n) {
-            animation: float 3s ease-in-out infinite;
-        }
+    .comparison-table th {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        font-weight: 600;
+    }
 
-        .skill-tag:nth-child(3n+1) {
-            animation: float 3s ease-in-out infinite 1s;
-        }
+    .comparison-table tr:hover {
+        background: rgba(102, 126, 234, 0.05);
+    }
 
-        .skill-tag:nth-child(3n+2) {
-            animation: float 3s ease-in-out infinite 2s;
-        }
+    .example-box {
+        background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+        border-radius: 8px;
+        padding: 15px;
+        margin: 10px 0;
+        border-left: 4px solid #667eea;
+    }
 
-        @media (max-width: 768px) {
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .skills-container {
-                gap: 10px;
-            }
-            
-            .skill-tag {
-                padding: 10px 16px;
-                font-size: 0.9rem;
-            }
-        }
+    .example-box strong {
+        color: #2c3e50;
+    }
 
-        .quick-guide-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
+    .download-section {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        text-align: center;
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .download-section h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
 
-        .header h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+    .download-section p {
+        margin-bottom: 25px;
+        opacity: 0.9;
+    }
 
-        .header p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-        }
+    .download-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
+    .btn-download {
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 12px 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .btn-download:hover {
+        background: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+    }
+
+    /* FIXED FOOTER STYLES */
+    .footer-fixed {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .footer-content {
+        padding: 15px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .footer-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        padding: 5px 0;
+    }
+
+    .footer-item:hover {
+        color: #64b5f6 !important;
+        transform: translateY(-1px);
+    }
+
+    .footer-item i {
+        font-size: 16px;
+        opacity: 0.9;
+        width: 18px;
+        text-align: center;
+    }
+
+    .footer-divider {
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        margin: 0 5px;
+    }
+
+    .footer-copyright {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 768px) {
         .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
+            grid-template-columns: 1fr;
         }
-
-        .guide-card {
-            background: linear-gradient(145deg, #ffffff, #f8f9fa);
-            border-radius: 15px;
-            padding: 25px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+        
+        .header h1 {
+            font-size: 2rem;
         }
-
-        .guide-card:hover {
-            transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
-        }
-
-        .guide-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .guide-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .card-title {
-            color: #2c3e50;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
-
-        .card-description {
-            color: #7f8c8d;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .card-actions {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 500;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .btn-secondary {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            border: 1px solid #667eea;
-        }
-
-        .btn-secondary:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .expanded-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease;
-            margin-top: 15px;
-        }
-
-        .expanded-content.active {
-            max-height: 1500px;
-        }
-
-        .step-list {
-            background: rgba(102, 126, 234, 0.05);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-
-        .step-list h4 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-
-        .step-list ol {
-            padding-left: 20px;
-        }
-
-        .step-list li {
-            color: #34495e;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-
-        /* Networking Notes Specific Styles */
-        .networking-sections {
-            display: flex;
+        
+        .download-buttons {
             flex-direction: column;
-            gap: 15px;
-        }
-
-        .network-topic {
-            background: linear-gradient(145deg, #f8f9ff, #ffffff);
-            border-radius: 12px;
-            padding: 20px;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .network-topic:hover {
-            border-color: rgba(102, 126, 234, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
-        }
-
-        .topic-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .topic-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #2c3e50;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .topic-icon {
-            font-size: 1.2rem;
-        }
-
-        .expand-arrow {
-            transition: transform 0.3s ease;
-            color: #667eea;
-        }
-
-        .network-topic.expanded .expand-arrow {
-            transform: rotate(180deg);
-        }
-
-        .topic-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .network-topic.expanded .topic-content {
-            max-height: 500px;
-        }
-
-        .topic-description {
-            color: #7f8c8d;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .network-list {
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 8px;
-            padding: 15px;
-        }
-
-        .network-list ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        .network-list li {
-            color: #34495e;
-            margin-bottom: 6px;
-            line-height: 1.5;
         }
 
         .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
         }
 
         .comparison-table th,
         .comparison-table td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
+            padding: 8px;
         }
 
-        .comparison-table th {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            font-weight: 600;
-        }
-
-        .comparison-table tr:hover {
-            background: rgba(102, 126, 234, 0.05);
-        }
-
-        .example-box {
-            background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
-            border-radius: 8px;
-            padding: 15px;
-            margin: 10px 0;
-            border-left: 4px solid #667eea;
-        }
-
-        .example-box strong {
-            color: #2c3e50;
-        }
-
-        .download-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
+        .footer-inner {
+            flex-direction: column;
+            gap: 15px;
             text-align: center;
         }
-
-        .download-section h3 {
-            margin-bottom: 15px;
-            font-size: 1.5rem;
+        
+        .footer-divider {
+            display: none;
         }
-
-        .download-section p {
-            margin-bottom: 25px;
-            opacity: 0.9;
+        
+        .footer-item {
+            font-size: 13px;
         }
-
-        .download-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn-download {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            padding: 12px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-download:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .guide-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .download-buttons {
-                flex-direction: column;
-            }
-
-            .comparison-table {
-                font-size: 0.9rem;
-            }
-
-            .comparison-table th,
-            .comparison-table td {
-                padding: 8px;
-            }
-        }
+    }
     </style>
 </head>
 <body>
@@ -861,6 +503,7 @@
     </div>
   </div>
 
+  <div class="main-content">
     <div class="quick-guide-container">
         <div class="header">
             <h1>🚀Quick Start Guide / Notes </h1>
@@ -919,86 +562,270 @@
                                         <li><strong>LAN (Local Area Network):</strong> Kecil je. Contoh: dalam rumah, sekolah, pejabat kecik.</li>
                                         <li><strong>WAN (Wide Area Network):</strong> Sambungkan banyak LAN dari tempat berbeza. Contoh: Internet.</li>
                                         <li><strong>PAN (Personal Area Network):</strong> Kecil dan peribadi. Contoh: Bluetooth phone ke headphone.</li>
+                                        <li><strong>MAN (Metropolitan Area Network):</strong> Cover satu bandar. Macam network provider dalam satu kawasan.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">🔌</span>
+                                    <span>Network Topologies</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-description">
+                                    Topology ni cara komputer arrange dalam network. Macam floor plan rumah, tapi untuk network.
+                                </div>
+                                <div class="network-list">
+                                    <ul>
+                                        <li><strong>Star:</strong> Semua connect ke satu central hub. Kalau hub rosak, semua mati.</li>
+                                        <li><strong>Bus:</strong> Semua connect ke satu main cable. Murah tapi slow bila ramai.</li>
+                                        <li><strong>Ring:</strong> Connect dalam bentuk bulatan. Data pergi satu arah je.</li>
+                                        <li><strong>Mesh:</strong> Semua connect dengan semua. Mahal tapi reliable gila.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">📚</span>
+                                    <span>OSI Model - 7 Layers</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-description">
+                                    OSI Model ni macam blueprint untuk networking. Ada 7 layer, setiap layer ada kerja sendiri.
+                                </div>
+                                <table class="comparison-table">
+                                    <tr>
+                                        <th>Layer</th>
+                                        <th>Nama</th>
+                                        <th>Fungsi</th>
+                                        <th>Contoh</th>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Application</td>
+                                        <td>Interface dengan user</td>
+                                        <td>Browser, Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Presentation</td>
+                                        <td>Encryption, Compression</td>
+                                        <td>JPEG, SSL</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Session</td>
+                                        <td>Manage connections</td>
+                                        <td>SQL Sessions</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Transport</td>
+                                        <td>End-to-end delivery</td>
+                                        <td>TCP, UDP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Network</td>
+                                        <td>Routing, IP addressing</td>
+                                        <td>Router, IP</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Data Link</td>
+                                        <td>Frame formatting</td>
+                                        <td>Switch, MAC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Physical</td>
+                                        <td>Physical connection</td>
+                                        <td>Cable, Fiber</td>
+                                    </tr>
+                                </table>
+                                <div class="example-box">
+                                    <strong>Memory trick:</strong> "Please Do Not Throw Sausage Pizza Away" - Physical, Data Link, Network, Transport, Session, Presentation, Application
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">🌍</span>
+                                    <span>TCP/IP Model</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-description">
+                                    TCP/IP ni model yang sebenarnya digunakan dalam internet. Lebih simple dari OSI - 4 layer je.
+                                </div>
+                                <div class="network-list">
+                                    <ul>
+                                        <li><strong>Application Layer:</strong> HTTP, FTP, SMTP, DNS</li>
+                                        <li><strong>Transport Layer:</strong> TCP (reliable), UDP (fast)</li>
+                                        <li><strong>Internet Layer:</strong> IP, ICMP, ARP</li>
+                                        <li><strong>Network Interface:</strong> Ethernet, WiFi</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">🏠</span>
+                                    <span>IP Addressing & Subnetting</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-description">
+                                    IP Address macam alamat rumah untuk komputer. Ada IPv4 (32-bit) dan IPv6 (128-bit).
+                                </div>
+                                <div class="example-box">
+                                    <strong>IPv4 Classes:</strong><br>
+                                    Class A: 1.0.0.0 - 126.255.255.255 (16 million hosts)<br>
+                                    Class B: 128.0.0.0 - 191.255.255.255 (65k hosts)<br>
+                                    Class C: 192.0.0.0 - 223.255.255.255 (254 hosts)
+                                </div>
+                                <div class="network-list">
+                                    <ul>
+                                        <li><strong>Private IP Ranges:</strong></li>
+                                        <li>10.0.0.0 - 10.255.255.255 (Class A)</li>
+                                        <li>172.16.0.0 - 172.31.255.255 (Class B)</li>
+                                        <li>192.168.0.0 - 192.168.255.255 (Class C)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">🔄</span>
+                                    <span>Network Devices</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="network-list">
+                                    <ul>
+                                        <li><strong>Hub:</strong> Basic repeater. Semua port dapat same data. Dah outdated.</li>
+                                        <li><strong>Switch:</strong> Smart hub. Each port dapat data yang betul je. Layer 2 device.</li>
+                                        <li><strong>Router:</strong> Connect different networks. Layer 3 device. Ada routing table.</li>
+                                        <li><strong>Access Point:</strong> Wireless hub. Convert wired ke wireless.</li>
+                                        <li><strong>Firewall:</strong> Security guard. Filter traffic masuk keluar.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">📨</span>
+                                    <span>Common Protocols</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <table class="comparison-table">
+                                    <tr>
+                                        <th>Protocol</th>
+                                        <th>Port</th>
+                                        <th>Fungsi</th>
+                                    </tr>
+                                    <tr>
+                                        <td>HTTP</td>
+                                        <td>80</td>
+                                        <td>Web browsing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HTTPS</td>
+                                        <td>443</td>
+                                        <td>Secure web browsing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FTP</td>
+                                        <td>21</td>
+                                        <td>File transfer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SSH</td>
+                                        <td>22</td>
+                                        <td>Secure remote access</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMTP</td>
+                                        <td>25</td>
+                                        <td>Send email</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DNS</td>
+                                        <td>53</td>
+                                        <td>Domain name resolution</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DHCP</td>
+                                        <td>67/68</td>
+                                        <td>Automatic IP assignment</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="network-topic" onclick="toggleTopic(this)">
+                            <div class="topic-header">
+                                <div class="topic-title">
+                                    <span class="topic-icon">🛡️</span>
+                                    <span>Network Security Basics</span>
+                                </div>
+                                <span class="expand-arrow">▼</span>
+                            </div>
+                            <div class="topic-content">
+                                <div class="network-list">
+                                    <ul>
+                                        <li><strong>Firewall:</strong> Block unwanted traffic. Macam bouncer club.</li>
+                                        <li><strong>VPN:</strong> Secure tunnel through internet. Macam terowong rahsia.</li>
+                                        <li><strong>WPA/WPA2:</strong> WiFi security. Jangan guna WEP, dah outdated.</li>
+                                        <li><strong>MAC Filtering:</strong> Only allow specific devices. Tapi boleh spoof.</li>
+                                        <li><strong>Network Segmentation:</strong> Pisahkan network untuk security.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </body>
-  
-  <!-- Footer Contact Info - FIXED VERSION -->
-<footer style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); width: 100vw; margin-left: calc(-50vw + 50%); padding: 12px 0; color: white; margin-top: 30px;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 25px; font-size: 14px;">
-      
-      <!-- Email -->
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <i class="fas fa-envelope" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
-        <a href="mailto:mirzaazhar3234@gmail.com" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
-           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
-           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
-          mirzaazhar3234@gmail.com
-        </a>
-      </div>
 
-      <!-- Divider -->
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
-
-      <!-- GitHub -->
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <i class="fab fa-github" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
-        <a href="https://github.com/mirzaazhar172" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
-           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
-           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
-          GitHub
-        </a>
-      </div>
-
-      <!-- Divider -->
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
-
-      <!-- LinkedIn -->
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <i class="fab fa-linkedin" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
-        <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
-           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
-           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
-          LinkedIn
-        </a>
-      </div>
-
-      <!-- Divider -->
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
-
-      <!-- Copyright -->
-      <div style="color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 300; letter-spacing: 0.5px;">
-        © 2025 Ahmad Mirza Azhar. All rights reserved.
-      </div>
-
-    </div>
-  </div>
-</footer>
-
-<style>
-/* Responsive untuk mobile */
-@media (max-width: 768px) {
-  footer div[style*="display: flex"] {
-    flex-direction: column !important;
-    gap: 15px !important;
-    text-align: center;
-  }
-  
-  footer div[style*="width: 1px"] {
-    display: none !important;
-  }
-  
-  footer div[style*="font-size: 14px"] div {
-    font-size: 13px !important;
-  }
-}
-</style>
-</html>
-  
+            <div class="guide-card" onclick="toggleContent('programming-notes')">
+                <div class="card-header">
+                    <div class="card-icon">💻</div>
+                    <div class="card-title">Programming Quick Reference</div>
+                </div>
+                <div class="card-description">
+                    Cheat sheet dan quick reference untuk common programming tasks, syntax, dan best practices.
+                </div>
+                <div class="card-actions">
+                    <button class="btn btn-primary" onclick="event.stopPropagation(); toggleContent('programming-notes')">
+                        📖 Baca Programming Notes
+                    </button>
+                    <a href="#" class="btn btn-secondary" onclick="downloadPDF('programming-notes')">
+                        📄 Download PDF
+                    </a>
+                </div>
+                <div class="expanded-content" id="programming-notes">
+                    <div class="step-list">
