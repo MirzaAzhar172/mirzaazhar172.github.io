@@ -905,8 +905,26 @@ if (!isPopupVisible) {
 
 <div class="divider"></div>
 
-<section class="video-section container">
-  <h2>🎬 Video Highlights</h2>
+   <div class="col-auto">
+      <div class="portfolio-item">
+        <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+          </div>
+          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+            <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
+          <div class="portfolio-caption-subheading text-muted">August 2024</div>
+        </div>
+      </div>
+    </div>
+
+<div class="video-section container">
+  <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
   <div class="whatsnew-scroll">
 
     <div class="col-auto">
@@ -922,7 +940,7 @@ if (!isPopupVisible) {
         </a>
         <div class="portfolio-caption">
           <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-          <div class="portfolio-caption-subheading text-muted">ISES 2024 • July 2024</div>
+          <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
         </div>
       </div>
     </div>
@@ -940,30 +958,12 @@ if (!isPopupVisible) {
         </a>
         <div class="portfolio-caption">
           <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
-          <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-          </div>
-          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-            <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
           <div class="portfolio-caption-subheading text-muted">July 2024</div>
         </div>
       </div>
     </div>
-
   </div>
-</section>
+</div>
 
 <!-- Modal for SEDA2024 -->
 <div id="newsModalSEDA" class="modal">
@@ -1023,6 +1023,32 @@ if (!isPopupVisible) {
     </ul>
   </div>
 </div>
+
+<!-- Modal for JIICAS2024 -->
+<div id="newsModalJiicas2024" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
+    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+      <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
+    <p><strong>Date:</strong> August 2024</p>
+    <h4>🎓 About the Competition:</h4>
+    <ul>
+      <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
+      <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
+      <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
+    </ul>
+    <h4>📽️ Presentation Highlights:</h4>
+    <ul>
+      <li>Focused on real-time AI + IoT integration in safety systems.</li>
+      <li>Project was part of ongoing faculty research and innovation initiatives.</li>
+      <li>Highlighted technical aspects, user safety, and scalability.</li>
+    </ul>
+  </div>
+</div>
+
     
 <div class="divider"></div>
 
