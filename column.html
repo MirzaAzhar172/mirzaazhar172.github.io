@@ -106,52 +106,169 @@
       font-size: 0.875rem;
       color: #666;
     }
-    .involvement-section {
-      margin-top: 4rem;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-    .involvement-section h2 {
-      text-align: center;
-      font-weight: 700;
-      position: relative;
-      margin-bottom: 2rem;
-    }
-    .involvement-scroll {
-      display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 1rem 0;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-    }
-    .involvement-section button {
-      background: #1f1f1f;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .involvement-section button:hover {
-      background: #333;
-    }
-   .involvement-item {
-      min-width: 260px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      cursor: pointer;
-      background: white;
-    }
-    .involvement-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
+     /* Involvement Gallery Styles */
+        .involvement-section {
+            padding: 40px 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .involvement-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .involvement-item {
+            min-width: 200px;
+            height: 150px;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .involvement-item:hover {
+            transform: scale(1.05);
+        }
+
+        .involvement-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* FIXED FOOTER STYLES */
+        .footer-fixed {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .footer-content {
+            padding: 15px 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+        }
+
+        .footer-item:hover {
+            color: #64b5f6 !important;
+            transform: translateY(-1px);
+        }
+
+        .footer-item i {
+            font-size: 16px;
+            opacity: 0.9;
+            width: 18px;
+            text-align: center;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0 5px;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-inner {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .footer-divider {
+                display: none;
+            }
+            
+            .footer-item {
+                font-size: 13px;
+            }
+        }
+        /* Ensure footer sticks to bottom */
+        html, body {
+            height: 100%;
+        }
      .filter-dropdown {
       margin-bottom: 1rem;
       text-align: center;
@@ -582,7 +699,7 @@ if (!isPopupVisible) {
 
 <div class="divider"></div>
 
-    <div class="involvement-section">
+<div class="involvement-section">
   <h2>📸 Involvement Gallery</h2>
   <div class="involvement-scroll">
     <div class="involvement-item" onclick="openModal('modalGTIDS')">
@@ -604,37 +721,37 @@ if (!isPopupVisible) {
   </div>
 </div>
 
-  <!-- Modals for Involvement Gallery -->
-  <div id="modalGTIDS" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-      <h3>GTIDS Presentation at SUK Selangor</h3>
-      <p><strong>Date:</strong> February 2025</p>
-      <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
-    </div>
+<!-- Modals for Involvement Gallery -->
+<div id="modalGTIDS" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+    <h3>GTIDS Presentation at SUK Selangor</h3>
+    <p><strong>Date:</strong> February 2025</p>
+    <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
   </div>
+</div>
 
-  <div id="modalIntern" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modalIntern')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-      <h3>Internship at BERNAMA Cybersecurity Unit</h3>
-      <p><strong>Date:</strong> January 2025</p>
-      <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
-    </div>
+<div id="modalIntern" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+    <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+    <p><strong>Date:</strong> January 2025</p>
+    <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
   </div>
+</div>
 
-  <div id="modalSULAM" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-      <h3>SULAM 2024 Digital Outreach Project</h3>
-      <p><strong>Date:</strong> March 2024</p>
-      <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
-    </div>
+<div id="modalSULAM" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+    <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+    <h3>SULAM 2024 Digital Outreach Project</h3>
+    <p><strong>Date:</strong> March 2024</p>
+    <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
   </div>
-  
+</div>
+
 <div id="modalFskik" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('modalFskik')">&times;</span>
@@ -655,107 +772,104 @@ if (!isPopupVisible) {
   </div>
 </div>
 
-  <!----------SCRIPT SECTION HERE----------->
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    }
-  </script>
-
-  <script>
-  function scrollGallery(offset) {
-    document.querySelector('.involvement-gallery').scrollBy({
-      left: offset,
-      behavior: 'smooth'
+<!----------SCRIPT SECTION HERE----------->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
     });
   }
 </script>
 
-  <!-- Footer Contact Info - OPTIMIZED VERSION -->
-<section class="py-2 text-white" style="background-color: #1f1f1f;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2" style="font-size: 0.85rem; line-height: 1.3;">
-          
-          <!-- Email -->
-          <div class="d-flex align-items-center">
-            <i class="fas fa-envelope me-1" style="font-size: 0.8rem;"></i>
-            <a href="mailto:mirzaazhar3234@gmail.com" class="text-white text-decoration-none" target="_blank">
-              mirzaazhar3234@gmail.com
-            </a>
-          </div>
+<script>
+function scrollGallery(offset) {
+  document.querySelector('.involvement-gallery').scrollBy({
+    left: offset,
+    behavior: 'smooth'
+  });
+}
+</script>
 
-          <!-- Divider -->
-          <div class="vr d-none d-md-block" style="height: 12px;"></div>
-
-          <!-- GitHub -->
-          <div class="d-flex align-items-center">
-            <i class="fab fa-github me-1" style="font-size: 0.8rem;"></i>
-            <a href="https://github.com/mirzaazhar172" class="text-white text-decoration-none" target="_blank">
-              GitHub
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="vr d-none d-md-block" style="height: 12px;"></div>
-
-          <!-- LinkedIn -->
-          <div class="d-flex align-items-center">
-            <i class="fab fa-linkedin me-1" style="font-size: 0.8rem;"></i>
-            <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" class="text-white text-decoration-none" target="_blank">
-              LinkedIn
-            </a>
-          </div>
-
-          <!-- Divider -->
-          <div class="vr d-none d-md-block" style="height: 12px;"></div>
-
-          <!-- Copyright -->
-          <div>
-            <span style="font-size: 0.8rem; opacity: 0.8;">© 2025 Ahmad Mirza Azhar. All rights reserved.</span>
-          </div>
-
-        </div>
+<!-- Footer Contact Info - FIXED VERSION -->
+<footer style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); width: 100vw; margin-left: calc(-50vw + 50%); padding: 12px 0; color: white; margin-top: 30px;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 25px; font-size: 14px;">
+      
+      <!-- Email -->
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-envelope" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
+        <a href="mailto:mirzaazhar3234@gmail.com" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
+           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
+           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
+          mirzaazhar3234@gmail.com
+        </a>
       </div>
+
+      <!-- Divider -->
+      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
+
+      <!-- GitHub -->
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="fab fa-github" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
+        <a href="https://github.com/mirzaazhar172" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
+           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
+           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
+          GitHub
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
+
+      <!-- LinkedIn -->
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <i class="fab fa-linkedin" style="font-size: 16px; opacity: 0.9; width: 18px; text-align: center;"></i>
+        <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" style="color: #ffffff; text-decoration: none; transition: all 0.3s ease;" 
+           onmouseover="this.style.color='#64b5f6'; this.style.transform='translateY(-1px)'" 
+           onmouseout="this.style.color='#ffffff'; this.style.transform='translateY(0)'" target="_blank">
+          LinkedIn
+        </a>
+      </div>
+
+      <!-- Divider -->
+      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2); margin: 0 5px;"></div>
+
+      <!-- Copyright -->
+      <div style="color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 300; letter-spacing: 0.5px;">
+        © 2025 Ahmad Mirza Azhar. All rights reserved.
+      </div>
+
     </div>
   </div>
-</section>
+</footer>
 
-  <style>
-  /* Additional CSS for super clean footer */
-  .footer-optimized {
-    background-color: #1f1f1f;
-    padding: 12px 0; /* Reduced from py-3 */
-    color: white;
+<style>
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  footer div[style*="display: flex"] {
+    flex-direction: column !important;
+    gap: 15px !important;
+    text-align: center;
   }
-  .footer-optimized .container {
-    max-width: 1140px;
+  
+  footer div[style*="width: 1px"] {
+    display: none !important;
   }
-  .footer-optimized a:hover {
-    color: #ccc !important;
-    transition: color 0.2s ease;
+  
+  footer div[style*="font-size: 14px"] div {
+    font-size: 13px !important;
   }
-  .footer-optimized .vr {
-    opacity: 0.3;
-    width: 1px;
-    height: 12px;
-  }
-  .footer-optimized i {
-    opacity: 0.8;
-  }
-  </style>
+}
+</style>
 
 </body>
 </html>
