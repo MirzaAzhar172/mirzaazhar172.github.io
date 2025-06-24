@@ -152,6 +152,26 @@
       height: 180px;
       object-fit: cover;
     }
+     .filter-dropdown {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .filter-dropdown select {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .new-badge {
+      background: red;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 6px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
   </style>
 </head>
 <body>
@@ -170,113 +190,136 @@
       <h2>What's New</h2>
       <h3>Technical Blog posts, tutorials & dev notes</h3>
     </div>
-    <div class="whatsnew-scroll">
-         <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-          </div>
-          <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-            <source src="assets/videos/seda2024.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-          <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+
+    <div style="text-align: right; margin-bottom: 1rem;">
+  <label for="categoryFilter" style="font-weight: 600;">Filter by:</label>
+  <select id="categoryFilter" onchange="filterNews()" style="padding: 5px 10px; border-radius: 8px; margin-left: 0.5rem;">
+    <option value="all">All</option>
+    <option value="flutter">Flutter</option>
+    <option value="ai">AI</option>
+    <option value="iot">IoT</option>
+    <option value="cybersecurity">Cybersecurity</option>
+  </select>
+</div>
+
+<div class="whatsnew-scroll">
+  <div class="col-auto" data-category="iot">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
         </div>
+        <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+          <source src="assets/videos/seda2024.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+        <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
       </div>
-    </div>
-      <div class="col-auto">
-        <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('modalDrowyLogic')">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-code fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/drowyapp.jpg" alt="DROWY app">
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Flutter Variable & Conditional Logic in Drowy App (drowsiness count++) / Yawn </div>
-            <div class="portfolio-caption-subheading text-muted">2025 Notes</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('newsModalGTIDSFlow')">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/microsleepflow.png" alt="GTIDS Flow" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">GTIDS24: Flowchart of Apps and How it Works?</div>
-            <div class="portfolio-caption-subheading text-muted">July 2025</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto">
-      <div class="portfolio-item">
-        <a class="portfolio-link" href="#" onclick="openModal('newsModalEvoCity')">
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-          </div>
-          <img class="img-fluid" src="assets/img/portfolio/Gallery/avatarchatbot.jpg" alt="EVO City AI Chatbox" />
-        </a>
-        <div class="portfolio-caption">
-          <div class="portfolio-caption-heading">Combination Multilanguage A.I, Detector and Text-to-Speech (TTS) </div>
-          <div class="portfolio-caption-subheading text-muted">June 2025</div>
-        </div>
-      </div>
-     </div>
-      <div class="col-auto">
-        <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">OpenCTI: Threat Intelligence Platform for Cybersecurity Monitoring & Analysis</div>
-            <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="portfolio-item">
-          <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Maltrail + Arkime: Real-Time Suspicious Traffic Detection & Packet Investigation</div>
-            <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-auto">
-        <div class="portfolio-item">
-               <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
-                 <div class="portfolio-hover">
-                  <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                 </div>
-                <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-                    <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                 </video>
-               </a>
-                <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Real-Time Microsleep & Drowsiness Detection System – IoT Prototype with Facial Landmark Tracking</div>
-                 <div class="portfolio-caption-subheading text-muted">July 2024</div>
-               </div>
-            </div>
-         </div>
     </div>
   </div>
+
+  <div class="col-auto" data-category="flutter">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('modalDrowyLogic')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-code fa-3x"></i></div>
+        </div>
+        <img class="img-fluid" src="assets/img/portfolio/Gallery/drowyapp.jpg" alt="DROWY app">
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Flutter Variable & Conditional Logic in Drowy App</div>
+        <div class="portfolio-caption-subheading text-muted">2025 Notes</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="ai">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalGTIDSFlow')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+        </div>
+        <img class="img-fluid" src="assets/img/portfolio/Gallery/microsleepflow.png" alt="GTIDS Flow" />
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">GTIDS24: Flowchart of Apps and How it Works?</div>
+        <div class="portfolio-caption-subheading text-muted">July 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="ai">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalEvoCity')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+        </div>
+        <img class="img-fluid" src="assets/img/portfolio/Gallery/avatarchatbot.jpg" alt="EVO City AI Chatbox" />
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Combination Multilanguage A.I, Detector and Text-to-Speech (TTS)</div>
+        <div class="portfolio-caption-subheading text-muted">June 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="cybersecurity">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalOpenCTI')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+        </div>
+        <div style="position: relative;">
+          <img class="img-fluid" src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI" />
+          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
+        </div>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">OpenCTI: Threat Intelligence Platform for Cybersecurity Monitoring & Analysis</div>
+        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="cybersecurity">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalMaltrail')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+        </div>
+        <div style="position: relative;">
+          <img class="img-fluid" src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail Arkime" />
+          <span style="position:absolute; top:10px; right:10px; background:red; color:white; padding:2px 6px; font-size: 0.75rem; border-radius: 4px;">NEW</span>
+        </div>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Maltrail + Arkime: Real-Time Suspicious Traffic Detection & Packet Investigation</div>
+        <div class="portfolio-caption-subheading text-muted">Jan 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-auto" data-category="iot">
+    <div class="portfolio-item">
+      <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+        <div class="portfolio-hover">
+          <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+        </div>
+        <video muted autoplay loop playsinline style="width: 100%; border-radius: 8px;" poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+          <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </a>
+      <div class="portfolio-caption">
+        <div class="portfolio-caption-heading">Real-Time Microsleep & Drowsiness Detection System – IoT Prototype</div>
+        <div class="portfolio-caption-subheading text-muted">July 2024</div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--------Modal for SEDA2024----->
   <div id="newsModalSEDA" class="modal">
@@ -636,8 +679,21 @@ if (!isPopupVisible) {
     });
   }
 </script>
-</body>
-</html>
+
+  <script>
+  function filterNews() {
+    const category = document.getElementById("categoryFilter").value;
+    const items = document.querySelectorAll(".whatsnew-scroll .col-auto");
+    items.forEach(item => {
+      const type = item.getAttribute("data-category");
+      if (category === "all" || type === category) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
