@@ -172,6 +172,36 @@
       top: 8px;
       right: 8px;
     }
+    .video-section {
+      margin-top: 4rem;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .video-section h2 {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .video-section .whatsnew-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-bottom: 1rem;
+    }
+    .video-section .col-auto {
+      flex: 0 0 auto;
+      width: 280px;
+      scroll-snap-align: start;
+    }
+    .portfolio-item video {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -284,6 +314,8 @@
     </div>
   </div>
 
+  </div>
+
       <script>
   function filterNews() {
     const category = document.getElementById("categoryFilter").value;
@@ -381,10 +413,10 @@ if (!isPopupVisible) {
       We're working together with our research officer <strong>Shafurah BHR</strong>, and our project leaders <strong>Dr. Izzad</strong> & <strong>Dr. Norkhushaini Awang</strong>.
     </p>
     <p>
-      We started building the system around mid-Ramadan and now we’re at about <strong>94% completion</strong>. Currently entering the testing & maintenance phase before deployment as a real product.
+      We started building the system around mid-Ramadan and now we're at about <strong>94% completion</strong>. Currently entering the testing & maintenance phase before deployment as a real product.
     </p>
     <p>
-      The idea is to make this A.I not just smart, but also helpful especially if you’re <strong>driving or working late</strong>. Still improving things bit by bit, but so far it’s been a fun journey building this 🙌
+      The idea is to make this A.I not just smart, but also helpful especially if you're <strong>driving or working late</strong>. Still improving things bit by bit, but so far it's been a fun journey building this 🙌
     </p>
   </div>
 </div>
@@ -407,7 +439,7 @@ if (!isPopupVisible) {
     <h3>Maltrail and How It Works with Arkime</h3>
     <p><strong>Date:</strong> July 2025</p>
     <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
-    <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime’s search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
+    <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime's search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
     <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
   </div>
 </div>
@@ -444,6 +476,109 @@ if (!isPopupVisible) {
   }
 </style>
 
+<div class="divider"></div>
+
+<section class="video-section container">
+  <h2>🎬 Video Highlights</h2>
+  <div class="whatsnew-scroll">
+
+    <div class="col-auto">
+      <div class="portfolio-item">
+        <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+          </div>
+          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+            <source src="assets/videos/seda2024.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+          <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-auto">
+      <div class="portfolio-item">
+        <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+          <div class="portfolio-hover">
+            <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+          </div>
+          <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+            <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </a>
+        <div class="portfolio-caption">
+          <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
+          <div class="portfolio-caption-subheading text-muted">July 2024</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal for SEDA2024 -->
+<div id="newsModalSEDA" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
+    <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+      <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
+    <p><strong>Date:</strong> April 2024</p>
+    <h4>🎥 Video Context:</h4>
+    <ul>
+      <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
+      <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
+    </ul>
+    <h4>🚀 Purpose & Vision:</h4>
+    <ul>
+      <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
+      <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
+      <li>My first step in sharing innovation to a broader audience.</li>
+    </ul>
+    <h4>🔖 Hashtags:</h4>
+    <p style="font-size: 0.9rem; color: #666;">
+      #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
+    </p>
+  </div>
+</div>
+
+<!-- Modal for Microsleep Demo -->
+<div id="newsModalMicrosleepDemo" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
+    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+      <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>Microsleep Detection System - IoT Prototype</h3>
+    <p><strong>Date:</strong> June 2025</p>
+    <h4>🔧 Project Highlights:</h4>
+    <ul>
+      <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
+      <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
+      <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
+      <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
+    </ul>
+    <h4>🎯 Objectives:</h4>
+    <ul>
+      <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
+      <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
+      <li>Test the usability and effectiveness of the system.</li>
+    </ul>
+    <h4>💡 Problem Statement:</h4>
+    <ul>
+      <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
+      <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
+    </ul>
+  </div>
+</div>
 
 <div class="divider"></div>
 
