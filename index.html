@@ -341,60 +341,6 @@
       margin-bottom: 6px;
     }
 
-    /* Footer */
-    .footer-fixed {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-      width: 100%;
-      padding: 15px 20px;
-      margin-top: auto;
-      font-size: 12px;
-      color: white;
-      user-select: none;
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 18px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 10px;
-    }
-    .footer-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #ffffff;
-      font-weight: 400;
-      transition: all 0.3s ease;
-      padding: 3px 0;
-      cursor: pointer;
-      font-size: 12px;
-    }
-    .footer-item:hover {
-      color: #64b5f6 !important;
-      transform: translateY(-1px);
-    }
-    .footer-item i {
-      font-size: 14px;
-      opacity: 0.9;
-      width: 18px;
-      text-align: center;
-    }
-    .footer-divider {
-      width: 1px;
-      height: 16px;
-      background: rgba(255, 255, 255, 0.2);
-      margin: 0 4px;
-    }
-    .footer-copyright {
-      color: rgba(255, 255, 255, 0.6);
-      font-weight: 300;
-      letter-spacing: 0.5px;
-      font-size: 11px;
-    }
-
     /* Responsive */
     @media (max-width: 768px) {
       .guide-grid {
@@ -403,16 +349,64 @@
       .header h1 {
         font-size: 1.6rem;
       }
-      .footer-inner {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
+      .custom-footer {
+        background: #1f1f1f;
+        color: #fff;
+        font-size: 13px;
+        padding: 10px 0;
+        margin-top: 40px;
       }
-      .footer-divider {
-        display: none;
+      .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 12px;
+      }
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
       }
       .footer-item {
-        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap;
+      }
+      .footer-item a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-weight: 500;
+      }
+      .footer-item a:hover {
+        color: #64b5f6;
+      }
+      .footer-divider {
+        width: 1px;
+        height: 18px;
+        background: rgba(255,255,255,0.18);
+        margin: 0 6px;
+        display: block;
+      }
+      .footer-item.copyright {
+        font-size: 12px;
+        color: rgba(255,255,255,0.6);
+        font-weight: 400;
+        margin-left: 0;
+      }
+      @media (max-width: 700px) {
+        .footer-row {
+          flex-direction: column;
+          gap: 5px;
+        }
+        .footer-divider {
+          display: none;
+        }
+        .footer-item.copyright {
+          margin-top: 4px;
+        }
       }
     }
   </style>
@@ -550,13 +544,32 @@
     </div>
   </div>
 
-  <div class="footer-fixed">
-    <div class="footer-inner">
-      <a href="#" class="footer-item"><i class="fab fa-github"></i> GitHub</a>
+ <!-- Footer Contact Info -->
+<footer class="custom-footer">
+  <div class="footer-container">
+    <div class="footer-row">
+      <!-- Email -->
+      <div class="footer-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:mirzaazhar3234@gmail.com" target="_blank">mirzaazhar3234@gmail.com</a>
+      </div>
       <div class="footer-divider"></div>
-      <a href="#" class="footer-item"><i class="fab fa-twitter"></i> Twitter</a>
+      <!-- GitHub -->
+      <div class="footer-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/mirzaazhar172" target="_blank">GitHub</a>
+      </div>
       <div class="footer-divider"></div>
-      <span class="footer-copyright">© 2025 Mirza Azhar</span>
+      <!-- LinkedIn -->
+      <div class="footer-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" target="_blank">LinkedIn</a>
+      </div>
+      <div class="footer-divider"></div>
+      <!-- Copyright -->
+      <div class="footer-item copyright">
+        © 2025 Ahmad Mirza Azhar. All rights reserved.
+      </div>
     </div>
   </div>
 
