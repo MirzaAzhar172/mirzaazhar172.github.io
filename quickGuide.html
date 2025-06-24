@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quick Guide / Notes - MIRZA AZHAR</title>
 
-    <!-- TAMBAH FAVICON NI -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/droid-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/droid-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/droid-128x128.png">
-    <!-- END FAVICON -->
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-   <style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/droid-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/droid-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/droid-128x128.png" />
+
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset & base */
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8f9fa;
@@ -21,523 +23,377 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      color: #2c3e50;
     }
-    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    button {
+      font-family: inherit;
+    }
+
+    /* Navbar */
     .navbar {
       background-color: #1f1f1f;
-      padding: 1rem;
+      padding: 1rem 2rem;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
-    
     .navbar a {
       color: white;
       margin: 0 1rem;
-      text-decoration: none;
       font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar a:hover {
+      color: #667eea;
+    }
+    .navbar > div:first-child a {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
 
+    /* Main content container */
     .main-content {
       flex: 1;
       padding: 60px 20px;
+      display: flex;
+      justify-content: center;
     }
-
     .quick-guide-container {
-    max-width: 768px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    padding: 20px 24px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
     }
 
+    /* Header */
     .header {
-        text-align: center;
-        margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 40px;
     }
-
     .header h1 {
-        color: #2c3e50;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
     }
-
     .header p {
-        color: #7f8c8d;
-        font-size: 1.1rem;
+      color: #7f8c8d;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
     }
 
+    /* Guide cards grid */
     .guide-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 25px;
-        margin-bottom: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
     }
 
+    /* Individual guide card */
     .guide-card {
-        background: linear-gradient(145deg, #ffffff, #f8f9fa);
-        border-radius: 15px;
-        padding: 25px;
-        border: 2px solid transparent;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        position: relative;
-        overflow: hidden;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border-radius: 15px;
+      padding: 25px;
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
-
     .guide-card:hover {
-        transform: translateY(-5px);
-        border-color: #667eea;
-        box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+      transform: translateY(-5px);
+      border-color: #667eea;
+      box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
     }
-
     .guide-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #667eea, #764ba2);
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
     }
-
     .guide-card:hover::before {
-        transform: scaleX(1);
+      transform: scaleX(1);
     }
 
+    /* Card header */
     .card-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
     }
-
     .card-icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 15px;
-        color: white;
-        font-size: 1.5rem;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      color: white;
+      font-size: 1.5rem;
+      user-select: none;
     }
-
     .card-title {
-        color: #2c3e50;
-        font-size: 1.4rem;
-        font-weight: 600;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #2c3e50;
+      user-select: none;
     }
 
-    .card-description,
-      .topic-description {
-        text-align: justify;
+    /* Card description */
+    .card-description {
+      color: #7f8c8d;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      user-select: none;
+      flex-grow: 1;
     }
 
+    /* Card actions */
     .card-actions {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      user-select: none;
     }
-
-   .btn {
-      padding: 8px 16px;
+    .btn {
+      padding: 10px 20px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
       font-weight: 500;
-      text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 8px;
       transition: all 0.3s ease;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+      user-select: none;
     }
-
     .btn-primary {
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: white;
     }
-
     .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
     }
-
     .btn-secondary {
-        background: rgba(102, 126, 234, 0.1);
-        color: #667eea;
-        border: 1px solid #667eea;
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      border: 1px solid #667eea;
     }
-
     .btn-secondary:hover {
-        background: #667eea;
-        color: white;
+      background: #667eea;
+      color: white;
     }
 
+    /* Expanded content (hidden by default) */
     .expanded-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
-        margin-top: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      margin-top: 15px;
     }
-
     .expanded-content.active {
-        max-height: 1500px;
+      max-height: 1500px; /* large enough to show content */
     }
 
-    .step-list {
-        background: rgba(102, 126, 234, 0.05);
-        padding: 20px;
-        border-radius: 10px;
-        margin: 15px 0;
-    }
-
-    .step-list h4 {
-        color: #2c3e50;
-        margin-bottom: 15px;
-        font-size: 1.1rem;
-    }
-
-    .step-list ol {
-        padding-left: 20px;
-    }
-
-    .step-list li {
-        color: #34495e;
-        margin-bottom: 8px;
-        line-height: 1.5;
-    }
-
-    /* Networking Notes Specific Styles */
+    /* Networking notes styles */
     .networking-sections {
-        display: flex;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .network-topic {
+      background: linear-gradient(145deg, #f8f9ff, #ffffff);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(102, 126, 234, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+    .network-topic:hover {
+      border-color: rgba(102, 126, 234, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
+    }
+    .topic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .topic-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #2c3e50;
+    }
+    .topic-icon {
+      font-size: 1.2rem;
+    }
+    .expand-arrow {
+      transition: transform 0.3s ease;
+      color: #667eea;
+      user-select: none;
+    }
+    .network-topic.expanded .expand-arrow {
+      transform: rotate(180deg);
+    }
+    .topic-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #7f8c8d;
+      line-height: 1.6;
+    }
+    .network-topic.expanded .topic-content {
+      max-height: 500px;
+    }
+    .topic-description {
+      margin-bottom: 15px;
+    }
+    .network-list {
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .network-list ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .network-list li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+      color: #34495e;
+    }
+
+    /* Example box */
+    .example-box {
+      background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #667eea;
+      color: #2c3e50;
+    }
+    .example-box strong {
+      font-weight: 700;
+    }
+
+    /* Programming notes card content */
+    .programming-content {
+      color: #7f8c8d;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer-fixed {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      width: 100%;
+      padding: 40px 20px;
+      margin-top: auto;
+      color: white;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+    .footer-item:hover {
+      color: #64b5f6 !important;
+      transform: translateY(-1px);
+    }
+    .footer-item i {
+      font-size: 16px;
+      opacity: 0.9;
+      width: 18px;
+      text-align: center;
+    }
+    .footer-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 0 5px;
+    }
+    .footer-copyright {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .guide-grid {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 2rem;
+      }
+      .footer-inner {
         flex-direction: column;
         gap: 15px;
-    }
-
-    .network-topic {
-        background: linear-gradient(145deg, #f8f9ff, #ffffff);
-        border-radius: 12px;
-        padding: 20px;
-        border: 1px solid rgba(102, 126, 234, 0.1);
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .network-topic:hover {
-        border-color: rgba(102, 126, 234, 0.3);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.1);
-    }
-
-    .topic-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    .topic-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #2c3e50;
-        font-weight: 600;
-        font-size: 1.1rem;
-    }
-
-    .topic-icon {
-        font-size: 1.2rem;
-    }
-
-    .expand-arrow {
-        transition: transform 0.3s ease;
-        color: #667eea;
-    }
-
-    .network-topic.expanded .expand-arrow {
-        transform: rotate(180deg);
-    }
-
-    .topic-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .network-topic.expanded .topic-content {
-        max-height: 500px;
-    }
-
-    .topic-description {
-        color: #7f8c8d;
-        line-height: 1.6;
-        margin-bottom: 15px;
-    }
-
-    .network-list {
-        background: rgba(102, 126, 234, 0.05);
-        border-radius: 8px;
-        padding: 15px;
-    }
-
-    .network-list ul {
-        margin: 0;
-        padding-left: 20px;
-    }
-
-    .network-list li {
-        color: #34495e;
-        margin-bottom: 6px;
-        line-height: 1.5;
-    }
-
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 15px 0;
-        background: white;
-        font-size: 0.9rem;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #eee;
-    }
-
-    .comparison-table th {
-        background: linear-gradient(45deg, #667eea, #764ba2);
-        color: white;
-        font-weight: 600;
-    }
-
-    .comparison-table tr:hover {
-        background: rgba(102, 126, 234, 0.05);
-    }
-
-    .example-box {
-        background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
-        border-radius: 8px;
-        padding: 15px;
-        margin: 10px 0;
-        border-left: 4px solid #667eea;
-    }
-
-    .example-box strong {
-        color: #2c3e50;
-    }
-
-    .download-section {
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-        padding: 30px;
-        border-radius: 15px;
         text-align: center;
-    }
-
-    .download-section h3 {
-        margin-bottom: 15px;
-        font-size: 1.5rem;
-    }
-
-    .download-section p {
-        margin-bottom: 25px;
-        opacity: 0.9;
-    }
-
-    .download-buttons {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .btn-download {
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        padding: 12px 25px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-    }
-
-    .btn-download:hover {
-        background: rgba(255, 255, 255, 0.3);
-        border-color: rgba(255, 255, 255, 0.5);
-        transform: translateY(-2px);
-    }
-
-    /* FIXED FOOTER STYLES */
-    .footer-fixed {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin-top: auto;
-    }
-
-
-    .footer-content {
-        padding: 15px 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .footer-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 25px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .footer-item {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 400;
-        transition: all 0.3s ease;
-        padding: 5px 0;
-    }
-
-    .footer-item:hover {
-        color: #64b5f6 !important;
-        transform: translateY(-1px);
-    }
-
-    .footer-item i {
-        font-size: 16px;
-        opacity: 0.9;
-        width: 18px;
-        text-align: center;
-    }
-
-    .footer-divider {
-        width: 1px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        margin: 0 5px;
-    }
-
-    .footer-copyright {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 13px;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-    }
-
-    @media (max-width: 768px) {
-        .guide-grid {
-            grid-template-columns: 1fr;
-        }
-        
-        .header h1 {
-            font-size: 2rem;
-        }
-        
-        .download-buttons {
-            flex-direction: column;
-        }
-
-        .comparison-table {
-            font-size: 0.9rem;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 8px;
-        }
-
-        .footer-inner {
-            flex-direction: column;
-            gap: 15px;
-            text-align: center;
-        }
-        
-        .footer-divider {
-            display: none;
-        }
-        
-        .footer-item {
-            font-size: 13px;
-        }
-
-            .modal {
+      }
+      .footer-divider {
         display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0,0,0,0.5);
       }
-      .modal-content {
-        background-color: #fff;
-        margin: 5% auto;
-        padding: 20px;
-        border-radius: 12px;
-        width: 90%;
-        max-width: 800px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      }
-      .close {
-        float: right;
-        font-size: 24px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-      details {
-        margin-bottom: 15px;
-        background: #f2f2f2;
-        padding: 10px 15px;
-        border-radius: 8px;
-      }
-      .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-      .comparison-table th, .comparison-table td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: left;
-      }
-      .comparison-table th {
-        background-color: #f0f0f0;
+      .footer-item {
+        font-size: 13px;
       }
     }
-    </style>
+  </style>
 </head>
 <body>
-  
-   <div class="navbar">
+  <div class="navbar">
     <div><a href="index.html">MIRZA AZHAR</a></div>
     <div>
       <a href="index.html#portfolio">Projects</a>
@@ -548,120 +404,159 @@
   </div>
 
   <div class="main-content">
-  <!-- Separated Containers: Networking Guide & Programming Cheat Sheet -->
-<div class="quick-guide-container">
-  <div class="header">
-    <h1>🚀 Quick Guide / Cheat Sheet</h1>
-    <p>For personal documentation & reference, and also notes to help other readers with IT field references and polish basic knowledge in I.T</p>
-  </div>
+    <div class="quick-guide-container">
+      <div class="header">
+        <h1>🚀 Quick Guide / Cheat Sheet</h1>
+        <p>For personal documentation & reference, and also notes to help other readers with IT field references and polish basic knowledge in I.T</p>
+      </div>
 
-  <!-- Networking Section -->
-  <div class="container-section">
-    <h2>🌐 Basic Computer Networking Guide</h2>
-    <p class="section-desc">Panduan networking dari asas hingga ke tahap lanjutan dalam bahasa rojak yang chill & mudah faham.</p>
-    <div class="guide-grid">
-      <div class="guide-card">
-        <div class="card-header">
-          <div class="card-icon">🌐</div>
-          <div class="card-title">Basic Networking Notes</div>
+      <div class="guide-grid">
+
+        <!-- Networking Guide Card -->
+        <div class="guide-card" onclick="toggleContent('quick-notes')">
+          <div class="card-header">
+            <div class="card-icon">🌐</div>
+            <div class="card-title">Basic Computer Network for Dummies (Bahasa Melayu Rojak)</div>
+          </div>
+          <div class="card-description">
+            Panduan lengkap networking basics - dari konsep asas hingga protocol advanced dalam bahasa rojak yang mudah faham.
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="event.stopPropagation(); toggleContent('quick-notes')">
+              📖 Baca Networking Notes
+            </button>
+            <a href="notes/networking.pdf" class="btn btn-secondary" download>
+              📄 Download PDF
+            </a>
+          </div>
+          <div class="expanded-content" id="quick-notes">
+            <div class="networking-sections">
+
+              <div class="network-topic" onclick="toggleTopic(this)">
+                <div class="topic-header">
+                  <div class="topic-title">
+                    <span class="topic-icon">🌐</span>
+                    <span>Apa Itu Network?</span>
+                  </div>
+                  <span class="expand-arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                  <div class="topic-description">
+                    Network ni macam jalan raya untuk komputer. Bila dua atau lebih komputer bersambung, dia boleh share info, file, internet, printer, etc.
+                  </div>
+                  <div class="example-box">
+                    <strong>Contoh:</strong> Laptop kau connect ke WiFi rumah - itu dah jadi satu network. Boleh share printer dengan PC lain.
+                  </div>
+                </div>
+              </div>
+
+              <div class="network-topic" onclick="toggleTopic(this)">
+                <div class="topic-header">
+                  <div class="topic-title">
+                    <span class="topic-icon">📡</span>
+                    <span>Jenis-jenis Network</span>
+                  </div>
+                  <span class="expand-arrow">▼</span>
+                </div>
+                <div class="topic-content">
+                  <div class="network-list">
+                    <ul>
+                      <li><strong>LAN (Local Area Network):</strong> Kecil je. Contoh: dalam rumah, sekolah, pejabat kecik.</li>
+                      <li><strong>WAN (Wide Area Network):</strong> Sambungkan banyak LAN dari tempat berbeza. Contoh: Internet.</li>
+                      <li><strong>PAN (Personal Area Network):</strong> Kecil dan peribadi. Contoh: Bluetooth phone ke headphone.</li>
+                      <li><strong>MAN (Metropolitan Area Network):</strong> Cover satu bandar. Macam network provider dalam satu kawasan.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tambah topik lain di sini jika mahu -->
+
+            </div>
+          </div>
         </div>
-        <div class="card-description">Topik seperti OSI Layer, IP Address, TCP/UDP, VLAN dan banyak lagi dalam satu rujukan.</div>
-        <div class="card-actions">
-          <button class="btn btn-primary" onclick="openModal('networkingModal')">📖 Baca Notes</button>
-          <a href="notes/networking.pdf" class="btn btn-secondary" download>📄 Download PDF</a>
+
+        <!-- Programming Guide Card -->
+        <div class="guide-card" onclick="toggleContent('programming-notes')">
+          <div class="card-header">
+            <div class="card-icon">💻</div>
+            <div class="card-title">Programming Cheat Sheet</div>
+          </div>
+          <div class="card-description">
+            Quick reference untuk programming tasks harian, syntax dan tools yang biasa digunakan.
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-primary" onclick="event.stopPropagation(); toggleContent('programming-notes')">
+              📖 Baca Programming Notes
+            </button>
+            <a href="notes/programming.pdf" class="btn btn-secondary" download>
+              📄 Download PDF
+            </a>
+          </div>
+          <div class="expanded-content" id="programming-notes">
+            <div class="programming-content">
+              <h4>Git Commands</h4>
+              <ul>
+                <li><code>git clone [url]</code> - Clone repo dari remote ke local.</li>
+                <li><code>git add .</code> - Stage semua perubahan.</li>
+                <li><code>git commit -m "message"</code> - Commit dengan mesej.</li>
+                <li><code>git push</code> - Push commit ke remote.</li>
+                <li><code>git pull</code> - Tarik update dari remote.</li>
+              </ul>
+
+              <h4>Python Basics</h4>
+              <ul>
+                <li>Indentation penting dalam Python.</li>
+                <li>Gunakan <code>def</code> untuk fungsi.</li>
+                <li>List comprehensions memudahkan loop.</li>
+              </ul>
+
+              <h4>Web Development Essentials</h4>
+              <ul>
+                <li>HTML untuk struktur.</li>
+                <li>CSS untuk gaya.</li>
+                <li>JavaScript untuk interaktiviti.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- Programming Section -->
-  <div class="container-section">
-    <h2>💻 Programming Cheat Sheet</h2>
-    <p class="section-desc">Quick reference untuk programming tasks harian, syntax dan tools yang biasa digunakan.</p>
-    <div class="guide-grid">
-      <div class="guide-card">
-        <div class="card-header">
-          <div class="card-icon">💻</div>
-          <div class="card-title">Programming Notes</div>
-        </div>
-        <div class="card-description">Git commands, Python basics dan web dev essentials semuanya dalam satu tempat.</div>
-        <div class="card-actions">
-          <button class="btn btn-primary" onclick="openModal('programmingModal')">📖 Baca Notes</button>
-          <a href="notes/programming.pdf" class="btn btn-secondary" download>📄 Download PDF</a>
-        </div>
-      </div>
+  <div class="footer-fixed">
+    <div class="footer-inner">
+      <a href="#" class="footer-item"><i class="fab fa-github"></i> GitHub</a>
+      <div class="footer-divider"></div>
+      <a href="#" class="footer-item"><i class="fab fa-twitter"></i> Twitter</a>
+      <div class="footer-divider"></div>
+      <span class="footer-copyright">© 2025 Mirza Azhar</span>
     </div>
   </div>
-</div>
 
-<!-- Networking Modal -->
-<div id="networkingModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('networkingModal')">&times;</span>
-    <h2>📘 Networking Notes</h2>
-    <div class="networking-sections">
-      <details>
-        <summary><strong>OSI Layer</strong></summary>
-        <p>OSI ada 7 layers: Application, Presentation, Session, Transport, Network, Data Link, Physical.</p>
-        <table class="comparison-table">
-          <tr><th>Layer</th><th>Fungsi</th><th>Contoh</th></tr>
-          <tr><td>Application</td><td>User Interface</td><td>Browser</td></tr>
-          <tr><td>Transport</td><td>End-to-End</td><td>TCP/UDP</td></tr>
-        </table>
-      </details>
-      <details>
-        <summary><strong>IP Address & Subnet</strong></summary>
-        <p>Alamat untuk device dalam network. IPv4 ada 4 octet, IPv6 lebih panjang. Subnet digunakan untuk pecah network besar kepada kecil. Contoh: 192.168.1.0/24</p>
-      </details>
-      <details>
-        <summary><strong>TCP vs UDP</strong></summary>
-        <ul>
-          <li><strong>TCP</strong>: Reliable, ada 3-way handshake (SYN-ACK), data sampai secara urutan.</li>
-          <li><strong>UDP</strong>: Lebih pantas, tapi tiada jaminan delivery. Sesuai untuk video call, game.</li>
-        </ul>
-      </details>
-    </div>
-  </div>
-</div>
+  <script>
+    // Toggle expanded content (notes)
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      if (!content) return;
+      content.classList.toggle('active');
+    }
 
-<!-- Programming Modal -->
-<div id="programmingModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('programmingModal')">&times;</span>
-    <h2>📘 Programming Notes</h2>
-    <details>
-      <summary><strong>Git Commands</strong></summary>
-      <ul>
-        <li><code>git init</code> – mula kan repo</li>
-        <li><code>git add .</code> – stage semua file</li>
-        <li><code>git commit -m "msg"</code> – simpan perubahan</li>
-      </ul>
-    </details>
-    <details>
-      <summary><strong>Python</strong></summary>
-      <ul>
-        <li><code>print("Hello World")</code></li>
-        <li><code>def func():</code> – define function</li>
-        <li><code>for i in range(5):</code> – loop 5 kali</li>
-      </ul>
-    </details>
-  </div>
-</div>
+    // Toggle individual topic inside networking notes
+    function toggleTopic(element) {
+      element.classList.toggle('expanded');
+    }
 
-<script>
-  function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-  function closeModal(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target == modal) modal.style.display = "none";
+    // Prevent card click when clicking buttons inside
+    document.querySelectorAll('.guide-card .btn').forEach(btn => {
+      btn.addEventListener('click', e => e.stopPropagation());
     });
-  };
-</script>
 
+    // Download PDF placeholder function
+    function downloadPDF(name) {
+      alert('Download PDF for ' + name + ' is not implemented in this demo.');
+    }
+  </script>
 </body>
 </html>
