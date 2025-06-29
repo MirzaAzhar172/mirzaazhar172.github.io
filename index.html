@@ -233,19 +233,109 @@
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
+        
+        <!-- PUBLICATIONS and AWARDS -->
+            <section class="publications section" id="publications">
+              <h2 class="section-title">Publications</h2>
+              <div class="publications__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem;">
+                <div class="publication__item">
+                  <p class="publication__text">IoT-Based Solar Energy - IJORTAS, Vol. 3, No. 2 – Sept 2021</p>
                 </div>
+                <div class="publication__item">
+                  <p class="publication__text">Intelligent Egg Incubator - IJORTAS, Vol. 2, No. 2 – Sept 2020</p>
+                </div>
+              </div>
             </section>
+
+            <section class="awards section" id="awards">
+              <h2 class="section-title">Awards & Recognition</h2>
+              <div class="awards__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem;">
+                <div class="award__card" onclick="openAwardPopup('gtids')">
+                  <img src="assets/img/awards/gtids.png" alt="GTIDS" class="award__image">
+                  <h3 class="award__title">Platinum - GTIDS 2024</h3>
+                </div>
+                <div class="award__card" onclick="openAwardPopup('jiiicas')">
+                  <img src="assets/img/awards/jiiicas.png" alt="JIIICAS" class="award__image">
+                  <h3 class="award__title">Gold - JIIICAS 2024</h3>
+                </div>
+                <div class="award__card" onclick="openAwardPopup('fyp')">
+                  <img src="assets/img/awards/fyp.png" alt="FYP" class="award__image">
+                  <h3 class="award__title">Best IoT FYP - UPSI</h3>
+                </div>
+              </div>
+            </section>
+            
+            <!-- Popup Modal -->
+            <div id="awardPopup" class="award__popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+              <div class="popup__content" style="background:white; padding:2rem; border-radius:10px; max-width:500px;">
+                <span onclick="closeAwardPopup()" style="cursor:pointer; float:right; font-weight:bold;">&times;</span>
+                <h3 id="popupTitle"></h3>
+                <p id="popupDescription"></p>
+                <img id="popupImage" src="" alt="Award Image" style="width:100%; border-radius:8px; margin-top:1rem;">
+              </div>
+            </div>
+            
+            <script>
+              function openAwardPopup(id) {
+                const popup = document.getElementById('awardPopup');
+                const title = document.getElementById('popupTitle');
+                const description = document.getElementById('popupDescription');
+                const image = document.getElementById('popupImage');
+            
+                const data = {
+                  gtids: {
+                    title: "GTIDS 2024 - Platinum Award",
+                    description: "Champion in Global Transformation Research Grant (GTIDS 2024) for developing a mobile AI Chatbot Anti-Microsleep App.",
+                    img: "assets/img/awards/gtids.png"
+                  },
+                  jiiicas: {
+                    title: "JIIICAS 2024 - Gold Award",
+                    description: "Gold medalist at JIIICAS 2024 for IoT Alarm System to prevent microsleep events.",
+                    img: "assets/img/awards/jiiicas.png"
+                  },
+                  fyp: {
+                    title: "Best IoT FYP - UPSI",
+                    description: "Awarded Best IoT Final Year Project at FSKIK Exhibition, UPSI for Smart Car Control using IoT.",
+                    img: "assets/img/awards/fyp.png"
+                  }
+                };
+            
+                const selected = data[id];
+                title.innerText = selected.title;
+                description.innerText = selected.description;
+                image.src = selected.img;
+            
+                popup.style.display = 'flex';
+              }
+            
+              function closeAwardPopup() {
+                document.getElementById('awardPopup').style.display = 'none';
+              }
+            </script>
+            
+            <style>
+              .publication__item {
+                background: #f2f2f2;
+                padding: 1rem 2rem;
+                border-radius: 8px;
+                min-width: 250px;
+              }
+              .award__card {
+                background: white;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                padding: 1rem;
+                border-radius: 10px;
+                min-width: 250px;
+                cursor: pointer;
+                text-align: center;
+              }
+              .award__image {
+                width: 100%;
+                border-radius: 8px;
+                max-height: 120px;
+                object-fit: cover;
+              }
+            </style>
         </main>
 
         <!--===== FOOTER =====-->
