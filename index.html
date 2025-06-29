@@ -372,11 +372,15 @@
         </main>
 
         <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Mirza</p>
-            <p class="footer__copy">&#169; Mirza@47000. All rights reserved</p>
+        <footer class="footer" style="background-color: #f9f9f9; padding: 2rem 1rem; text-align: center;">
+            <h2 class="footer__title" style="font-size: 1.5rem; margin-bottom: 1rem;">Get in Touch</h2>
+            <form action="mailto:your.email@example.com" method="post" enctype="text/plain" style="max-width: 500px; margin: 0 auto;">
+                <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 5px;">
+                <textarea name="message" placeholder="Your Message" rows="4" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 1rem;"></textarea>
+                <button type="submit" style="padding: 0.8rem 2rem; background-color: #4f46e5; color: white; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+            </form>
+            <p class="footer__copy" style="margin-top: 2rem; color: #666;">&#169; Mirza@47000. All rights reserved</p>
         </footer>
-
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
