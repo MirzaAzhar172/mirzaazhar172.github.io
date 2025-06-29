@@ -368,72 +368,157 @@
                   }
                 </script>
 
-            <section class="awards section" id="awards">
-              <h2 class="section-title">Awards & Recognition</h2>
-              <div class="awards__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; justify-content: center;">
-                <div class="award__card" onclick="openAwardPopup('gtids')">
-                  <img src="assets/img/awards/platinum_award.png" alt="GTIDS" class="platinumAward">
-                  <h3 class="award__title">Platinum - GTIDS 2024</h3>
+            <!-- ===== AWARDS SECTION ===== -->
+                <section class="awards section" id="awards">
+                  <h2 class="section-title">Awards & Recognition</h2>
+                  <div class="awards__container">
+                    <div class="award__card" onclick="openAwardPopup('gtids')">
+                      <img src="assets/img/awards/platinum_award.png" alt="GTIDS">
+                      <h3 class="award__title">Platinum - GTIDS 2024</h3>
+                    </div>
+                    <div class="award__card" onclick="openAwardPopup('jiiicas')">
+                      <img src="assets/img/awards/jiicas24.png" alt="JIIICAS">
+                      <h3 class="award__title">Gold - JIIICAS 2024</h3>
+                    </div>
+                    <div class="award__card" onclick="openAwardPopup('fyp')">
+                      <img src="assets/img/awards/best_iot.png" alt="FYP">
+                      <h3 class="award__title">Best IoT FYP - UPSI</h3>
+                    </div>
+                  </div>
+                </section>
+                
+                <!-- ===== POPUP MODAL ===== -->
+                <div id="awardPopup" class="award__popup">
+                  <div class="popup__content">
+                    <span class="popup__close" onclick="closeAwardPopup()">&times;</span>
+                    <h3 id="popupTitle"></h3>
+                    <p id="popupDescription"></p>
+                    <img id="popupImage" src="" alt="Award Image">
+                  </div>
                 </div>
-                <div class="award__card" onclick="openAwardPopup('jiiicas')">
-                  <img src="assets/img/awards/jiicas24.png" alt="JIIICAS" class="jiicas24">
-                  <h3 class="award__title">Gold - JIIICAS 2024</h3>
-                </div>
-                <div class="award__card" onclick="openAwardPopup('fyp')">
-                  <img src="assets/img/awards/best_iot.png" alt="FYP" class="bestIoT">
-                  <h3 class="award__title">Best IoT FYP - UPSI</h3>
-                </div>
-              </div>
-            </section>
-            
-            <!-- Popup Modal -->
-            <div id="awardPopup" class="award__popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
-              <div class="popup__content" style="background:white; padding:2rem; border-radius:10px; max-width:500px;">
-                <span onclick="closeAwardPopup()" style="cursor:pointer; float:right; font-weight:bold;">&times;</span>
-                <h3 id="popupTitle"></h3>
-                <p id="popupDescription"></p>
-                <img id="popupImage" src="" alt="Award Image" style="width:100%; border-radius:8px; margin-top:1rem;">
-              </div>
-            </div>
-            
-            <script>
-              function openAwardPopup(id) {
-                const popup = document.getElementById('awardPopup');
-                const title = document.getElementById('popupTitle');
-                const description = document.getElementById('popupDescription');
-                const image = document.getElementById('popupImage');
-            
-                const data = {
-                  gtids: {
-                    title: "GTIDS 2024 - Platinum Award",
-                    description: "Champion in Global Transformation Research Grant (GTIDS 2024) for developing a mobile AI Chatbot Anti-Microsleep App.",
-                    img: "assets/img/awards/platinum_award.png"
-                  },
-                  jiiicas: {
-                    title: "JIIICAS 2024 - Gold Award",
-                    description: "Gold medalist at JIIICAS 2024 for IoT Alarm System to prevent microsleep events.",
-                    img: "assets/img/awards/jiicas24.png"
-                  },
-                  fyp: {
-                    title: "Best IoT FYP - UPSI",
-                    description: "Awarded Best IoT Final Year Project at FSKIK Exhibition, UPSI for Smart Car Control using IoT.",
-                    img: "assets/img/awards/best_iot.png"
+                
+                <!-- ===== CSS STYLE ===== -->
+                <style>
+                  .awards__container {
+                    display: flex;
+                    overflow-x: auto;
+                    gap: 1rem;
+                    padding: 1rem;
+                    justify-content: center;
                   }
-                };
-            
-                const selected = data[id];
-                title.innerText = selected.title;
-                description.innerText = selected.description;
-                image.src = selected.img;
-            
-                popup.style.display = 'flex';
-              }
-            
-              function closeAwardPopup() {
-                document.getElementById('awardPopup').style.display = 'none';
-              }
-            </script>
-            
+                
+                  .award__card {
+                    min-width: 220px;
+                    background-color: #f9f9f9;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    padding: 1rem;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: transform 0.2s ease;
+                  }
+                
+                  .award__card:hover {
+                    transform: scale(1.03);
+                  }
+                
+                  .award__card img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 140px;
+                    object-fit: contain;
+                    margin-bottom: 0.5rem;
+                  }
+                
+                  .award__title {
+                    font-size: 1rem;
+                    color: #1e3a8a;
+                    font-weight: 600;
+                  }
+                
+                  .award__popup {
+                    display: none;
+                    position: fixed;
+                    top: 0; left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.6);
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 1000;
+                  }
+                
+                  .popup__content {
+                    background-color: white;
+                    padding: 1.5rem;
+                    border-radius: 10px;
+                    max-width: 400px;
+                    width: 90%;
+                    text-align: center;
+                    position: relative;
+                    animation: fadeIn 0.3s ease;
+                  }
+                
+                  .popup__close {
+                    position: absolute;
+                    top: 10px;
+                    right: 14px;
+                    font-size: 1.5rem;
+                    color: #333;
+                    cursor: pointer;
+                  }
+                
+                  .popup__content img {
+                    width: 100%;
+                    margin-top: 1rem;
+                    border-radius: 8px;
+                  }
+                
+                  @keyframes fadeIn {
+                    from { opacity: 0; transform: scale(0.95); }
+                    to { opacity: 1; transform: scale(1); }
+                  }
+                </style>
+                
+                <!-- ===== JAVASCRIPT ===== -->
+                <script>
+                  function openAwardPopup(id) {
+                    const popup = document.getElementById('awardPopup');
+                    const title = document.getElementById('popupTitle');
+                    const description = document.getElementById('popupDescription');
+                    const image = document.getElementById('popupImage');
+                
+                    const data = {
+                      gtids: {
+                        title: "GTIDS 2024 - Platinum Award",
+                        description: "Champion in Global Transformation Research Grant (GTIDS 2024) for developing a mobile AI Chatbot Anti-Microsleep App.",
+                        img: "assets/img/awards/platinum_award.png"
+                      },
+                      jiiicas: {
+                        title: "JIIICAS 2024 - Gold Award",
+                        description: "Gold medalist at JIIICAS 2024 for IoT Alarm System to prevent microsleep events.",
+                        img: "assets/img/awards/jiicas24.png"
+                      },
+                      fyp: {
+                        title: "Best IoT FYP - UPSI",
+                        description: "Awarded Best IoT Final Year Project at FSKIK Exhibition, UPSI for Smart Car Control using IoT.",
+                        img: "assets/img/awards/best_iot.png"
+                      }
+                    };
+                
+                    const selected = data[id];
+                    title.innerText = selected.title;
+                    description.innerText = selected.description;
+                    image.src = selected.img;
+                
+                    popup.style.display = 'flex';
+                  }
+                
+                  function closeAwardPopup() {
+                    document.getElementById('awardPopup').style.display = 'none';
+                  }
+                </script>
+
             <style>
               .publication__item {
                 background: #f2f2f2;
