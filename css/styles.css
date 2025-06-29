@@ -11314,6 +11314,21 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
+.publication__item {
+    background: #f2f2f2;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    min-width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+.publication__item:hover {
+    background: #e0e7ff;
+    transform: translateY(-2px);
+  }
+
 .footer {
   text-align: center;
   font-size: 0.9rem;
