@@ -298,75 +298,162 @@
                 </style>
             
 
-        <!--PUBLICATIONS and AWARDS -->
-            <!--===== PUBLICATIONS =====-->
-                <section class="publications section" id="publications">
-                  <h2 class="section-title">Publications</h2>
-                  <div class="publications__container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <!---========PUBLICATIONS &  AWARDS =========>
+            
+           <!-- ===== PUBLICATIONS SECTION ===== -->
+                    <section class="publications section" id="publications">
+                      <h2 class="section-title">Publications</h2>
+                      <div class="publications__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; justify-content: center;">
+                        
+                        <!-- Publication 1 -->
+                        <div class="publication__item" onclick="openPublicationPopup('solar')">
+                          <p class="publication__text">IoT-Based Solar Energy - IJORTAS, Vol. 3, No. 2 – Sept 2021</p>
+                        </div>
                     
-                    <!-- Publication 1 -->
-                    <div class="publication__item" onclick="openPublicationPopup('solar')"
-                         style="background: #f2f2f2; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; min-width: 250px; text-align: center;">
-                      IoT-Based Solar Energy – IJORTAS, Vol. 3, No. 2
+                        <!-- Publication 2 -->
+                        <div class="publication__item" onclick="openPublicationPopup('egg')">
+                          <p class="publication__text">Intelligent Egg Incubator - IJORTAS, Vol. 2, No. 2 – Sept 2020</p>
+                        </div>
+                    
+                        <!-- Publication 3 - With PDF Download -->
+                        <div class="publication__item" onclick="openPublicationPopup('jiicas')">
+                          <p class="publication__text">IoT Alarm System: Detecting & Preventing Microsleep Events – JIIICAS 2024</p>
+                        </div>
+                      </div>
+                    </section>
+                    
+                    <!-- ===== PUBLICATION POPUP ===== -->
+                    <div id="publicationPopup" class="publication__popup">
+                      <div class="popup__content">
+                        <span class="popup__close" onclick="closePublicationPopup()">&times;</span>
+                        <h3 id="pubTitle"></h3>
+                        <p id="pubDescription"></p>
+                        <div id="pubLinkContainer" style="margin-top: 1rem;"></div>
+                      </div>
                     </div>
                     
-                    <!-- Publication 2 -->
-                    <div class="publication__item" onclick="openPublicationPopup('incubator')"
-                         style="background: #f2f2f2; padding: 1rem 2rem; border-radius: 8px; cursor: pointer; min-width: 250px; text-align: center;">
-                      Intelligent Egg Incubator – IJORTAS, Vol. 2, No. 2
-                    </div>
-                    
-                  </div>
-                </section>
-                
-                <!--===== MODAL POPUP FOR PUBLICATIONS =====-->
-                <div id="publicationPopup" class="popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:999;">
-                  <div style="background:white; padding:2rem; border-radius:10px; max-width:500px; position:relative;">
-                    <span onclick="closePublicationPopup()" style="position:absolute; top:10px; right:15px; cursor:pointer; font-weight:bold;">&times;</span>
-                    <h3 id="pubTitle" style="margin-bottom:0.5rem;"></h3>
-                    <p id="pubDate" style="font-size: 0.9rem; color: gray;"></p>
-                    <p id="pubDesc" style="margin:1rem 0;"></p>
-                    <a id="pubLink" href="#" target="_blank" style="color: #2563eb; text-decoration: underline;">View Full Article</a>
-                  </div>
-                </div>
-                
-                <!--===== JS FOR POPUP =====-->
-                <script>
-                  function openPublicationPopup(id) {
-                    const popup = document.getElementById('publicationPopup');
-                    const title = document.getElementById('pubTitle');
-                    const date = document.getElementById('pubDate');
-                    const desc = document.getElementById('pubDesc');
-                    const link = document.getElementById('pubLink');
-                
-                    const publications = {
-                      solar: {
-                        title: "IoT-Based Solar Energy Monitoring System",
-                        date: "IJORTAS, Vol. 3, No. 2 – September 2021",
-                        desc: "This paper proposes a solar energy system integrated with IoT sensors to monitor voltage, current, and energy efficiency in real time.",
-                        link: "https://example.com/solar-paper.pdf" // Replace with actual link
-                      },
-                      incubator: {
-                        title: "Intelligent Egg Incubator with IoT and Temperature Control",
-                        date: "IJORTAS, Vol. 2, No. 2 – September 2020",
-                        desc: "This publication describes a smart egg incubator system that uses IoT modules and feedback loops for humidity and heat regulation.",
-                        link: "https://example.com/incubator-paper.pdf" // Replace with actual link
+                    <!-- ===== CSS for Publications Popup ===== -->
+                    <style>
+                      .publication__item {
+                        background: #f2f2f2;
+                        padding: 1rem 2rem;
+                        border-radius: 8px;
+                        min-width: 250px;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: background 0.2s ease;
                       }
-                    };
-                
-                    const pub = publications[id];
-                    title.textContent = pub.title;
-                    date.textContent = pub.date;
-                    desc.textContent = pub.desc;
-                    link.href = pub.link;
-                
-                    popup.style.display = 'flex';
-                  }
-                
-                  function closePublicationPopup() {
-                    document.getElementById('publicationPopup').style.display = 'none';
-                  }
-                </script>
+                    
+                      .publication__item:hover {
+                        background: #e0e7ff;
+                      }
+                    
+                      .publication__popup {
+                        display: none;
+                        position: fixed;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-color: rgba(0,0,0,0.6);
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                      }
+                    
+                      .popup__content {
+                        background: white;
+                        padding: 2rem;
+                        border-radius: 10px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        position: relative;
+                        animation: fadeIn 0.3s ease;
+                      }
+                    
+                      .popup__close {
+                        position: absolute;
+                        top: 10px;
+                        right: 14px;
+                        font-size: 1.5rem;
+                        color: #333;
+                        cursor: pointer;
+                      }
+                    
+                      .popup__content a.download-btn {
+                        display: inline-block;
+                        margin-top: 1rem;
+                        padding: 0.6rem 1.2rem;
+                        background-color: #1e3a8a;
+                        color: white;
+                        border-radius: 6px;
+                        text-decoration: none;
+                        font-size: 0.9rem;
+                      }
+                    
+                      @keyframes fadeIn {
+                        from { opacity: 0; transform: scale(0.95); }
+                        to { opacity: 1; transform: scale(1); }
+                      }
+                    </style>
+                    
+                    <!-- ===== JAVASCRIPT FOR PUBLICATION POPUP ===== -->
+                    <script>
+                      function openPublicationPopup(id) {
+                        const popup = document.getElementById("publicationPopup");
+                        const title = document.getElementById("pubTitle");
+                        const description = document.getElementById("pubDescription");
+                        const linkContainer = document.getElementById("pubLinkContainer");
+                    
+                        const data = {
+                          solar: {
+                            title: "IoT-Based Solar Energy",
+                            description: "Published in IJORTAS Vol. 3, No. 2 – Sept 2021. Discusses solar-powered IoT integration.",
+                            link: "https://scholar.google.com/scholar?q=IoT-Based+Solar+Energy"
+                          },
+                          egg: {
+                            title: "Intelligent Egg Incubator",
+                            description: "Published in IJORTAS Vol. 2, No. 2 – Sept 2020. Describes smart egg incubation system.",
+                            link: "https://scholar.google.com/scholar?q=Intelligent+Egg+Incubator"
+                          },
+                          jiicas: {
+                            title: "IoT Alarm System: Detecting & Preventing Microsleep Events",
+                            description: "Presented at JIIICAS 2024, held on Oct 13, 2024. This system was designed to address microsleep detection using IoT.",
+                            download: "assets/pdf/jiicas2024_microsleep.pdf"
+                          }
+                        };
+                    
+                        const selected = data[id];
+                        title.textContent = selected.title;
+                        description.textContent = selected.description;
+                    
+                        // Clear previous content
+                        linkContainer.innerHTML = "";
+                    
+                        // Link or download
+                        if (selected.link) {
+                          const a = document.createElement("a");
+                          a.href = selected.link;
+                          a.target = "_blank";
+                          a.className = "download-btn";
+                          a.textContent = "View on Google Scholar";
+                          linkContainer.appendChild(a);
+                        } else if (selected.download) {
+                          const a = document.createElement("a");
+                          a.href = selected.download;
+                          a.download = "";
+                          a.className = "download-btn";
+                          a.textContent = "Download Proceeding PDF";
+                          linkContainer.appendChild(a);
+                        }
+                    
+                        popup.style.display = "flex";
+                      }
+                    
+                      function closePublicationPopup() {
+                        document.getElementById("publicationPopup").style.display = "none";
+                      }
+                    </script>
+
 
             <!-- ===== AWARDS SECTION ===== -->
                 <section class="awards section" id="awards">
