@@ -11196,6 +11196,11 @@ header.masthead .masthead-heading {
     padding: 0 30px 20px 20px;
     text-align: left;
   }
+
+  .home__blob-img {
+  object-fit: contain;
+  }
+
 }
 @media (min-width: 992px) {
   .timeline > li {
