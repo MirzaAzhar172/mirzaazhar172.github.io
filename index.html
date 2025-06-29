@@ -87,142 +87,88 @@
             </section>
 
             <!--===== PROJECTS =====-->
-                <section class="projects section" id="projects">
-                  <h2 class="section-title" style="text-align:center; font-size:2rem; margin-bottom:2rem;">My Projects</h2>
-                
-                  <div class="projects__container" style="display: flex; overflow-x: auto; gap: 1.5rem; padding: 0 1rem 2rem;">
-                    <!-- Project Card 1 -->
-                    <div class="project__card" onclick="openProjectPopup('ra')">
-                      <img src="assets/img/projects/ra_project.jpg" alt="RA Project" class="project__image">
-                      <h3 class="project__title">Microsleep Detection App</h3>
+               <section class="projects section" id="projects">
+                  <h2 class="section-title" style="text-align: center; font-size: 2rem;">My Projects</h2>
+                  <div class="projects__container" style="display: flex; overflow-x: auto; gap: 1rem; padding: 1rem; justify-content: center; align-items: stretch;">
+                    <!-- Project 1 -->
+                    <div class="project__card" onclick="openProjectPopup('gtids')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/projects/project1.jpg" alt="GTIDS App" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">Anti-Microsleep App</h3>
+                      <p>RA Project – GTIDS Grant</p>
                     </div>
                 
-                    <!-- Project Card 2 -->
-                    <div class="project__card" onclick="openProjectPopup('fyp_deg')">
-                      <img src="assets/img/projects/fyp_degree.jpg" alt="Degree FYP" class="project__image">
-                      <h3 class="project__title">Smart Car Control IoT</h3>
+                    <!-- Project 2 -->
+                    <div class="project__card" onclick="openProjectPopup('degree')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/projects/project2.jpg" alt="Smart Car IoT" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">Smart Car IoT Control</h3>
+                      <p>Final Year Project – Degree</p>
                     </div>
                 
-                    <!-- Project Card 3 -->
-                    <div class="project__card" onclick="openProjectPopup('fyp_dip')">
-                      <img src="assets/img/projects/fyp_diploma.jpg" alt="Diploma FYP" class="project__image">
-                      <h3 class="project__title">IoT Incubator System</h3>
-                    </div>
-                  </div>
-                
-                  <!-- Popup Modal -->
-                  <div id="projectPopup" class="project__popup">
-                    <div class="popup__content">
-                      <span class="popup__close" onclick="closeProjectPopup()">&times;</span>
-                      <h3 id="popupProjectTitle"></h3>
-                      <p id="popupProjectDesc"></p>
-                      <div class="popup__links">
-                        <a id="popupGithub" href="#" target="_blank">GitHub</a>
-                        <a id="popupReport" href="#" target="_blank">Report</a>
-                      </div>
+                    <!-- Project 3 -->
+                    <div class="project__card" onclick="openProjectPopup('diploma')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/projects/project3.jpg" alt="Raspberry Pi Security" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">Raspberry Pi Security</h3>
+                      <p>Final Year Project – Diploma</p>
                     </div>
                   </div>
                 </section>
                 
-                <style>
-                .project__card {
-                  background: white;
-                  border-radius: 10px;
-                  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                  min-width: 250px;
-                  cursor: pointer;
-                  text-align: center;
-                  padding: 1rem;
-                  transition: transform 0.2s ease;
-                }
-                .project__card:hover {
-                  transform: scale(1.03);
-                }
-                .project__image {
-                  width: 100%;
-                  height: 150px;
-                  object-fit: cover;
-                  border-radius: 8px;
-                  margin-bottom: 0.5rem;
-                }
-                .project__popup {
-                  display: none;
-                  position: fixed;
-                  top: 0; left: 0;
-                  width: 100%; height: 100%;
-                  background-color: rgba(0,0,0,0.6);
-                  justify-content: center;
-                  align-items: center;
-                  z-index: 1000;
-                }
-                .popup__content {
-                  background: #fff;
-                  padding: 1.5rem;
-                  border-radius: 10px;
-                  width: 90%;
-                  max-width: 500px;
-                  position: relative;
-                }
-                .popup__close {
-                  position: absolute;
-                  top: 10px;
-                  right: 15px;
-                  font-size: 1.5rem;
-                  font-weight: bold;
-                  cursor: pointer;
-                }
-                .popup__links a {
-                  display: inline-block;
-                  margin-right: 1rem;
-                  margin-top: 1rem;
-                  color: #3b82f6;
-                  text-decoration: underline;
-                }
-                </style>
+                <!-- Project Popup -->
+                <div id="projectPopup" class="project__popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+                  <div class="popup__content" style="background:white; padding:1.5rem; border-radius:10px; max-width:500px; width:90%;">
+                    <span onclick="closeProjectPopup()" style="cursor:pointer; float:right; font-weight:bold; font-size:1.2rem;">&times;</span>
+                    <h3 id="popupProjectTitle" style="margin-top: 0.5rem;"></h3>
+                    <p id="popupProjectDescription" style="margin-top: 1rem;"></p>
+                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap;">
+                      <a id="popupGithubLink" href="#" target="_blank" style="background:#1e40af; color:white; padding:0.5rem 1rem; border-radius:5px; text-decoration:none;">GitHub</a>
+                      <a id="popupReportLink" href="#" target="_blank" style="background:#1e3a8a; color:white; padding:0.5rem 1rem; border-radius:5px; text-decoration:none;">Report</a>
+                    </div>
+                  </div>
+                </div>
                 
                 <script>
-                function openProjectPopup(id) {
-                  const popup = document.getElementById("projectPopup");
-                  const title = document.getElementById("popupProjectTitle");
-                  const desc = document.getElementById("popupProjectDesc");
-                  const github = document.getElementById("popupGithub");
-                  const report = document.getElementById("popupReport");
+                  function openProjectPopup(id) {
+                    const popup = document.getElementById('projectPopup');
+                    const title = document.getElementById('popupProjectTitle');
+                    const desc = document.getElementById('popupProjectDescription');
+                    const github = document.getElementById('popupGithubLink');
+                    const report = document.getElementById('popupReportLink');
                 
-                  const data = {
-                    ra: {
-                      title: "Microsleep Detection App",
-                      desc: "An AI-powered Flutter app for detecting drowsiness and microsleep with chatbot integration. Developed during RA tenure at UiTM.",
-                      github: "https://github.com/mirzaazhar172/microsleep-app",
-                      report: "assets/docs/microsleep-report.pdf"
-                    },
-                    fyp_deg: {
-                      title: "Smart Car Control IoT",
-                      desc: "Final Year Project for Bachelor Degree: Real-time IoT system for controlling car ignition and ventilation based on temperature and motion sensors.",
-                      github: "https://github.com/mirzaazhar172/iot-car-project",
-                      report: "assets/docs/smartcar-fyp.pdf"
-                    },
-                    fyp_dip: {
-                      title: "IoT Incubator System",
-                      desc: "Diploma Final Year Project: Intelligent incubator system with temperature and humidity monitoring using Arduino.",
-                      github: "https://github.com/mirzaazhar172/iot-incubator",
-                      report: "assets/docs/incubator-fyp.pdf"
-                    }
-                  };
+                    const data = {
+                      gtids: {
+                        title: "Anti-Microsleep App",
+                        description: "Developed a Flutter-based mobile app to detect microsleep and drowsiness events in real-time with chatbot and emergency trigger.",
+                        github: "https://github.com/mirzaazhar172/gtids-app",
+                        report: "assets/docs/GTIDS_App_Report.pdf"
+                      },
+                      degree: {
+                        title: "Smart Car IoT Control",
+                        description: "An IoT-based FYP project to control car locks, ignition, and GPS tracking using Blynk and NodeMCU.",
+                        github: "https://github.com/mirzaazhar172/smartcar-iot",
+                        report: "assets/docs/Smart_Car_IoT_Report.pdf"
+                      },
+                      diploma: {
+                        title: "Raspberry Pi Security System",
+                        description: "Developed a motion-triggered camera surveillance system with notifications using Raspberry Pi and Python.",
+                        github: "https://github.com/mirzaazhar172/pi-security",
+                        report: "assets/docs/Pi_Security_Report.pdf"
+                      }
+                    };
                 
-                  const project = data[id];
-                  title.innerText = project.title;
-                  desc.innerText = project.desc;
-                  github.href = project.github;
-                  report.href = project.report;
+                    const selected = data[id];
+                    title.innerText = selected.title;
+                    desc.innerText = selected.description;
+                    github.href = selected.github;
+                    report.href = selected.report;
                 
-                  popup.style.display = "flex";
-                }
+                    popup.style.display = 'flex';
+                  }
                 
-                function closeProjectPopup() {
-                  document.getElementById("projectPopup").style.display = "none";
-                }
+                  function closeProjectPopup() {
+                    document.getElementById('projectPopup').style.display = 'none';
+                  }
                 </script>
-            
+
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
