@@ -14,8 +14,22 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>PORTFOLIO - AHMAD MIRZA AZHAR</title>
-    </head>
-    <body>
+        
+                 <style>
+                    .section-title-container {
+                      background: url('assets/img/portfolio/bg_section.jpg') center/cover no-repeat;
+                      padding: 4rem 1rem 2rem 1rem;
+                      text-align: center;
+                    }
+                    .section-title-container h2 {
+                      font-size: 2.5rem;
+                      color: white;
+                      margin: 0;
+                    }
+                </style>
+            </head>
+        <body>
+        
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -88,7 +102,7 @@
 
             <!--===== PROJECTS =====-->
                <section class="projects section" id="projects">
-                  <h2 class="section-title" style="text-align: center; font-size: 2rem;">My Projects</h2>
+                  <div class="section-title-container"><h2 class="section-title">My Projects</h2></div>
                   <div class="projects__container" style="display: flex; overflow-x: auto; gap: 1rem; padding: 1rem; justify-content: center; align-items: stretch;">
                     <!-- Project 1 -->
                     <div class="project__card" onclick="openProjectPopup('gtids')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
@@ -172,7 +186,7 @@
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+                <div class="section-title-container"><h2 class="section-title">My Projects</h2></div>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -188,7 +202,8 @@
 
            <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-              <h2 class="section-title">Skills</h2>
+               <div class="section-title-container"><h2 class="section-title">Skills</h2></div>
+            <section class="skills section" id="skills">
               <div class="skills__container bd-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; align-items: start;">
                 <div>
                   <h2 class="skills__subtitle">Professional Skills</h2>
@@ -303,7 +318,7 @@
 
             <!--===== WORK =====-->
                 <section class="work section" id="work">
-                  <h2 class="section-title" style="text-align: center;">Work/Internship Experience</h2>
+                   <div class="section-title-container"><h2 class="section-title">Work/Internship Experience</h2></div>
                   
                   <!-- Scroll Container -->
                   <div class="work__scroll-wrapper" style="overflow-x: auto; padding: 1rem 0;">
@@ -382,7 +397,7 @@
             
            <!-- ===== PUBLICATIONS SECTION ===== -->
                     <section class="publications section" id="publications">
-                      <h2 class="section-title">Publications</h2>
+                      <div class="section-title-container"><h2 class="section-title">Publications</h2></div>
                       <div class="publications__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; justify-content: center;">
                         
                         <!-- Publication 1 -->
@@ -537,7 +552,7 @@
 
             <!-- ===== AWARDS SECTION ===== -->
                 <section class="awards section" id="awards">
-                  <h2 class="section-title">Awards & Recognition</h2>
+                  <div class="section-title-container"><h2 class="section-title">Awards & Recognition</h2></div>
                   <div class="awards__container">
                     <div class="award__card" onclick="openAwardPopup('gtids')">
                       <img src="assets/img/awards/platinum_award.png" alt="GTIDS">
