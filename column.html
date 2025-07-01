@@ -44,42 +44,50 @@
       z-index: 1000;
     }
 
-   /* Navbar Logo */
-    .nav__logo {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #0a1128; /* same as your dark navy */
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      text-decoration: none;
+       /* NAVBAR FIX FOR COLUMN.HTML */
+    
+    /* Container nav */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem; /* ✅ tambah ruang kiri/kanan */
+      max-width: 1200px;
+      margin: 0 auto;
     }
     
-    /* Navbar Items */
+    /* Logo style */
+    .nav__logo {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;  /* ✅ kecilkan sikit */
+      font-weight: 700;
+      color: #0a1128;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    
+    /* List style */
     .nav__list {
       display: flex;
       gap: 2.5rem;
       list-style: none;
       align-items: center;
+      margin: 0;
+      padding: 0;
     }
     
+    /* Link style */
     .nav__item a.nav__link {
       font-family: 'Poppins', sans-serif;
+      font-size: 1rem; /* ✅ konsisten */
       font-weight: 600;
-      font-size: 1.05rem;
       color: #0a1128;
       text-decoration: none;
       transition: color 0.3s ease;
     }
     
     .nav__item a.nav__link:hover {
-      color: #4f46e5; /* highlight on hover */
-    }
-    
-    .nav__toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
+      color: #4f46e5;
     }
 
     /* Main Container */
