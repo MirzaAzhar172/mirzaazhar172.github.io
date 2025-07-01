@@ -409,6 +409,48 @@
         font-size: 1.5rem;
         cursor: pointer;
       }
+      .video-scroll-wrapper {
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+    
+    .video-scroll-inner {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      scroll-behavior: smooth;
+    }
+    
+    .video-scroll-inner .portfolio-item {
+      flex: 0 0 auto;
+      width: 320px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    
+    .video-scroll-inner video {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      display: block;
+    }
+    
+    .portfolio-caption {
+      padding: 12px;
+      text-align: left;
+    }
+    
+    .portfolio-caption-heading {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .portfolio-caption-subheading {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
     }
   </style>
 </head>
@@ -697,6 +739,255 @@
         <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
       </div>
     </div>
+
+    <div class="divider"></div>
+
+      <!-- 🎬 Video Highlights Scrollable -->
+      <div class="video-section container">
+        <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
+      
+        <div class="video-scroll-wrapper">
+          <div class="video-scroll-inner">
+            <!-- Video 1 -->
+            <div class="portfolio-item">
+              <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                </div>
+                <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+                  <source src="assets/videos/seda2024.mp4" type="video/mp4">
+                </video>
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+                <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+              </div>
+            </div>
+      
+            <!-- Video 2 -->
+            <div class="portfolio-item">
+              <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                </div>
+                <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                  <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+                </video>
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
+                <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
+              </div>
+            </div>
+      
+            <!-- Video 3 -->
+            <div class="portfolio-item">
+              <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                </div>
+                <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                  <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+                </video>
+              </a>
+              <div class="portfolio-caption">
+                <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
+                <div class="portfolio-caption-subheading text-muted">August 2024</div>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal for SEDA2024 -->
+<div id="newsModalSEDA" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
+    <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+      <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
+    <p><strong>Date:</strong> April 2024</p>
+    <h4>🎥 Video Context:</h4>
+    <ul>
+      <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
+      <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
+    </ul>
+    <h4>🚀 Purpose & Vision:</h4>
+    <ul>
+      <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
+      <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
+      <li>My first step in sharing innovation to a broader audience.</li>
+    </ul>
+    <h4>🔖 Hashtags:</h4>
+    <p style="font-size: 0.9rem; color: #666;">
+      #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
+    </p>
+  </div>
+</div>
+
+    <!-- Modal for Microsleep Demo -->
+    <div id="newsModalMicrosleepDemo" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
+        <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+          <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>Microsleep Detection System - IoT Prototype</h3>
+        <p><strong>Date:</strong> June 2025</p>
+        <h4>🔧 Project Highlights:</h4>
+        <ul>
+          <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
+          <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
+          <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
+          <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
+        </ul>
+        <h4>🎯 Objectives:</h4>
+        <ul>
+          <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
+          <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
+          <li>Test the usability and effectiveness of the system.</li>
+        </ul>
+        <h4>💡 Problem Statement:</h4>
+        <ul>
+          <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
+          <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Modal for JIICAS2024 -->
+    <div id="newsModalJiicas2024" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
+        <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+          <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
+        <p><strong>Date:</strong> August 2024</p>
+        <h4>🎓 About the Competition:</h4>
+        <ul>
+          <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
+          <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
+          <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
+        </ul>
+        <h4>📽️ Presentation Highlights:</h4>
+        <ul>
+          <li>Focused on real-time AI + IoT integration in safety systems.</li>
+          <li>Project was part of ongoing faculty research and innovation initiatives.</li>
+          <li>Highlighted technical aspects, user safety, and scalability.</li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="divider"></div>
+
+    <!---=====INVOLVEMENT GALLERY-------->
+      <div class="involvement-section">
+        <h2>📸 Involvement Gallery</h2>
+        <div class="involvement-scroll">
+          <div class="involvement-item" onclick="openModal('modalGTIDS')">
+            <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+          </div>
+          <div class="involvement-item" onclick="openModal('modalIntern')">
+            <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+          </div>
+          <div class="involvement-item" onclick="openModal('modalSULAM')">
+            <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+          </div>
+          <div class="involvement-item" onclick="openModal('modalFskik')">
+            <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
+          </div>
+          <div class="involvement-item" onclick="openModal('modalSuk')">
+            <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
+          </div>
+          <!-- Add more items here if needed -->
+        </div>
+      </div>
+      
+        <div class="divider"></div>
+      
+      <!-- Modals for Involvement Gallery -->
+      <div id="modalGTIDS" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+          <h3>GTIDS Presentation at SUK Selangor</h3>
+          <p><strong>Date:</strong> February 2025</p>
+          <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
+        </div>
+      </div>
+      
+      <div id="modalIntern" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+          <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+          <p><strong>Date:</strong> January 2025</p>
+          <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
+        </div>
+      </div>
+      
+      <div id="modalSULAM" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+          <h3>SULAM 2024 Digital Outreach Project</h3>
+          <p><strong>Date:</strong> March 2024</p>
+          <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
+        </div>
+      </div>
+      
+      <div id="modalFskik" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalFskik')">&times;</span>
+          <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition UPSI">
+          <h3>FSKIK Exhibition UPSI</h3>
+          <p><strong>Date:</strong> May 2025</p>
+          <p>With friends who were involved in the FSKIK Exhibition UPSI with projects consisting of Applications, Web, and IoT, held at SITC Hall, Abdul Jalil Campus, UPSI.</p>
+        </div>
+      </div>
+      
+      <div id="modalSuk" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('modalSuk')">&times;</span>
+          <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
+          <h3>Presentation with SUK Selangor Rep</h3>
+          <p><strong>Date:</strong> May 2025</p>
+          <p>I got some really good feedback from Encik Shamsul, Director of Innovation at GTIDS, during our session at the Selangor State Secretary's Office. Presented the winning grant project for 30 mins with my supervisors Dr. Nor & Dr. Izzad, and my teammate Shafurah, who handled the AI Chatbox coding part..</p>
+        </div>
+      </div>
+      
+      <!----------SCRIPT SECTION HERE (INVOLVEMENT)----------->
+      <script>
+        function openModal(id) {
+          document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+          document.getElementById(id).style.display = "none";
+        }
+        window.onclick = function(event) {
+          const modals = document.querySelectorAll('.modal');
+          modals.forEach(modal => {
+            if (event.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        }
+      </script>
+      
+      <script>
+      function scrollGallery(offset) {
+        document.querySelector('.involvement-gallery').scrollBy({
+          left: offset,
+          behavior: 'smooth'
+        });
+      }
+      </script>
 
 
   <!-- JavaScript untuk filter dan modal -->
