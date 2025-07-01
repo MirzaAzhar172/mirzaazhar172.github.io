@@ -715,7 +715,7 @@
     .gallery-item {
       animation: fadeInUp 0.6s ease forwards;
     }
-    /* Align filter with What's New heading */
+   /* Align filter with What's New heading */
     .section-header.with-filter {
       display: flex;
       justify-content: space-between;
@@ -765,7 +765,7 @@
         width: 100%;
       }
     }
-    
+
     </style>
  </head>
 
@@ -793,15 +793,10 @@
   <!-- Main Content -->
   <main class="main-container">
     <!-- What's New Section -->
-    <section class="container" id="projects">
-      <div class="section-header">
+          <section class="container" id="projects">
+           <div class="section-header with-filter">
         <h2>📢 What's New</h2>
-        <h3>Technical Blog posts, tutorials & dev notes</h3>
-      </div>
-
-      <div class="filter-section">
         <div class="filter-dropdown">
-          <label for="categoryFilter" style="margin-right: 0.5rem; font-weight: 600;">Filter by:</label>
           <select id="categoryFilter" onchange="filterNews()">
             <option value="all">All</option>
             <option value="flutter">Flutter</option>
