@@ -14,77 +14,201 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <title>PORTFOLIO - AHMAD MIRZA AZHAR</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-                <nav class="nav bd-grid">
-                  <div><a href="index.html" class="nav__logo">MIRZA AZHAR</a></div>
-                  <ul class="nav__list">
-                    <li class="nav__item"><a href="column.html" class="nav__link">Blog/Gallery</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#publications" class="nav__link">Publications & Awards</a></li>
-                  </ul>
-                  <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                  </div>
-                </nav>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">
-                      I'm <span class="home__title-color">Mirza</span><br>
-                      IoT • Networks
-                    </h1>
-
-                    <a href="column.html" class="button">What's New</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" target="_blank" class="home__social-icon">
-                        <i class='bx bxl-linkedin'></i>
-                    </a>
-                    <a href="https://www.behance.net/yourusername" target="_blank" class="home__social-icon">
-                        <i class='bx bxl-behance'></i>
-                    </a>
-                    <a href="https://github.com/mirzaazhar172" target="_blank" class="home__social-icon">
-                        <i class='bx bxl-github'></i>
-                    </a>
-                </div>
-
-              <div class="home__img" style="display: flex; justify-content: center; align-items: center;">
-                  <svg class="home__blob" viewBox="0 0 479 467" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                    <mask id="mask0" mask-type="alpha">
-                      <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
-                    </mask>
-                    <g mask="url(#mask0)">
-                      <!-- Blob Shape -->
-                      <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="#3b82f6"/>
-                      
-                      <!-- Gambar -->
-                      <image 
-                        href="assets/img/portfolio/AboutMe/mirza_removebg.png" 
-                        x="-10" 
-                        y="5" 
-                        width="500" 
-                        height="500" 
-                        style="transform: scale(0.95); transform-origin: center;"
-                      />
-                    </g>
-                  </svg>
-                </div>
-            </section>
+        <style>
+              /* Font & base setup */
+              body {
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+                padding: 0;
+                background: #fff;
+                color: #0a1128;
+              }
+            
+              /* Container limit */
+              .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 1rem;
+              }
+            
+              /* Header & logo */
+              .nav__logo {
+                font-weight: 700;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+              }
+            
+              /* Title section */
+              .home__title {
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 1.1;
+                word-wrap: break-word;
+                word-break: break-word;
+              }
+            
+              .home__subtitle {
+                font-size: 1.3rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+              }
+            
+              /* Button */
+              .home__button {
+                background-color: #4f46e5;
+                color: white;
+                padding: 0.8rem 2rem;
+                border: none;
+                border-radius: 10px;
+                font-weight: 600;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-bottom: 2rem;
+              }
+            
+              .home__button:hover {
+                background-color: #4338ca;
+              }
+            
+              /* Social icons */
+              .home__social {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+              }
+            
+              .home__social a {
+                font-size: 1.5rem;
+                color: #0a1128;
+              }
+            
+              /* Image section */
+              .home__img {
+                display: flex;
+                justify-content: center;
+                margin-top: 2rem;
+              }
+            
+              .home__img img {
+                width: 100%;
+                max-width: 280px;
+                border-radius: 50%;
+              }
+            
+              /* Section titles */
+              .section-title {
+                font-size: 2rem;
+                font-weight: 700;
+                text-align: center;
+                margin-top: 3rem;
+                margin-bottom: 1.5rem;
+              }
+            
+              /* Responsive Fixes */
+              @media (max-width: 768px) {
+                .home__title {
+                  font-size: 2rem;
+                  text-align: center;
+                }
+            
+                .home__subtitle {
+                  font-size: 1.1rem;
+                  text-align: center;
+                }
+            
+                .home__img {
+                  margin-top: 1.5rem;
+                }
+            
+                .nav__list {
+                  flex-direction: column;
+                  gap: 1rem;
+                  padding: 1rem 0;
+                  align-items: flex-start;
+                }
+            
+                .section-title {
+                  font-size: 1.5rem;
+                }
+              }
+            </style>
+            </head>
+    
+            <body>
+                <!--===== HEADER =====-->
+                <header class="l-header">
+                        <nav class="nav bd-grid">
+                          <div><a href="index.html" class="nav__logo">MIRZA AZHAR</a></div>
+                          <ul class="nav__list">
+                            <li class="nav__item"><a href="column.html" class="nav__link">Blog/Gallery</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                            <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                            <li class="nav__item"><a href="#publications" class="nav__link">Publications & Awards</a></li>
+                          </ul>
+                          <div class="nav__toggle" id="nav-toggle">
+                            <i class='bx bx-menu'></i>
+                          </div>
+                        </nav>
+        
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class='bx bx-menu'></i>
+                        </div>
+                    </nav>
+                </header>
+        
+                <main class="l-main">
+                    <!--===== HOME =====-->
+                    <section class="home bd-grid" id="home">
+                        <div class="home__data">
+                            <h1 class="home__title">
+                              I'm <span class="home__title-color">Mirza</span><br>
+                              IoT • Networks
+                            </h1>
+        
+                            <a href="column.html" class="button">What's New</a>
+                        </div>
+        
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/ahmad-mirza-azhar-775518223" target="_blank" class="home__social-icon">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                            <a href="https://www.behance.net/yourusername" target="_blank" class="home__social-icon">
+                                <i class='bx bxl-behance'></i>
+                            </a>
+                            <a href="https://github.com/mirzaazhar172" target="_blank" class="home__social-icon">
+                                <i class='bx bxl-github'></i>
+                            </a>
+                        </div>
+        
+                      <div class="home__img" style="display: flex; justify-content: center; align-items: center;">
+                          <svg class="home__blob" viewBox="0 0 479 467" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0" mask-type="alpha">
+                              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                              <!-- Blob Shape -->
+                              <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="#3b82f6"/>
+                              
+                              <!-- Gambar -->
+                              <image 
+                                href="assets/img/portfolio/AboutMe/mirza_removebg.png" 
+                                x="-10" 
+                                y="5" 
+                                width="500" 
+                                height="500" 
+                                style="transform: scale(0.95); transform-origin: center;"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                    </section>
 
             
                 <!--===== PROJECTS =====-->
