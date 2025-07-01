@@ -374,40 +374,35 @@
       /* 📸 Involvement Gallery Styles */
       
       /* Wrapper to make gallery scroll horizontally */
-      .gallery-scroll-wrapper {
+     .gallery-scroll-wrapper {
         overflow-x: auto;
         overflow-y: hidden;
-        padding: 1rem 0;
-        white-space: nowrap;
-        scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: none;  /* hide scrollbar on IE/Edge */
-        scrollbar-width: none;     /* hide scrollbar on Firefox */
-      }
-      .gallery-scroll-wrapper::-webkit-scrollbar {
-        display: none;             /* hide scrollbar on Chrome/Safari */
+        scroll-behavior: smooth;
+        padding: 1rem 0;
       }
       
-      /* Horizontal scroll flex layout */
       .gallery-grid-horizontal {
         display: flex;
-        gap: 1.2rem;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        scroll-snap-type: x mandatory;
+        justify-content: center; /* ✨ Center content inside */
         padding: 0 1rem;
       }
       
       /* Standardize each card's size */
       .gallery-item {
         flex: 0 0 auto;
-        width: 220px;
-        height: 280px;
+        width: 260px;
+        height: 180px;
         border-radius: 12px;
         overflow: hidden;
-        scroll-snap-align: start;
-        background: #fff;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         cursor: pointer;
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
+        scroll-snap-align: start;
       }
+
       .gallery-item:hover {
         transform: scale(1.03);
       }
