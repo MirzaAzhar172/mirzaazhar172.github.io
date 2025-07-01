@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
   <title>PORTFOLIO - AHMAD MIRZA AZHAR</title>
 
   <style>
@@ -42,41 +44,38 @@
       z-index: 1000;
     }
 
-   .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
+   /* Navbar Logo */
     .nav__logo {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
-      color: #2c3e50;
+      color: #0a1128; /* same as your dark navy */
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
       text-decoration: none;
-      letter-spacing: 1px;
     }
     
-    .nav ul {
+    /* Navbar Items */
+    .nav__list {
       display: flex;
+      gap: 2.5rem;
       list-style: none;
-      gap: 2rem;
+      align-items: center;
     }
     
-    .nav ul li a {
+    .nav__item a.nav__link {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #0a1128;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      font-size: 1.1rem;
       transition: color 0.3s ease;
     }
     
-    .nav ul li a:hover {
-      color: #3498db;
+    .nav__item a.nav__link:hover {
+      color: #4f46e5; /* highlight on hover */
     }
-
+    
     .nav__toggle {
       display: none;
       font-size: 1.5rem;
@@ -703,13 +702,13 @@
       <div>
         <a href="index.html" class="nav__logo">MIRZA AZHAR</a>
       </div>
-      <nav>
-        <ul id="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#publications">Publications & Awards</a></li>
+     <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><a href="#publications" class="nav__link">Publications & Awards</a></li>
         </ul>
       </nav>
       <div class="nav__toggle" id="nav-toggle">
