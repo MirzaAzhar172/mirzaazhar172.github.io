@@ -113,19 +113,52 @@
                   </div>
                 </section>
                 
-                <!-- Project Popup -->
-                <div id="projectPopup" class="project__popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
-                  <div class="popup__content" style="background:white; padding:1.5rem; border-radius:10px; max-width:500px; width:90%;">
-                    <span onclick="closeProjectPopup()" style="cursor:pointer; float:right; font-weight:bold; font-size:1.2rem;">&times;</span>
-                    <h3 id="popupProjectTitle" style="margin-top: 0.5rem;"></h3>
-                    <p id="popupProjectDescription" style="margin-top: 1rem;"></p>
-                    <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap;">
-                      <a id="popupGithubLink" href="#" target="_blank" style="background:#1e40af; color:white; padding:0.5rem 1rem; border-radius:5px; text-decoration:none;">GitHub</a>
-                      <a id="popupReportLink" href="#" target="_blank" style="background:#1e3a8a; color:white; padding:0.5rem 1rem; border-radius:5px; text-decoration:none;">Report</a>
+                <!--===== PROJECTS =====-->
+                <section class="projects section" id="projects">
+                  <h2 class="section-title" style="text-align: center; font-size: 2rem;">My Projects</h2>
+                  <div class="projects__container" style="display: flex; overflow-x: auto; gap: 1rem; padding: 1rem; justify-content: center; align-items: stretch;">
+                    
+                    <!-- Project 1 -->
+                    <div class="project__card" onclick="openProjectPopup('gtids')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/My Projects/Mudah_Alih_Microsleep.png" alt="GTIDS 2024" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">Sistem Aplikasi Mudah Alih Anti-Microsleep</h3>
+                      <p>RA Project – GTIDS Grant</p>
+                    </div>
+                
+                    <!-- Project 2 -->
+                    <div class="project__card" onclick="openProjectPopup('degree')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/My Projects/micro_1.jpg.png" alt="UITM - KPPIM EXHIBITION 2024" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">IoT - Microsleep Alarm for Driver</h3>
+                      <p>Final Year Project – Degree</p>
+                    </div>
+                
+                    <!-- Project 3 -->
+                    <div class="project__card" onclick="openProjectPopup('diploma')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
+                      <img src="assets/img/portfolio/My Projects/smartphone_car.png" alt="UPSI - FSKIK EXHIBITION 2020" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <h3 style="margin-top: 0.75rem;">IoT - Smartphone Car Control</h3>
+                      <p>Final Year Project – Diploma</p>
+                    </div>
+                
+                  </div>
+                </section>
+
+<!-- ===== PROJECT POPUP MODAL ===== -->
+                <div id="projectPopup" class="project__popup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:999;">
+                  <div class="popup__content" style="background:white; padding:1.5rem; border-radius:10px; max-width:500px; width:90%; position:relative;">
+                    <span onclick="closeProjectPopup()" style="cursor:pointer; position:absolute; top:12px; right:16px; font-weight:bold; font-size:1.5rem;">&times;</span>
+                    
+                    <h3 id="popupProjectTitle" style="margin-top: 0.5rem; text-align:center;"></h3>
+                    <p id="popupProjectDescription" style="margin-top: 1rem; text-align:center;"></p>
+                
+                    <!-- Button Container -->
+                    <div id="popupButtons" style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                      <a id="popupGithubLink" href="#" target="_blank" style="background:#1e40af; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">GitHub</a>
+                      <a id="popupReportLink" href="#" target="_blank" style="background:#1e3a8a; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">Report</a>
                     </div>
                   </div>
                 </div>
                 
+                <!-- ===== SCRIPT FOR POPUP LOGIC ===== -->
                 <script>
                   function openProjectPopup(id) {
                     const popup = document.getElementById('projectPopup');
@@ -139,24 +172,41 @@
                         title: "Anti-Microsleep App",
                         description: "Developed a Flutter-based mobile app to detect microsleep and drowsiness events in real-time with chatbot and emergency trigger.",
                         github: "https://github.com/mirzaazhar172/gtids-app",
+                        report: "assets/pdf/gtids-report.pdf"
                       },
                       degree: {
                         title: "IoT - Microsleep Alarm for Driver",
-                        description: "An IoT-based FYP project to control car locks, ignition, and GPS tracking using Blynk and NodeMCU.",
+                        description: "An IoT-software based project using Python, OpenCV, MQTT & Slack API for network messaging and MongoDB as the database.",
                         github: "https://github.com/mirzaazhar172/smartcar-iot",
+                        report: "assets/pdf/microsleep-driver-report.pdf"
                       },
                       diploma: {
                         title: "IoT - Smartphone Car Control",
-                        description: "An IoT-based FYP project to control car locks, ignition, and GPS tracking using Blynk and NodeMCU",
+                        description: "An IoT-based FYP project to control car locks, ignition, and GPS tracking using Blynk and NodeMCU ESP8266.",
+                        github: null,
                         report: "assets/docs/Pi_Security_Report.pdf"
                       }
                     };
                 
                     const selected = data[id];
+                
                     title.innerText = selected.title;
                     desc.innerText = selected.description;
-                    github.href = selected.github;
-                    report.href = selected.report;
+                
+                    // Toggle button visibility based on data availability
+                    if (selected.github) {
+                      github.href = selected.github;
+                      github.style.display = 'inline-block';
+                    } else {
+                      github.style.display = 'none';
+                    }
+                
+                    if (selected.report) {
+                      report.href = selected.report;
+                      report.style.display = 'inline-block';
+                    } else {
+                      report.style.display = 'none';
+                    }
                 
                     popup.style.display = 'flex';
                   }
@@ -164,8 +214,8 @@
                   function closeProjectPopup() {
                     document.getElementById('projectPopup').style.display = 'none';
                   }
-                </script>
-
+            </script>
+            
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
