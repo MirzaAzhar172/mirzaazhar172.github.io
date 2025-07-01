@@ -834,7 +834,84 @@
           </div>
         </div>
 
-      <div class="divider"></div>
+            <!-- Modals for Involvement gallery -->
+                  <div id="modalGTIDS" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+                      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+                      <h3>GTIDS Presentation at SUK Selangor</h3>
+                      <p><strong>Date:</strong> February 2025</p>
+                      <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
+                    </div>
+                  </div>
+                  
+                  <div id="modalIntern" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+                      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+                      <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+                      <p><strong>Date:</strong> January 2025</p>
+                      <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
+                    </div>
+                  </div>
+                  
+                  <div id="modalSULAM" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+                      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+                      <h3>SULAM 2024 Digital Outreach Project</h3>
+                      <p><strong>Date:</strong> March 2024</p>
+                      <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
+                    </div>
+                  </div>
+                  
+                  <div id="modalFskik" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('modalFskik')">&times;</span>
+                      <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition UPSI">
+                      <h3>FSKIK Exhibition UPSI</h3>
+                      <p><strong>Date:</strong> May 2025</p>
+                      <p>With friends who were involved in the FSKIK Exhibition UPSI with projects consisting of Applications, Web, and IoT, held at SITC Hall, Abdul Jalil Campus, UPSI.</p>
+                    </div>
+                  </div>
+                  
+                  <div id="modalSuk" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('modalSuk')">&times;</span>
+                      <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
+                      <h3>Presentation with SUK Selangor Rep</h3>
+                      <p><strong>Date:</strong> May 2025</p>
+                      <p>I got some really good feedback from Encik Shamsul, Director of Innovation at GTIDS, during our session at the Selangor State Secretary's Office. Presented the winning grant project for 30 mins with my supervisors Dr. Nor & Dr. Izzad, and my teammate Shafurah, who handled the AI Chatbox coding part..</p>
+                    </div>
+                  </div>
+            
+                    <script>
+                      function openModal(id) {
+                        document.getElementById(id).style.display = "flex";
+                      }
+                      function closeModal(id) {
+                        document.getElementById(id).style.display = "none";
+                      }
+                      window.onclick = function(event) {
+                        const modals = document.querySelectorAll('.modal');
+                        modals.forEach(modal => {
+                          if (event.target === modal) {
+                            modal.style.display = "none";
+                          }
+                        });
+                      }
+                    </script>
+                    
+                    <script>
+                    function scrollGallery(offset) {
+                      document.querySelector('.involvement-gallery').scrollBy({
+                        left: offset,
+                        behavior: 'smooth'
+                      });
+                    }
+                  </script>
+  
+          <div class="divider"></div>
 
         <!-- 🎬 Video Highlights Scrollable -->
             <div class="video-section container">
@@ -980,107 +1057,6 @@
 
           <div class="divider"></div>
 
-<div class="involvement-section">
-  <h2>📸 Involvement Gallery</h2>
-  <div class="involvement-scroll">
-    <div class="involvement-item" onclick="openModal('modalGTIDS')">
-      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-    </div>
-    <div class="involvement-item" onclick="openModal('modalIntern')">
-      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-    </div>
-    <div class="involvement-item" onclick="openModal('modalSULAM')">
-      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-    </div>
-    <div class="involvement-item" onclick="openModal('modalFskik')">
-      <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
-    </div>
-    <div class="involvement-item" onclick="openModal('modalSuk')">
-      <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
-    </div>
-    <!-- Add more items here if needed -->
-  </div>
-</div>
-
-  <div class="divider"></div>
-
-    <!-- Modals for Involvement Gallery -->
-      <div id="modalGTIDS" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-          <h3>GTIDS Presentation at SUK Selangor</h3>
-          <p><strong>Date:</strong> February 2025</p>
-          <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
-        </div>
-      </div>
-      
-      <div id="modalIntern" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modalIntern')">&times;</span>
-          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-          <h3>Internship at BERNAMA Cybersecurity Unit</h3>
-          <p><strong>Date:</strong> January 2025</p>
-          <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
-        </div>
-      </div>
-      
-      <div id="modalSULAM" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
-          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-          <h3>SULAM 2024 Digital Outreach Project</h3>
-          <p><strong>Date:</strong> March 2024</p>
-          <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
-        </div>
-      </div>
-      
-      <div id="modalFskik" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modalFskik')">&times;</span>
-          <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition UPSI">
-          <h3>FSKIK Exhibition UPSI</h3>
-          <p><strong>Date:</strong> May 2025</p>
-          <p>With friends who were involved in the FSKIK Exhibition UPSI with projects consisting of Applications, Web, and IoT, held at SITC Hall, Abdul Jalil Campus, UPSI.</p>
-        </div>
-      </div>
-      
-      <div id="modalSuk" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('modalSuk')">&times;</span>
-          <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
-          <h3>Presentation with SUK Selangor Rep</h3>
-          <p><strong>Date:</strong> May 2025</p>
-          <p>I got some really good feedback from Encik Shamsul, Director of Innovation at GTIDS, during our session at the Selangor State Secretary's Office. Presented the winning grant project for 30 mins with my supervisors Dr. Nor & Dr. Izzad, and my teammate Shafurah, who handled the AI Chatbox coding part..</p>
-        </div>
-      </div>
-
-        <script>
-          function openModal(id) {
-            document.getElementById(id).style.display = "flex";
-          }
-          function closeModal(id) {
-            document.getElementById(id).style.display = "none";
-          }
-          window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-              if (event.target === modal) {
-                modal.style.display = "none";
-              }
-            });
-          }
-        </script>
-        
-        <script>
-        function scrollGallery(offset) {
-          document.querySelector('.involvement-gallery').scrollBy({
-            left: offset,
-            behavior: 'smooth'
-          });
-        }
-      </script>
-  
           <!-- ===== FOOTER ===== -->
             <footer class="footer">
               <div class="footer__container">
