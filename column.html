@@ -374,80 +374,49 @@
     /* ===== Involvement Gallery Section - FIXED & CENTERED ===== */
 
       /* Wrapper section - spacing from above and clean background */
-      .gallery-section.container {
-        margin-top: 4rem; /* spacing from section above */
-        background: white;
-        border-radius: 12px;
-        padding: 3rem 2rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      }
-      
-      /* Section title & subtitle center aligned, like video section */
-      .gallery-section .section-header {
-        text-align: center;
-        margin-bottom: 2.5rem;
-      }
-      
-      /* Grid layout center-aligned and wrapping neatly */
-      .gallery-grid {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+      .gallery-scroll-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
         padding: 1rem 0;
+        white-space: nowrap;
         scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        scrollbar-width: thin;
-        scrollbar-color: #bdc3c7 transparent;
+        -webkit-overflow-scrolling: touch;
       }
       
-      /* Gallery cards */
-      .gallery-item {
+      .gallery-grid-horizontal {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .gallery-grid-horizontal .gallery-item {
         flex: 0 0 auto;
-        width: 280px;
-        height: 200px;
-        border-radius: 12px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 220px;
         scroll-snap-align: start;
-        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
       
-      .gallery-item:hover {
-        transform: translateY(-5px) scale(1.05);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-      }
-      
-      .gallery-item img {
+      .gallery-grid-horizontal .gallery-item img {
         width: 100%;
-        height: 100%;
+        height: auto;
+        display: block;
         object-fit: cover;
         transition: transform 0.3s ease;
       }
       
-      .gallery-item:hover img {
-        transform: scale(1.1);
+      .gallery-grid-horizontal .gallery-item:hover img {
+        transform: scale(1.05);
       }
       
-      /* Add subtle gradient overlay on hover */
-      .gallery-item::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(155, 89, 182, 0.1));
-        opacity: 0;
-        transition: opacity 0.3s ease;
+      /* Optional: hide scrollbar */
+      .gallery-scroll-wrapper::-webkit-scrollbar {
+        display: none;
       }
-      
-      .gallery-item:hover::after {
-        opacity: 1;
+      .gallery-scroll-wrapper {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
-
 
     /* Skills Section */
     .skills-section {
@@ -989,25 +958,30 @@
     </section>
 
     <!-- Involvement Gallery Section -->
-    <section class="gallery-section container">
-      <div class="section-header">
-        <h2>📸 Involvement Gallery</h2>
-        <h3>Events, competitions & professional engagements</h3>
-      </div>
-
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openModal('modalGTIDS')">
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+      <section class="gallery-section container">
+        <div class="section-header">
+          <h2>📸 Involvement Gallery</h2>
+          <h3>Events, competitions & professional engagements</h3>
         </div>
-        <div class="gallery-item" onclick="openModal('modalIntern')">
-          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+      
+        <div class="gallery-scroll-wrapper">
+          <div class="gallery-grid-horizontal">
+            <div class="gallery-item" onclick="openModal('modalGTIDS')">
+              <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+            </div>
+            <div class="gallery-item" onclick="openModal('modalIntern')">
+              <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+            </div>
+            <div class="gallery-item" onclick="openModal('modalSULAM')">
+              <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+            </div>
+            <div class="gallery-item" onclick="openModal('modalFskik')">
+              <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
+            </div>
+            <!-- add more if needed -->
+          </div>
         </div>
-        <div class="gallery-item" onclick="openModal('modalSULAM')">
-          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-        </div>
-        <div class="gallery-item" onclick="openModal('modalFskik')">
-          <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK FYP">
-        </div>
+      </section>
 
         <!-- ========== ALL MODALS SECTION ========== -->
 
