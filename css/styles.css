@@ -11328,3 +11328,46 @@ section#contact form#contactForm :-ms-input-placeholder {
     background: #e0e7ff;
     transform: translateY(-2px);
   }
+@media (max-width: 768px) {
+  .nav__list {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: flex-start;
+  }
+
+  .projects__container,
+  .work__container,
+  .publications__container,
+  .awards__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project__card,
+  .work__card,
+  .publication__item,
+  .award__card {
+    min-width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .home__title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .home__data {
+    text-align: center;
+  }
+
+  .home__img {
+    margin-top: 1rem;
+  }
+
+  .footer__form {
+    padding: 0 1rem;
+  }
+}
+
