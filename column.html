@@ -457,269 +457,267 @@
         </div>
       </div>
     </section>
+    
 
-    <div class="divider"></div>
-
-          <!------video highlightS------->
-                  <style>
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                    }
-            
-                    body {
-                        font-family: 'Arial', sans-serif;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        min-height: 100vh;
-                        padding: 20px 0;
-                    }
-            
-                    .container {
-                        max-width: 1200px;
-                        margin: 0 auto;
-                        padding: 0 20px;
-                    }
-            
-                    .video-section {
-                        margin: 40px 0;
-                    }
-            
-                    .video-section h2 {
-                        text-align: center;
-                        font-weight: 700;
-                        margin-bottom: 2rem;
-                        color: white;
-                        font-size: 2.5rem;
-                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-                    }
-            
-                    .video-scroll-wrapper {
-                        position: relative;
-                        overflow: hidden;
-                        padding: 20px 0;
-                    }
-            
-                    .video-scroll-inner {
-                        display: flex;
-                        gap: 30px;
-                        overflow-x: auto;
-                        overflow-y: hidden;
-                        scroll-behavior: smooth;
-                        padding: 20px 10px;
-                        scrollbar-width: thin;
-                        scrollbar-color: rgba(255,255,255,0.3) transparent;
-                    }
-            
-                    .video-scroll-inner::-webkit-scrollbar {
-                        height: 8px;
-                    }
-            
-                    .video-scroll-inner::-webkit-scrollbar-track {
-                        background: rgba(255,255,255,0.1);
-                        border-radius: 10px;
-                    }
-            
-                    .video-scroll-inner::-webkit-scrollbar-thumb {
-                        background: rgba(255,255,255,0.3);
-                        border-radius: 10px;
-                        transition: background 0.3s ease;
-                    }
-            
-                    .video-scroll-inner::-webkit-scrollbar-thumb:hover {
-                        background: rgba(255,255,255,0.5);
-                    }
-            
-                    .portfolio-item {
-                        flex: 0 0 350px;
-                        background: white;
-                        border-radius: 15px;
-                        overflow: hidden;
-                        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-                        transition: all 0.3s ease;
-                        position: relative;
-                    }
-            
-                    .portfolio-item:hover {
-                        transform: translateY(-10px);
-                        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-                    }
-            
-                    .portfolio-link {
-                        position: relative;
-                        display: block;
-                        text-decoration: none;
-                        overflow: hidden;
-                    }
-            
-                    .portfolio-hover {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: rgba(0,0,0,0.7);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                        z-index: 10;
-                    }
-            
-                    .portfolio-link:hover .portfolio-hover {
-                        opacity: 1;
-                    }
-            
-                    .portfolio-hover-content {
-                        color: white;
-                        text-align: center;
-                        transform: scale(0.8);
-                        transition: transform 0.3s ease;
-                    }
-            
-                    .portfolio-link:hover .portfolio-hover-content {
-                        transform: scale(1);
-                    }
-            
-                    .portfolio-item video {
-                        width: 100%;
-                        height: 200px;
-                        object-fit: cover;
-                        display: block;
-                    }
-            
-                    .portfolio-caption {
-                        padding: 20px;
-                        text-align: center;
-                    }
-            
-                    .portfolio-caption-heading {
-                        font-weight: 600;
-                        font-size: 1.1rem;
-                        color: #333;
-                        margin-bottom: 8px;
-                        line-height: 1.3;
-                    }
-            
-                    .portfolio-caption-subheading {
-                        color: #666;
-                        font-size: 0.9rem;
-                        font-weight: 500;
-                    }
-            
-                    .text-muted {
-                        color: #6c757d !important;
-                    }
-            
-                    /* Modal Styles */
-                    .modal {
-                        display: none;
-                        position: fixed;
-                        z-index: 1000;
-                        left: 0;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0,0,0,0.8);
-                        backdrop-filter: blur(5px);
-                    }
-            
-                    .modal-content {
-                        background-color: white;
-                        margin: 2% auto;
-                        padding: 30px;
-                        border-radius: 15px;
-                        width: 90%;
-                        max-width: 800px;
-                        max-height: 90vh;
-                        overflow-y: auto;
-                        position: relative;
-                        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-                    }
-            
-                    .close {
-                        color: #aaa;
-                        float: right;
-                        font-size: 28px;
-                        font-weight: bold;
-                        position: absolute;
-                        top: 15px;
-                        right: 20px;
-                        cursor: pointer;
-                        transition: color 0.3s ease;
-                    }
-            
-                    .close:hover {
-                        color: #000;
-                    }
-            
-                    .modal-content video {
-                        width: 100%;
-                        height: auto;
-                        border-radius: 10px;
-                        margin-bottom: 20px;
-                    }
-            
-                    .modal-content h3 {
-                        color: #333;
-                        margin-bottom: 15px;
-                        font-size: 1.8rem;
-                    }
-            
-                    .modal-content h4 {
-                        color: #555;
-                        margin: 20px 0 10px 0;
-                        font-size: 1.2rem;
-                    }
-            
-                    .modal-content p {
-                        margin-bottom: 15px;
-                        line-height: 1.6;
-                        color: #666;
-                    }
-            
-                    .modal-content ul {
-                        margin-bottom: 15px;
-                        padding-left: 20px;
-                    }
-            
-                    .modal-content li {
-                        margin-bottom: 8px;
-                        line-height: 1.5;
-                        color: #555;
-                    }
-            
-                    /* Responsive Design */
-                    @media (max-width: 768px) {
-                        .portfolio-item {
-                            flex: 0 0 280px;
-                        }
-                        
-                        .video-section h2 {
-                            font-size: 2rem;
-                        }
-                        
-                        .modal-content {
-                            width: 95%;
-                            padding: 20px;
-                            margin: 5% auto;
-                        }
-                    }
-            
-                    @media (max-width: 480px) {
-                        .portfolio-item {
-                            flex: 0 0 250px;
-                        }
-                        
-                        .video-scroll-inner {
-                            gap: 20px;
-                        }
-                    }
-                </style>
+        <!---====VIDEO HIGHLIGHTS CONTAINER -------->
+                    <style>
+                      * {
+                          margin: 0;
+                          padding: 0;
+                          box-sizing: border-box;
+                      }
+              
+                      body {
+                          font-family: 'Arial', sans-serif;
+                          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                          min-height: 100vh;
+                          padding: 20px 0;
+                      }
+              
+                      .container {
+                          max-width: 1200px;
+                          margin: 0 auto;
+                          padding: 0 20px;
+                      }
+              
+                      .video-section {
+                          margin: 40px 0;
+                      }
+              
+                      .video-section h2 {
+                          text-align: center;
+                          font-weight: 700;
+                          margin-bottom: 2rem;
+                          color: white;
+                          font-size: 2.5rem;
+                          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                      }
+              
+                      .video-scroll-wrapper {
+                          position: relative;
+                          overflow: hidden;
+                          padding: 20px 0;
+                      }
+              
+                      .video-scroll-inner {
+                          display: flex;
+                          gap: 30px;
+                          overflow-x: auto;
+                          overflow-y: hidden;
+                          scroll-behavior: smooth;
+                          padding: 20px 10px;
+                          scrollbar-width: thin;
+                          scrollbar-color: rgba(255,255,255,0.3) transparent;
+                      }
+              
+                      .video-scroll-inner::-webkit-scrollbar {
+                          height: 8px;
+                      }
+              
+                      .video-scroll-inner::-webkit-scrollbar-track {
+                          background: rgba(255,255,255,0.1);
+                          border-radius: 10px;
+                      }
+              
+                      .video-scroll-inner::-webkit-scrollbar-thumb {
+                          background: rgba(255,255,255,0.3);
+                          border-radius: 10px;
+                          transition: background 0.3s ease;
+                      }
+              
+                      .video-scroll-inner::-webkit-scrollbar-thumb:hover {
+                          background: rgba(255,255,255,0.5);
+                      }
+              
+                      .portfolio-item {
+                          flex: 0 0 350px;
+                          background: white;
+                          border-radius: 15px;
+                          overflow: hidden;
+                          box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                          transition: all 0.3s ease;
+                          position: relative;
+                      }
+              
+                      .portfolio-item:hover {
+                          transform: translateY(-10px);
+                          box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                      }
+              
+                      .portfolio-link {
+                          position: relative;
+                          display: block;
+                          text-decoration: none;
+                          overflow: hidden;
+                      }
+              
+                      .portfolio-hover {
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          right: 0;
+                          bottom: 0;
+                          background: rgba(0,0,0,0.7);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          opacity: 0;
+                          transition: opacity 0.3s ease;
+                          z-index: 10;
+                      }
+              
+                      .portfolio-link:hover .portfolio-hover {
+                          opacity: 1;
+                      }
+              
+                      .portfolio-hover-content {
+                          color: white;
+                          text-align: center;
+                          transform: scale(0.8);
+                          transition: transform 0.3s ease;
+                      }
+              
+                      .portfolio-link:hover .portfolio-hover-content {
+                          transform: scale(1);
+                      }
+              
+                      .portfolio-item video {
+                          width: 100%;
+                          height: 200px;
+                          object-fit: cover;
+                          display: block;
+                      }
+              
+                      .portfolio-caption {
+                          padding: 20px;
+                          text-align: center;
+                      }
+              
+                      .portfolio-caption-heading {
+                          font-weight: 600;
+                          font-size: 1.1rem;
+                          color: #333;
+                          margin-bottom: 8px;
+                          line-height: 1.3;
+                      }
+              
+                      .portfolio-caption-subheading {
+                          color: #666;
+                          font-size: 0.9rem;
+                          font-weight: 500;
+                      }
+              
+                      .text-muted {
+                          color: #6c757d !important;
+                      }
+              
+                      /* Modal Styles */
+                      .modal {
+                          display: none;
+                          position: fixed;
+                          z-index: 1000;
+                          left: 0;
+                          top: 0;
+                          width: 100%;
+                          height: 100%;
+                          background-color: rgba(0,0,0,0.8);
+                          backdrop-filter: blur(5px);
+                      }
+              
+                      .modal-content {
+                          background-color: white;
+                          margin: 2% auto;
+                          padding: 30px;
+                          border-radius: 15px;
+                          width: 90%;
+                          max-width: 800px;
+                          max-height: 90vh;
+                          overflow-y: auto;
+                          position: relative;
+                          box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                      }
+              
+                      .close {
+                          color: #aaa;
+                          float: right;
+                          font-size: 28px;
+                          font-weight: bold;
+                          position: absolute;
+                          top: 15px;
+                          right: 20px;
+                          cursor: pointer;
+                          transition: color 0.3s ease;
+                      }
+              
+                      .close:hover {
+                          color: #000;
+                      }
+              
+                      .modal-content video {
+                          width: 100%;
+                          height: auto;
+                          border-radius: 10px;
+                          margin-bottom: 20px;
+                      }
+              
+                      .modal-content h3 {
+                          color: #333;
+                          margin-bottom: 15px;
+                          font-size: 1.8rem;
+                      }
+              
+                      .modal-content h4 {
+                          color: #555;
+                          margin: 20px 0 10px 0;
+                          font-size: 1.2rem;
+                      }
+              
+                      .modal-content p {
+                          margin-bottom: 15px;
+                          line-height: 1.6;
+                          color: #666;
+                      }
+              
+                      .modal-content ul {
+                          margin-bottom: 15px;
+                          padding-left: 20px;
+                      }
+              
+                      .modal-content li {
+                          margin-bottom: 8px;
+                          line-height: 1.5;
+                          color: #555;
+                      }
+              
+                      /* Responsive Design */
+                      @media (max-width: 768px) {
+                          .portfolio-item {
+                              flex: 0 0 280px;
+                          }
+                          
+                          .video-section h2 {
+                              font-size: 2rem;
+                          }
+                          
+                          .modal-content {
+                              width: 95%;
+                              padding: 20px;
+                              margin: 5% auto;
+                          }
+                      }
+              
+                      @media (max-width: 480px) {
+                          .portfolio-item {
+                              flex: 0 0 250px;
+                          }
+                          
+                          .video-scroll-inner {
+                              gap: 20px;
+                          }
+                      }
+                  </style>
             </head>
             <body>
-                <!-- 🎬 Video Highlights Scrollable -->
                 <div class="video-section container">
                     <h2>🎬 Video Highlights</h2>
                     
@@ -1125,8 +1123,6 @@
                               });
                             }
                           </script>
-
-              <div class="divider"></div>
 
           <!-- ===== FOOTER ===== -->
             <footer class="footer">
