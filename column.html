@@ -468,6 +468,243 @@
       margin-bottom: 1rem;
     }
 
+    /*Video Highlights*/
+     .video-section {
+            margin: 40px 0;
+        }
+
+        .video-section h2 {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: white;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .video-scroll-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .video-scroll-inner {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            padding: 20px 10px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255,255,255,0.3) transparent;
+        }
+
+        .video-scroll-inner::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .video-scroll-inner::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .video-scroll-inner::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .video-scroll-inner::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.5);
+        }
+
+        .portfolio-item {
+            flex: 0 0 350px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .portfolio-link {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            overflow: hidden;
+        }
+
+        .portfolio-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .portfolio-link:hover .portfolio-hover {
+            opacity: 1;
+        }
+
+        .portfolio-hover-content {
+            color: white;
+            text-align: center;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-link:hover .portfolio-hover-content {
+            transform: scale(1);
+        }
+
+        .portfolio-item video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-caption {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-caption-heading {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .portfolio-caption-subheading {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 2% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .modal-content video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .modal-content h4 {
+            color: #555;
+            margin: 20px 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .modal-content ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        .modal-content li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-item {
+                flex: 0 0 280px;
+            }
+            
+            .video-section h2 {
+                font-size: 2rem;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 20px;
+                margin: 5% auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .portfolio-item {
+                flex: 0 0 250px;
+            }
+            
+            .video-scroll-inner {
+                gap: 20px;
+            }
+        }
+
     /* Divider */
     .divider {
       height: 2px;
@@ -681,239 +918,7 @@
 
     <div class="divider"></div>
 
-    <!-- Involvement Gallery Section -->
-    <section class="gallery-section">
-      <div class="section-header">
-        <h2>📸 Involvement Gallery</h2>
-      </div>
-      
-      <div class="gallery-grid">
-        <div class="gallery-item" onclick="openModal('modalGTIDS')">
-          <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS Presentation">
-        </div>
-        <div class="gallery-item" onclick="openModal('modalIntern')">
-          <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="BERNAMA Internship">
-        </div>
-        <div class="gallery-item" onclick="openModal('modalSULAM')">
-          <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM 2024">
-        </div>
-        <div class="gallery-item" onclick="openModal('modalFskik')">
-          <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition">
-        </div>
-        <div class="gallery-item" onclick="openModal('modalSuk')">
-          <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK Presentation">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- All Modals -->
-  <!-- Modal MQTT/Node-Red -->
-  <div id="newsModalVigilance" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('newsModalVigilance')">&times;</span>
-      <img src="assets/img/portfolio/Gallery/flow diagram.JPG" alt="Vigilance Monitor System">
-      <h3>Vigilance Monitor: AI Vision + MQTT Alert Infrastructure</h3>
-      <p><strong>Date:</strong> June 2025</p>
-      <p>An intelligent vigilance monitoring system that combines computer vision with IoT messaging infrastructure to detect drowsiness and fatigue in real-time through webcam analysis.</p>
-      <p>The system processes facial landmarks including Eye Aspect Ratio (EAR) and lip distance measurements, publishing alert data via MQTT protocol to Node-RED automation flows. When drowsiness thresholds are exceeded, automated notifications and alarm systems are triggered through the integrated IoT infrastructure.</p>
-      <p>This solution provides seamless integration between AI-powered computer vision analysis and robust MQTT messaging for scalable safety monitoring applications across various environments.</p>
-    </div>
-  </div>
-
-  <!-- Modal for Flutter Drowy Logic -->
-  <div id="modalDrowyLogic" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modalDrowyLogic')">&times;</span>
-      <h3>Flutter Variable & Conditional Logic in Drowy App</h3>
-      <p>This is a quick guide and reflection of how variables and logic are structured in my app.</p>
-      <h4>🔸 Main Variables</h4>
-      <ul>
-        <li>bool isDrowsy = false;</li>
-        <li>bool isPopupVisible = false;</li>
-        <li>bool isDetectionEnabled = true;</li>
-        <li>int yawnCount = 0;</li>
-      </ul>
-      <h4>🔁 Conditional Logic</h4>
-      <pre><code>if (isDrowsy) {
-          player.play('alarm.mp3');
-        } else {
-          player.stop();
-        }
-        
-        if (isYawning && yawnCount >= 3) {
-          showWarningPopup();
-        }
-        
-        if (isDrowsy || isYawning) {
-          player.play('alarm.mp3');
-        }</code></pre>
-              <h4>🛑 Pausing & Resuming</h4>
-              <pre><code>// Pause if popup is active
-        if (isPopupVisible) {
-          return;
-        }
-        
-        // Resume detection
-        if (!isPopupVisible) {
-          startDetection();
-        }</code></pre>
-            </div>
-        </div>
-
-          <!-- Modal for GTIDS Flow -->
-        <div id="newsModalGTIDSFlow" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalGTIDSFlow')">&times;</span>
-            <img src="assets/img/portfolio/Gallery/microsleepflow.png" alt="GTIDS Flowchart" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-            <h3>GTIDS24 x EvoCity – Anti-Microsleep App Flow</h3>
-            <p><strong>Date:</strong> July 2025</p>
-            <p>
-              This flowchart summarizes the full process of the mobile app developed under the GTIDS24 project collaboration between UiTM and EvoCity. The app uses camera-based face detection and AI avatars to monitor driver drowsiness, yawns, and microsleep events in real-time.
-            </p>
-            <p>
-              After launching the app, users can choose from 7 languages and avatar voices. A manual guide is shown for first-time users. Once activated, the avatar-enabled detector screen begins analyzing user expressions via the camera.
-            </p>
-            <p>
-              Detected signs (yawn, drowsiness, microsleep) are logged into a dashboard. Each trigger displays a popup and plays a TTS warning in the selected language. All data — including time, type, and count — is stored and later visualized in charts or exported as a PDF driving activity report.
-            </p>
-            <p>
-              This project was deployed during GTIDS24, focusing on real-time safety systems for drivers. I served as a Research Assistant during this development, and contributed to UI/UX flows, backend data logging, and testing under real driving conditions.
-            </p>
-          </div>
-        </div>
-          
-          <div id="newsModalEvoCity" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalEvoCity')">&times;</span>
-            <img src="assets/img/portfolio/Gallery/avatarchatbot.jpg" alt="EVO City AI Avatar" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
-            <h3>EVO City App – Multilingual Avatar with Drowsiness Detection</h3>
-            <p><strong>Date:</strong> June 2025</p>
-            <p>Just wanna share a sneak peek of my current project - <strong>EVO City app</strong> 😊</p>
-            <p>
-              Basically, it's an <strong>A.I chatbox</strong> with a smart avatar that can talk to you in different languages like English, Malay, Chinese, Arab, Hindi/Tamil, Korean, and Japanese. The avatar responds using voice (TTS), so it feels more alive and interactive.
-            </p>
-            <p>
-              What makes it more interesting, <strong>Shafurah BHR</strong> and I combined it with a <strong>drowsiness detection system</strong> (from Drowy App). So while you're chatting with the A.I, the app can also detect if you're sleepy, microsleeping or yawning.
-            </p>
-            <p>
-              Once it detects any of that, the A.I will react by giving a <strong>warning through voice and popup</strong>. There's also a toggle in the settings to turn detection on/off anytime.
-            </p>
-            <p>
-              We're working together with our research officer <strong>Shafurah BHR</strong>, and our project leaders <strong>Dr. Izzad</strong> & <strong>Dr. Norkhushaini Awang</strong>.
-            </p>
-            <p>
-              We started building the system around mid-Ramadan and now we're at about <strong>94% completion</strong>. Currently entering the testing & maintenance phase before deployment as a real product.
-            </p>
-            <p>
-              The idea is to make this A.I not just smart, but also helpful especially if you're <strong>driving or working late</strong>. Still improving things bit by bit, but so far it's been a fun journey building this 🙌
-            </p>
-          </div>
-        </div>
-              
-        <div id="newsModalOpenCTI" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalOpenCTI')">&times;</span>
-            <img src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI">
-            <h3>What is OpenCTI?</h3>
-            <p><strong>Date:</strong> July 2025</p>
-            <p>OpenCTI (Open Cyber Threat Intelligence Platform) is an open-source platform designed to manage and share cyber threat intelligence (CTI). It provides structured and contextualized information such as indicators of compromise (IOCs), attack patterns, threat actors, malware, and more.</p>
-            <p>During my internship, I used OpenCTI to monitor live threat feeds and correlate data from different sources. The platform supports STIX/TAXII, integrates with MITRE ATT&CK, and helps visualize relationships between threats and assets. It is essential for any SOC team looking to automate, analyze, and share threat intelligence effectively.</p>
-          </div>
-        </div>
-        
-        <div id="newsModalMaltrail" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalMaltrail')">&times;</span>
-            <img src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail with Arkime">
-            <h3>Maltrail and How It Works with Arkime</h3>
-            <p><strong>Date:</strong> July 2025</p>
-            <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
-            <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime's search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
-            <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
-          </div>
-        </div>
-
-            <!-- Modals for Involvement gallery -->
-                  <div id="modalGTIDS" class="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
-                      <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
-                      <h3>GTIDS Presentation at SUK Selangor</h3>
-                      <p><strong>Date:</strong> February 2025</p>
-                      <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
-                    </div>
-                  </div>
-                  
-                  <div id="modalIntern" class="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal('modalIntern')">&times;</span>
-                      <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
-                      <h3>Internship at BERNAMA Cybersecurity Unit</h3>
-                      <p><strong>Date:</strong> January 2025</p>
-                      <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
-                    </div>
-                  </div>
-                  
-                  <div id="modalSULAM" class="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
-                      <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
-                      <h3>SULAM 2024 Digital Outreach Project</h3>
-                      <p><strong>Date:</strong> March 2024</p>
-                      <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
-                    </div>
-                  </div>
-                  
-                  <div id="modalFskik" class="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal('modalFskik')">&times;</span>
-                      <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition UPSI">
-                      <h3>FSKIK Exhibition UPSI</h3>
-                      <p><strong>Date:</strong> May 2025</p>
-                      <p>With friends who were involved in the FSKIK Exhibition UPSI with projects consisting of Applications, Web, and IoT, held at SITC Hall, Abdul Jalil Campus, UPSI.</p>
-                    </div>
-                  </div>
-                  
-                  <div id="modalSuk" class="modal">
-                    <div class="modal-content">
-                      <span class="close" onclick="closeModal('modalSuk')">&times;</span>
-                      <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
-                      <h3>Presentation with SUK Selangor Rep</h3>
-                      <p><strong>Date:</strong> May 2025</p>
-                      <p>I got some really good feedback from Encik Shamsul, Director of Innovation at GTIDS, during our session at the Selangor State Secretary's Office. Presented the winning grant project for 30 mins with my supervisors Dr. Nor & Dr. Izzad, and my teammate Shafurah, who handled the AI Chatbox coding part..</p>
-                    </div>
-                  </div>
-            
-                    <script>
-                      function openModal(id) {
-                        document.getElementById(id).style.display = "flex";
-                      }
-                      function closeModal(id) {
-                        document.getElementById(id).style.display = "none";
-                      }
-                      window.onclick = function(event) {
-                        const modals = document.querySelectorAll('.modal');
-                        modals.forEach(modal => {
-                          if (event.target === modal) {
-                            modal.style.display = "none";
-                          }
-                        });
-                      }
-                    </script>
-                    
-                    <script>
-                    function scrollGallery(offset) {
-                      document.querySelector('.involvement-gallery').scrollBy({
-                        left: offset,
-                        behavior: 'smooth'
-                      });
-                    }
-                  </script>
-  
-          <div class="divider"></div>
-
-        <!-- 🎬 Video Highlights Scrollable -->
+    !-- 🎬 Video Highlights Scrollable -->
             <div class="video-section container">
               <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
             
@@ -971,91 +976,321 @@
               </div>
             </div>
 
-    <!-- Modal for SEDA2024 -->
-        <div id="newsModalSEDA" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
-            <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-              <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
-            <p><strong>Date:</strong> April 2024</p>
-            <h4>🎥 Video Context:</h4>
-            <ul>
-              <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
-              <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
-            </ul>
-            <h4>🚀 Purpose & Vision:</h4>
-            <ul>
-              <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
-              <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
-              <li>My first step in sharing innovation to a broader audience.</li>
-            </ul>
-            <h4>🔖 Hashtags:</h4>
-            <p style="font-size: 0.9rem; color: #666;">
-              #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
-            </p>
-          </div>
-        </div>
-        
-        <!-- Modal for Microsleep Demo -->
-        <div id="newsModalMicrosleepDemo" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
-            <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-              <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h3>Microsleep Detection System - IoT Prototype</h3>
-            <p><strong>Date:</strong> June 2025</p>
-            <h4>🔧 Project Highlights:</h4>
-            <ul>
-              <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
-              <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
-              <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
-              <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
-            </ul>
-            <h4>🎯 Objectives:</h4>
-            <ul>
-              <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
-              <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
-              <li>Test the usability and effectiveness of the system.</li>
-            </ul>
-            <h4>💡 Problem Statement:</h4>
-            <ul>
-              <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
-              <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Modal for JIICAS2024 -->
-        <div id="newsModalJiicas2024" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
-            <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-              <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
-            <p><strong>Date:</strong> August 2024</p>
-            <h4>🎓 About the Competition:</h4>
-            <ul>
-              <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
-              <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
-              <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
-            </ul>
-            <h4>📽️ Presentation Highlights:</h4>
-            <ul>
-              <li>Focused on real-time AI + IoT integration in safety systems.</li>
-              <li>Project was part of ongoing faculty research and innovation initiatives.</li>
-              <li>Highlighted technical aspects, user safety, and scalability.</li>
-            </ul>
-          </div>
-        </div>
+            <!-- Modal for SEDA2024 -->
+                <div id="newsModalSEDA" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
+                    <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+                      <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
+                    <p><strong>Date:</strong> April 2024</p>
+                    <h4>🎥 Video Context:</h4>
+                    <ul>
+                      <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
+                      <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
+                    </ul>
+                    <h4>🚀 Purpose & Vision:</h4>
+                    <ul>
+                      <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
+                      <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
+                      <li>My first step in sharing innovation to a broader audience.</li>
+                    </ul>
+                    <h4>🔖 Hashtags:</h4>
+                    <p style="font-size: 0.9rem; color: #666;">
+                      #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Modal for Microsleep Demo -->
+                <div id="newsModalMicrosleepDemo" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
+                    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                      <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <h3>Microsleep Detection System - IoT Prototype</h3>
+                    <p><strong>Date:</strong> June 2025</p>
+                    <h4>🔧 Project Highlights:</h4>
+                    <ul>
+                      <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
+                      <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
+                      <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
+                      <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
+                    </ul>
+                    <h4>🎯 Objectives:</h4>
+                    <ul>
+                      <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
+                      <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
+                      <li>Test the usability and effectiveness of the system.</li>
+                    </ul>
+                    <h4>💡 Problem Statement:</h4>
+                    <ul>
+                      <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
+                      <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Modal for JIICAS2024 -->
+                <div id="newsModalJiicas2024" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
+                    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+                      <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
+                    <p><strong>Date:</strong> August 2024</p>
+                    <h4>🎓 About the Competition:</h4>
+                    <ul>
+                      <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
+                      <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
+                      <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
+                    </ul>
+                    <h4>📽️ Presentation Highlights:</h4>
+                    <ul>
+                      <li>Focused on real-time AI + IoT integration in safety systems.</li>
+                      <li>Project was part of ongoing faculty research and innovation initiatives.</li>
+                      <li>Highlighted technical aspects, user safety, and scalability.</li>
+                    </ul>
+                  </div>
+                </div>
 
-          <div class="divider"></div>
+            <!-- Involvement Gallery Section -->
+            <section class="gallery-section">
+              <div class="section-header">
+                <h2>📸 Involvement Gallery</h2>
+              </div>
+              
+              <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('modalGTIDS')">
+                  <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS Presentation">
+                </div>
+                <div class="gallery-item" onclick="openModal('modalIntern')">
+                  <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="BERNAMA Internship">
+                </div>
+                <div class="gallery-item" onclick="openModal('modalSULAM')">
+                  <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM 2024">
+                </div>
+                <div class="gallery-item" onclick="openModal('modalFskik')">
+                  <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition">
+                </div>
+                <div class="gallery-item" onclick="openModal('modalSuk')">
+                  <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK Presentation">
+                </div>
+              </div>
+            </section>
+          </main>
+        
+          <!-- All Modals -->
+          <!-- Modal MQTT/Node-Red -->
+          <div id="newsModalVigilance" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('newsModalVigilance')">&times;</span>
+              <img src="assets/img/portfolio/Gallery/flow diagram.JPG" alt="Vigilance Monitor System">
+              <h3>Vigilance Monitor: AI Vision + MQTT Alert Infrastructure</h3>
+              <p><strong>Date:</strong> June 2025</p>
+              <p>An intelligent vigilance monitoring system that combines computer vision with IoT messaging infrastructure to detect drowsiness and fatigue in real-time through webcam analysis.</p>
+              <p>The system processes facial landmarks including Eye Aspect Ratio (EAR) and lip distance measurements, publishing alert data via MQTT protocol to Node-RED automation flows. When drowsiness thresholds are exceeded, automated notifications and alarm systems are triggered through the integrated IoT infrastructure.</p>
+              <p>This solution provides seamless integration between AI-powered computer vision analysis and robust MQTT messaging for scalable safety monitoring applications across various environments.</p>
+            </div>
+          </div>
+        
+          <!-- Modal for Flutter Drowy Logic -->
+          <div id="modalDrowyLogic" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal('modalDrowyLogic')">&times;</span>
+              <h3>Flutter Variable & Conditional Logic in Drowy App</h3>
+              <p>This is a quick guide and reflection of how variables and logic are structured in my app.</p>
+              <h4>🔸 Main Variables</h4>
+              <ul>
+                <li>bool isDrowsy = false;</li>
+                <li>bool isPopupVisible = false;</li>
+                <li>bool isDetectionEnabled = true;</li>
+                <li>int yawnCount = 0;</li>
+              </ul>
+              <h4>🔁 Conditional Logic</h4>
+              <pre><code>if (isDrowsy) {
+                  player.play('alarm.mp3');
+                } else {
+                  player.stop();
+                }
+                
+                if (isYawning && yawnCount >= 3) {
+                  showWarningPopup();
+                }
+                
+                if (isDrowsy || isYawning) {
+                  player.play('alarm.mp3');
+                }</code></pre>
+                      <h4>🛑 Pausing & Resuming</h4>
+                      <pre><code>// Pause if popup is active
+                if (isPopupVisible) {
+                  return;
+                }
+                
+                // Resume detection
+                if (!isPopupVisible) {
+                  startDetection();
+                }</code></pre>
+                    </div>
+                </div>
+        
+                  <!-- Modal for GTIDS Flow -->
+                <div id="newsModalGTIDSFlow" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalGTIDSFlow')">&times;</span>
+                    <img src="assets/img/portfolio/Gallery/microsleepflow.png" alt="GTIDS Flowchart" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3>GTIDS24 x EvoCity – Anti-Microsleep App Flow</h3>
+                    <p><strong>Date:</strong> July 2025</p>
+                    <p>
+                      This flowchart summarizes the full process of the mobile app developed under the GTIDS24 project collaboration between UiTM and EvoCity. The app uses camera-based face detection and AI avatars to monitor driver drowsiness, yawns, and microsleep events in real-time.
+                    </p>
+                    <p>
+                      After launching the app, users can choose from 7 languages and avatar voices. A manual guide is shown for first-time users. Once activated, the avatar-enabled detector screen begins analyzing user expressions via the camera.
+                    </p>
+                    <p>
+                      Detected signs (yawn, drowsiness, microsleep) are logged into a dashboard. Each trigger displays a popup and plays a TTS warning in the selected language. All data — including time, type, and count — is stored and later visualized in charts or exported as a PDF driving activity report.
+                    </p>
+                    <p>
+                      This project was deployed during GTIDS24, focusing on real-time safety systems for drivers. I served as a Research Assistant during this development, and contributed to UI/UX flows, backend data logging, and testing under real driving conditions.
+                    </p>
+                  </div>
+                </div>
+                  
+                  <div id="newsModalEvoCity" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalEvoCity')">&times;</span>
+                    <img src="assets/img/portfolio/Gallery/avatarchatbot.jpg" alt="EVO City AI Avatar" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+                    <h3>EVO City App – Multilingual Avatar with Drowsiness Detection</h3>
+                    <p><strong>Date:</strong> June 2025</p>
+                    <p>Just wanna share a sneak peek of my current project - <strong>EVO City app</strong> 😊</p>
+                    <p>
+                      Basically, it's an <strong>A.I chatbox</strong> with a smart avatar that can talk to you in different languages like English, Malay, Chinese, Arab, Hindi/Tamil, Korean, and Japanese. The avatar responds using voice (TTS), so it feels more alive and interactive.
+                    </p>
+                    <p>
+                      What makes it more interesting, <strong>Shafurah BHR</strong> and I combined it with a <strong>drowsiness detection system</strong> (from Drowy App). So while you're chatting with the A.I, the app can also detect if you're sleepy, microsleeping or yawning.
+                    </p>
+                    <p>
+                      Once it detects any of that, the A.I will react by giving a <strong>warning through voice and popup</strong>. There's also a toggle in the settings to turn detection on/off anytime.
+                    </p>
+                    <p>
+                      We're working together with our research officer <strong>Shafurah BHR</strong>, and our project leaders <strong>Dr. Izzad</strong> & <strong>Dr. Norkhushaini Awang</strong>.
+                    </p>
+                    <p>
+                      We started building the system around mid-Ramadan and now we're at about <strong>94% completion</strong>. Currently entering the testing & maintenance phase before deployment as a real product.
+                    </p>
+                    <p>
+                      The idea is to make this A.I not just smart, but also helpful especially if you're <strong>driving or working late</strong>. Still improving things bit by bit, but so far it's been a fun journey building this 🙌
+                    </p>
+                  </div>
+                </div>
+                      
+                <div id="newsModalOpenCTI" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalOpenCTI')">&times;</span>
+                    <img src="assets/img/portfolio/Gallery/opencti.png" alt="OpenCTI">
+                    <h3>What is OpenCTI?</h3>
+                    <p><strong>Date:</strong> July 2025</p>
+                    <p>OpenCTI (Open Cyber Threat Intelligence Platform) is an open-source platform designed to manage and share cyber threat intelligence (CTI). It provides structured and contextualized information such as indicators of compromise (IOCs), attack patterns, threat actors, malware, and more.</p>
+                    <p>During my internship, I used OpenCTI to monitor live threat feeds and correlate data from different sources. The platform supports STIX/TAXII, integrates with MITRE ATT&CK, and helps visualize relationships between threats and assets. It is essential for any SOC team looking to automate, analyze, and share threat intelligence effectively.</p>
+                  </div>
+                </div>
+                
+                <div id="newsModalMaltrail" class="modal">
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal('newsModalMaltrail')">&times;</span>
+                    <img src="assets/img/portfolio/Gallery/maltrail.png" alt="Maltrail with Arkime">
+                    <h3>Maltrail and How It Works with Arkime</h3>
+                    <p><strong>Date:</strong> July 2025</p>
+                    <p>Maltrail is an open-source malicious traffic detection system that utilizes publicly available blacklists and machine learning to detect threats in real-time. It logs suspicious DNS queries, IPs, and unusual behaviors.</p>
+                    <p>In my setup, I integrated Maltrail with Arkime (formerly Moloch) — a large-scale packet capture and indexing tool. Arkime captures and indexes network traffic, while Maltrail flags suspicious indicators. By correlating alerts from Maltrail inside Arkime's search interface, we can trace back full packet logs and better understand the nature of the threat.</p>
+                    <p>This integration enhances SOC visibility and enables deep packet inspection on malicious activities detected by Maltrail, improving response time and threat analysis.</p>
+                  </div>
+                </div>
+        
+                    <!-- Modals for Involvement gallery -->
+                          <div id="modalGTIDS" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
+                              <img src="assets/img/portfolio/Gallery/GTIDS_present.jpg" alt="GTIDS">
+                              <h3>GTIDS Presentation at SUK Selangor</h3>
+                              <p><strong>Date:</strong> February 2025</p>
+                              <p>Presented Anti-Microsleep system powered by AI to SUK Innovation Director and MBI. Highlighted real-time alerts and drowsiness detection using Google ML Kit and avatar chatbot.</p>
+                            </div>
+                          </div>
+                          
+                          <div id="modalIntern" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeModal('modalIntern')">&times;</span>
+                              <img src="assets/img/portfolio/Gallery/internbernama.jpg" alt="Intern">
+                              <h3>Internship at BERNAMA Cybersecurity Unit</h3>
+                              <p><strong>Date:</strong> January 2025</p>
+                              <p>Assisted in real-time monitoring during national events and supported the configuration of OpenCTI for threat intelligence. Contributed to daily briefings and infrastructure maintenance.</p>
+                            </div>
+                          </div>
+                          
+                          <div id="modalSULAM" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeModal('modalSULAM')">&times;</span>
+                              <img src="assets/img/portfolio/Gallery/sulam2024.jpg" alt="SULAM">
+                              <h3>SULAM 2024 Digital Outreach Project</h3>
+                              <p><strong>Date:</strong> March 2024</p>
+                              <p>Led a tech-education initiative under SULAM to teach rural communities about AI safety apps for microsleep prevention. Used storytelling and interactive mobile demos.</p>
+                            </div>
+                          </div>
+                          
+                          <div id="modalFskik" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeModal('modalFskik')">&times;</span>
+                              <img src="assets/img/portfolio/Gallery/fskik_fyp.jpg" alt="FSKIK Exhibition UPSI">
+                              <h3>FSKIK Exhibition UPSI</h3>
+                              <p><strong>Date:</strong> May 2025</p>
+                              <p>With friends who were involved in the FSKIK Exhibition UPSI with projects consisting of Applications, Web, and IoT, held at SITC Hall, Abdul Jalil Campus, UPSI.</p>
+                            </div>
+                          </div>
+                          
+                          <div id="modalSuk" class="modal">
+                            <div class="modal-content">
+                              <span class="close" onclick="closeModal('modalSuk')">&times;</span>
+                              <img src="assets/img/portfolio/Gallery/gtidsPresentation.jpg" alt="SUK presentation">
+                              <h3>Presentation with SUK Selangor Rep</h3>
+                              <p><strong>Date:</strong> May 2025</p>
+                              <p>I got some really good feedback from Encik Shamsul, Director of Innovation at GTIDS, during our session at the Selangor State Secretary's Office. Presented the winning grant project for 30 mins with my supervisors Dr. Nor & Dr. Izzad, and my teammate Shafurah, who handled the AI Chatbox coding part..</p>
+                            </div>
+                          </div>
+                    
+                            <script>
+                              function openModal(id) {
+                                document.getElementById(id).style.display = "flex";
+                              }
+                              function closeModal(id) {
+                                document.getElementById(id).style.display = "none";
+                              }
+                              window.onclick = function(event) {
+                                const modals = document.querySelectorAll('.modal');
+                                modals.forEach(modal => {
+                                  if (event.target === modal) {
+                                    modal.style.display = "none";
+                                  }
+                                });
+                              }
+                            </script>
+                            
+                            <script>
+                            function scrollGallery(offset) {
+                              document.querySelector('.involvement-gallery').scrollBy({
+                                left: offset,
+                                behavior: 'smooth'
+                              });
+                            }
+                          </script>
+
+              <div class="divider"></div>
 
           <!-- ===== FOOTER ===== -->
             <footer class="footer">
