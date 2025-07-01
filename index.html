@@ -427,7 +427,7 @@
 
                        <!-- Publication 3 - With PDF Download -->
                             <div class="publication__item" onclick="openPublicationPopup('jiicas')">
-                              <img src="assets/img/portfolio/publications/UiTM-Logo.png" alt="UiTM JIIICAS Logo" class="ijortas-logo">
+                              <img src="assets/img/portfolio/publications/UiTM-Logo.png" alt="UiTM JIIICAS Logo" class="jiicas-logo">
                               <p class="publication__text">IoT Alarm System: Detecting & Preventing Microsleep Events – JIIICAS 2024</p>
                             </div>
 
@@ -508,14 +508,15 @@
                         font-size: 0.9rem;
                       }
                         
-                          .ijortas-logo, .jiicas-logo {
-                          width: 80px;
-                          height: auto;
+                     .ijortas-logo,
+                        .jiicas-logo {
+                          max-width: 80px;
+                          max-height: 80px;
+                          object-fit: contain;
                           display: block;
                           margin: 0 auto 0.5rem auto;
                         }
 
-                    
                       @keyframes fadeIn {
                         from { opacity: 0; transform: scale(0.95); }
                         to { opacity: 1; transform: scale(1); }
