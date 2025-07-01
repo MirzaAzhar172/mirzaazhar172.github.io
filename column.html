@@ -247,464 +247,6 @@
       color: #2980b9;
     }
 
-    /* Video Section */
-    .video-section {
-      background: white;
-      border-radius: 12px;
-      padding: 3rem 2rem;
-      margin: 4rem 0;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .video-grid {
-      display: flex;
-      overflow-x: auto;
-      gap: 2rem;
-      padding: 1rem 0;
-    }
-
-    .video-card {
-      flex: 0 0 auto;
-      width: 320px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .video-card:hover {
-      transform: translateY(-3px);
-    }
-
-    .video-card video {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .video-card .card-content {
-      padding: 1rem;
-    }
-
-    /* Gallery Section */
-    .gallery-section {
-      background: white;
-      border-radius: 12px;
-      padding: 3rem 2rem;
-      margin: 4rem 0;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-grid {
-      display: flex;
-      overflow-x: auto;
-      gap: 1.5rem;
-      padding: 1rem 0;
-    }
-
-    .gallery-item {
-      flex: 0 0 auto;
-      width: 220px;
-      height: 160px;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Skills Section */
-    .skills-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 4rem 0;
-      margin: 4rem 0;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .skills-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-      opacity: 0.3;
-    }
-
-    .skills-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-    }
-
-    .skills-content h2 {
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .skills-content p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 1.1rem;
-      margin-bottom: 3rem;
-    }
-
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .skill-tag {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 25px;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .skill-tag:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Modal Styles */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-    }
-
-    .modal-content {
-      background: white;
-      border-radius: 12px;
-      max-width: 600px;
-      width: 100%;
-      max-height: 90vh;
-      overflow-y: auto;
-      position: relative;
-      padding: 2rem;
-    }
-
-    .modal-content .close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: #7f8c8d;
-      transition: color 0.3s ease;
-    }
-
-    .modal-content .close:hover {
-      color: #e74c3c;
-    }
-
-    .modal-content img,
-    .modal-content video {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    .modal-content h3 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-
-    .modal-content p {
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      color: #555;
-    }
-
-    .modal-content ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .modal-content pre {
-      background: #f8f9fa;
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      margin-bottom: 1rem;
-    }
-
-    /*Video Highlights*/
-     .video-section {
-            margin: 40px 0;
-        }
-
-        .video-section h2 {
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: white;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .video-scroll-wrapper {
-            position: relative;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        .video-scroll-inner {
-            display: flex;
-            gap: 30px;
-            overflow-x: auto;
-            overflow-y: hidden;
-            scroll-behavior: smooth;
-            padding: 20px 10px;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255,255,255,0.3) transparent;
-        }
-
-        .video-scroll-inner::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .video-scroll-inner::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-        }
-
-        .video-scroll-inner::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.3);
-            border-radius: 10px;
-            transition: background 0.3s ease;
-        }
-
-        .video-scroll-inner::-webkit-scrollbar-thumb:hover {
-            background: rgba(255,255,255,0.5);
-        }
-
-        .portfolio-item {
-            flex: 0 0 350px;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-        }
-
-        .portfolio-link {
-            position: relative;
-            display: block;
-            text-decoration: none;
-            overflow: hidden;
-        }
-
-        .portfolio-hover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 10;
-        }
-
-        .portfolio-link:hover .portfolio-hover {
-            opacity: 1;
-        }
-
-        .portfolio-hover-content {
-            color: white;
-            text-align: center;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-        }
-
-        .portfolio-link:hover .portfolio-hover-content {
-            transform: scale(1);
-        }
-
-        .portfolio-item video {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .portfolio-caption {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .portfolio-caption-heading {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #333;
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-
-        .portfolio-caption-subheading {
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .text-muted {
-            color: #6c757d !important;
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 2% auto;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close:hover {
-            color: #000;
-        }
-
-        .modal-content video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-
-        .modal-content h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-
-        .modal-content h4 {
-            color: #555;
-            margin: 20px 0 10px 0;
-            font-size: 1.2rem;
-        }
-
-        .modal-content p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #666;
-        }
-
-        .modal-content ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-
-        .modal-content li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .portfolio-item {
-                flex: 0 0 280px;
-            }
-            
-            .video-section h2 {
-                font-size: 2rem;
-            }
-            
-            .modal-content {
-                width: 95%;
-                padding: 20px;
-                margin: 5% auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .portfolio-item {
-                flex: 0 0 250px;
-            }
-            
-            .video-scroll-inner {
-                gap: 20px;
-            }
-        }
-
     /* Divider */
     .divider {
       height: 2px;
@@ -918,147 +460,441 @@
 
     <div class="divider"></div>
 
-    !-- 🎬 Video Highlights Scrollable -->
-            <div class="video-section container">
-              <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
+          <!------video highlightS------->
+                  <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
             
-              <div class="video-scroll-wrapper">
-                <div class="video-scroll-inner">
-                  <!-- Video 1 -->
-                  <div class="portfolio-item">
-                    <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                      </div>
-                      <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-                        <source src="assets/videos/seda2024.mp4" type="video/mp4">
-                      </video>
-                    </a>
-                    <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-                      <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        min-height: 100vh;
+                        padding: 20px 0;
+                    }
+            
+                    .container {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+            
+                    .video-section {
+                        margin: 40px 0;
+                    }
+            
+                    .video-section h2 {
+                        text-align: center;
+                        font-weight: 700;
+                        margin-bottom: 2rem;
+                        color: white;
+                        font-size: 2.5rem;
+                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+                    }
+            
+                    .video-scroll-wrapper {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 20px 0;
+                    }
+            
+                    .video-scroll-inner {
+                        display: flex;
+                        gap: 30px;
+                        overflow-x: auto;
+                        overflow-y: hidden;
+                        scroll-behavior: smooth;
+                        padding: 20px 10px;
+                        scrollbar-width: thin;
+                        scrollbar-color: rgba(255,255,255,0.3) transparent;
+                    }
+            
+                    .video-scroll-inner::-webkit-scrollbar {
+                        height: 8px;
+                    }
+            
+                    .video-scroll-inner::-webkit-scrollbar-track {
+                        background: rgba(255,255,255,0.1);
+                        border-radius: 10px;
+                    }
+            
+                    .video-scroll-inner::-webkit-scrollbar-thumb {
+                        background: rgba(255,255,255,0.3);
+                        border-radius: 10px;
+                        transition: background 0.3s ease;
+                    }
+            
+                    .video-scroll-inner::-webkit-scrollbar-thumb:hover {
+                        background: rgba(255,255,255,0.5);
+                    }
+            
+                    .portfolio-item {
+                        flex: 0 0 350px;
+                        background: white;
+                        border-radius: 15px;
+                        overflow: hidden;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                        transition: all 0.3s ease;
+                        position: relative;
+                    }
+            
+                    .portfolio-item:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                    }
+            
+                    .portfolio-link {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        overflow: hidden;
+                    }
+            
+                    .portfolio-hover {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0,0,0,0.7);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        z-index: 10;
+                    }
+            
+                    .portfolio-link:hover .portfolio-hover {
+                        opacity: 1;
+                    }
+            
+                    .portfolio-hover-content {
+                        color: white;
+                        text-align: center;
+                        transform: scale(0.8);
+                        transition: transform 0.3s ease;
+                    }
+            
+                    .portfolio-link:hover .portfolio-hover-content {
+                        transform: scale(1);
+                    }
+            
+                    .portfolio-item video {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                        display: block;
+                    }
+            
+                    .portfolio-caption {
+                        padding: 20px;
+                        text-align: center;
+                    }
+            
+                    .portfolio-caption-heading {
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        color: #333;
+                        margin-bottom: 8px;
+                        line-height: 1.3;
+                    }
+            
+                    .portfolio-caption-subheading {
+                        color: #666;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+            
+                    .text-muted {
+                        color: #6c757d !important;
+                    }
+            
+                    /* Modal Styles */
+                    .modal {
+                        display: none;
+                        position: fixed;
+                        z-index: 1000;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.8);
+                        backdrop-filter: blur(5px);
+                    }
+            
+                    .modal-content {
+                        background-color: white;
+                        margin: 2% auto;
+                        padding: 30px;
+                        border-radius: 15px;
+                        width: 90%;
+                        max-width: 800px;
+                        max-height: 90vh;
+                        overflow-y: auto;
+                        position: relative;
+                        box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                    }
+            
+                    .close {
+                        color: #aaa;
+                        float: right;
+                        font-size: 28px;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 15px;
+                        right: 20px;
+                        cursor: pointer;
+                        transition: color 0.3s ease;
+                    }
+            
+                    .close:hover {
+                        color: #000;
+                    }
+            
+                    .modal-content video {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                        margin-bottom: 20px;
+                    }
+            
+                    .modal-content h3 {
+                        color: #333;
+                        margin-bottom: 15px;
+                        font-size: 1.8rem;
+                    }
+            
+                    .modal-content h4 {
+                        color: #555;
+                        margin: 20px 0 10px 0;
+                        font-size: 1.2rem;
+                    }
+            
+                    .modal-content p {
+                        margin-bottom: 15px;
+                        line-height: 1.6;
+                        color: #666;
+                    }
+            
+                    .modal-content ul {
+                        margin-bottom: 15px;
+                        padding-left: 20px;
+                    }
+            
+                    .modal-content li {
+                        margin-bottom: 8px;
+                        line-height: 1.5;
+                        color: #555;
+                    }
+            
+                    /* Responsive Design */
+                    @media (max-width: 768px) {
+                        .portfolio-item {
+                            flex: 0 0 280px;
+                        }
+                        
+                        .video-section h2 {
+                            font-size: 2rem;
+                        }
+                        
+                        .modal-content {
+                            width: 95%;
+                            padding: 20px;
+                            margin: 5% auto;
+                        }
+                    }
+            
+                    @media (max-width: 480px) {
+                        .portfolio-item {
+                            flex: 0 0 250px;
+                        }
+                        
+                        .video-scroll-inner {
+                            gap: 20px;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <!-- 🎬 Video Highlights Scrollable -->
+                <div class="video-section container">
+                    <h2>🎬 Video Highlights</h2>
+                    
+                    <div class="video-scroll-wrapper">
+                        <div class="video-scroll-inner">
+                            <!-- Video 1 -->
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
+                                    <div class="portfolio-hover">
+                                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                                    </div>
+                                    <video muted autoplay loop playsinline poster="https://via.placeholder.com/350x200/667eea/white?text=SEDA+2024">
+                                        <source src="assets/videos/seda2024.mp4" type="video/mp4">
+                                    </video>
+                                </a>
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
+                                    <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+                                </div>
+                            </div>
+            
+                            <!-- Video 2 -->
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
+                                    <div class="portfolio-hover">
+                                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                                    </div>
+                                    <video muted autoplay loop playsinline poster="https://via.placeholder.com/350x200/764ba2/white?text=Microsleep+Demo">
+                                        <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+                                    </video>
+                                </a>
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
+                                    <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
+                                </div>
+                            </div>
+            
+                            <!-- Video 3 -->
+                            <div class="portfolio-item">
+                                <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
+                                    <div class="portfolio-hover">
+                                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
+                                    </div>
+                                    <video muted autoplay loop playsinline poster="https://via.placeholder.com/350x200/667eea/white?text=JIICAS+2024">
+                                        <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+                                    </video>
+                                </a>
+                                <div class="portfolio-caption">
+                                    <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
+                                    <div class="portfolio-caption-subheading text-muted">August 2024</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
             
-                  <!-- Video 2 -->
-                  <div class="portfolio-item">
-                    <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                      </div>
-                      <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-                        <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-                      </video>
-                    </a>
-                    <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
-                      <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
-                    </div>
-                  </div>
-            
-                  <!-- Video 3 -->
-                  <div class="portfolio-item">
-                    <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                      </div>
-                      <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-                        <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
-                      </video>
-                    </a>
-                    <div class="portfolio-caption">
-                      <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
-                      <div class="portfolio-caption-subheading text-muted">August 2024</div>
-                    </div>
-                  </div>
-            
-                </div>
-              </div>
-            </div>
-
-            <!-- Modal for SEDA2024 -->
+                <!-- Modal for SEDA2024 -->
                 <div id="newsModalSEDA" class="modal">
-                  <div class="modal-content">
-                    <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
-                    <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-                      <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
-                    <p><strong>Date:</strong> April 2024</p>
-                    <h4>🎥 Video Context:</h4>
-                    <ul>
-                      <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
-                      <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
-                    </ul>
-                    <h4>🚀 Purpose & Vision:</h4>
-                    <ul>
-                      <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
-                      <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
-                      <li>My first step in sharing innovation to a broader audience.</li>
-                    </ul>
-                    <h4>🔖 Hashtags:</h4>
-                    <p style="font-size: 0.9rem; color: #666;">
-                      #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
-                    </p>
-                  </div>
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
+                        <video controls poster="https://via.placeholder.com/800x400/667eea/white?text=SEDA+Video">
+                            <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
+                        <p><strong>Date:</strong> April 2024</p>
+                        <h4>🎥 Video Context:</h4>
+                        <ul>
+                            <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
+                            <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
+                        </ul>
+                        <h4>🚀 Purpose & Vision:</h4>
+                        <ul>
+                            <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
+                            <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
+                            <li>My first step in sharing innovation to a broader audience.</li>
+                        </ul>
+                        <h4>🔖 Hashtags:</h4>
+                        <p style="font-size: 0.9rem; color: #666;">
+                            #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
+                        </p>
+                    </div>
                 </div>
-                
+            
                 <!-- Modal for Microsleep Demo -->
                 <div id="newsModalMicrosleepDemo" class="modal">
-                  <div class="modal-content">
-                    <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
-                    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-                      <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <h3>Microsleep Detection System - IoT Prototype</h3>
-                    <p><strong>Date:</strong> June 2025</p>
-                    <h4>🔧 Project Highlights:</h4>
-                    <ul>
-                      <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
-                      <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
-                      <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
-                      <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
-                    </ul>
-                    <h4>🎯 Objectives:</h4>
-                    <ul>
-                      <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
-                      <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
-                      <li>Test the usability and effectiveness of the system.</li>
-                    </ul>
-                    <h4>💡 Problem Statement:</h4>
-                    <ul>
-                      <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
-                      <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
-                    </ul>
-                  </div>
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
+                        <video controls poster="https://via.placeholder.com/800x400/764ba2/white?text=Microsleep+Demo">
+                            <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Microsleep Detection System - IoT Prototype</h3>
+                        <p><strong>Date:</strong> June 2025</p>
+                        <h4>🔧 Project Highlights:</h4>
+                        <ul>
+                            <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
+                            <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
+                            <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
+                            <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
+                        </ul>
+                        <h4>🎯 Objectives:</h4>
+                        <ul>
+                            <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
+                            <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
+                            <li>Test the usability and effectiveness of the system.</li>
+                        </ul>
+                        <h4>💡 Problem Statement:</h4>
+                        <ul>
+                            <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
+                            <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
+                        </ul>
+                    </div>
                 </div>
-                
+            
                 <!-- Modal for JIICAS2024 -->
                 <div id="newsModalJiicas2024" class="modal">
-                  <div class="modal-content">
-                    <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
-                    <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-                      <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
-                    <p><strong>Date:</strong> August 2024</p>
-                    <h4>🎓 About the Competition:</h4>
-                    <ul>
-                      <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
-                      <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
-                      <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
-                    </ul>
-                    <h4>📽️ Presentation Highlights:</h4>
-                    <ul>
-                      <li>Focused on real-time AI + IoT integration in safety systems.</li>
-                      <li>Project was part of ongoing faculty research and innovation initiatives.</li>
-                      <li>Highlighted technical aspects, user safety, and scalability.</li>
-                    </ul>
-                  </div>
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
+                        <video controls poster="https://via.placeholder.com/800x400/667eea/white?text=JIICAS+2024">
+                            <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
+                        <p><strong>Date:</strong> August 2024</p>
+                        <h4>🎓 About the Competition:</h4>
+                        <ul>
+                            <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
+                            <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
+                            <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
+                        </ul>
+                        <h4>📽️ Presentation Highlights:</h4>
+                        <ul>
+                            <li>Focused on real-time AI + IoT integration in safety systems.</li>
+                            <li>Project was part of ongoing faculty research and innovation initiatives.</li>
+                            <li>Highlighted technical aspects, user safety, and scalability.</li>
+                        </ul>
+                    </div>
                 </div>
+            
+                <script>
+                    function openModal(modalId) {
+                        document.getElementById(modalId).style.display = 'block';
+                        document.body.style.overflow = 'hidden';
+                    }
+            
+                    function closeModal(modalId) {
+                        document.getElementById(modalId).style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+            
+                    // Close modal when clicking outside of it
+                    window.onclick = function(event) {
+                        const modals = document.querySelectorAll('.modal');
+                        modals.forEach(modal => {
+                            if (event.target === modal) {
+                                modal.style.display = 'none';
+                                document.body.style.overflow = 'auto';
+                            }
+                        });
+                    }
+            
+                    // Keyboard navigation for accessibility
+                    document.addEventListener('keydown', function(event) {
+                        if (event.key === 'Escape') {
+                            const modals = document.querySelectorAll('.modal');
+                            modals.forEach(modal => {
+                                if (modal.style.display === 'block') {
+                                    modal.style.display = 'none';
+                                    document.body.style.overflow = 'auto';
+                                }
+                            });
+                        }
+                    });
+                </script>
+                  
 
             <!-- Involvement Gallery Section -->
             <section class="gallery-section">
