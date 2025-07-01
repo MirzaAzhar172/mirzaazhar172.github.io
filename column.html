@@ -262,7 +262,21 @@
     .project-card .card-link:hover {
       color: #2980b9;
     }
+    /* Center & Responsive Section Container */
+    .video-section,
+    .gallery-section {
+      margin: 0 auto;
+      padding: 0 1rem;
+      max-width: 1100px;
+    }
     
+    /* Center Align Section Title & Subtitle */
+    .video-section .section-header,
+    .gallery-section .section-header {
+      text-align: center;
+    }
+    
+    /* Responsive Flex Grid for Videos & Gallery */
     .video-grid,
     .gallery-grid {
       display: flex;
@@ -270,16 +284,12 @@
       flex-wrap: wrap;
       gap: 1.5rem;
     }
-  
-    .video-section .section-header,
-    .gallery-section .section-header {
-      text-align: center;
-    }
-  
-    .video-section,
-    .gallery-section {
-      margin: 0 auto;
-      max-width: 1100px;
+    
+    /* Ensure Cards Don't Stretch Too Much */
+    .video-card,
+    .gallery-item {
+      max-width: 300px;
+      flex: 1 1 250px;
     }
 
     /* Video Cards - Same Style as Project Cards */
