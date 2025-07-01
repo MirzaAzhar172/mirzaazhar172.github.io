@@ -17,7 +17,7 @@
   <title>PORTFOLIO - AHMAD MIRZA AZHAR</title>
 
   <style>
-    * {
+ * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -831,149 +831,63 @@
     </section>
 
     <!-- Video Highlights Section -->
-        <div class="video-section container">
-          <h2 style="text-align: center; font-weight: 700; margin-bottom: 2rem;">🎬 Video Highlights</h2>
-        
-          <div class="video-scroll-wrapper">
-            <div class="video-scroll-inner">
+          <section class="video-section container">
+            <div class="section-header">
+              <h2>🎬 Video Highlights</h2>
+              <h3>Project demos, presentations & event coverage</h3>
+            </div>
+      
+            <div class="video-grid">
               <!-- Video 1 -->
-              <div class="portfolio-item">
-                <a class="portfolio-link" href="#" onclick="openModal('newsModalSEDA')">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                  </div>
+              <div class="video-card">
+                <div class="video-container" onclick="openModal('newsModalSEDA')">
                   <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
                     <source src="assets/videos/seda2024.mp4" type="video/mp4">
                   </video>
-                </a>
-                <div class="portfolio-caption">
-                  <div class="portfolio-caption-heading">Throwback: 30s Teaser for SEDA Innovation Project</div>
-                  <div class="portfolio-caption-subheading text-muted">ISES 2024 • April 2024</div>
+                  <div class="play-overlay">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Throwback: 30s Teaser for SEDA Innovation Project</h3>
+                  <p class="card-subtitle">ISES 2024 • April 2024</p>
                 </div>
               </div>
-        
+      
               <!-- Video 2 -->
-              <div class="portfolio-item">
-                <a class="portfolio-link" href="#" onclick="openModal('newsModalMicrosleepDemo')">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                  </div>
+              <div class="video-card">
+                <div class="video-container" onclick="openModal('newsModalMicrosleepDemo')">
                   <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
                     <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
                   </video>
-                </a>
-                <div class="portfolio-caption">
-                  <div class="portfolio-caption-heading">Microsleep & Drowsiness Detection – IoT Prototype</div>
-                  <div class="portfolio-caption-subheading text-muted">Mac 2024</div>
+                  <div class="play-overlay">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">Microsleep & Drowsiness Detection – IoT Prototype</h3>
+                  <p class="card-subtitle">Mac 2024</p>
                 </div>
               </div>
-        
+      
               <!-- Video 3 -->
-              <div class="portfolio-item">
-                <a class="portfolio-link" href="#" onclick="openModal('newsModalJiicas2024')">
-                  <div class="portfolio-hover">
-                    <div class="portfolio-hover-content"><i class="fas fa-play fa-3x"></i></div>
-                  </div>
+              <div class="video-card">
+                <div class="video-container" onclick="openModal('newsModalJiicas2024')">
                   <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
                     <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
                   </video>
-                </a>
-                <div class="portfolio-caption">
-                  <div class="portfolio-caption-heading">JIICAS2024 Proceedings Presentation (IoT) - UiTM</div>
-                  <div class="portfolio-caption-subheading text-muted">August 2024</div>
+                  <div class="play-overlay">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+                <div class="card-content">
+                  <h3 class="card-title">JIICAS2024 Proceedings Presentation (IoT) - UiTM</h3>
+                  <p class="card-subtitle">August 2024</p>
                 </div>
               </div>
-        
             </div>
-          </div>
-        </div>
-    </section>
-
-          <!-- Modal for SEDA2024 -->
-<div id="newsModalSEDA" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
-    <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-      <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
-    <p><strong>Date:</strong> April 2024</p>
-    <h4>🎥 Video Context:</h4>
-    <ul>
-      <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
-      <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
-    </ul>
-    <h4>🚀 Purpose & Vision:</h4>
-    <ul>
-      <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
-      <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
-      <li>My first step in sharing innovation to a broader audience.</li>
-    </ul>
-    <h4>🔖 Hashtags:</h4>
-    <p style="font-size: 0.9rem; color: #666;">
-      #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
-    </p>
-  </div>
-</div>
-
-   <!-- Modal for Microsleep Demo -->
-        <div id="newsModalMicrosleepDemo" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalMicrosleepDemo')">&times;</span>
-            <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-              <source src="assets/videos/microsleepOpenCV.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h3>Microsleep Detection System - IoT Prototype</h3>
-            <p><strong>Date:</strong> June 2025</p>
-            <h4>🔧 Project Highlights:</h4>
-            <ul>
-              <li>Developed using Python, dlib, OpenCV, Node-RED, Slack API, MQTT, and MongoDB.</li>
-              <li>Real-time facial landmark tracking and detection using x68 landmarks and Haar Cascade.</li>
-              <li>Speech alerts via eSpeak (e.g., "Danger!! WAKE UP!" and "Stop Driving! You need to take some fresh air.")</li>
-              <li>Live data published from Python to Node-RED using MQTT for dashboard visualization.</li>
-            </ul>
-            <h4>🎯 Objectives:</h4>
-            <ul>
-              <li>Identify physiological indicators of driver drowsiness and microsleep.</li>
-              <li>Develop an IoT-based anti-microsleep alarm for drivers.</li>
-              <li>Test the usability and effectiveness of the system.</li>
-            </ul>
-            <h4>💡 Problem Statement:</h4>
-            <ul>
-              <li>Current drowsiness detection systems lack reliability and personal adaptability.</li>
-              <li>There is a need for early warning systems with configurable multi-modal alerts.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Modal for JIICAS2024 -->
-        <div id="newsModalJiicas2024" class="modal">
-          <div class="modal-content">
-            <span class="close" onclick="closeModal('newsModalJiicas2024')">&times;</span>
-            <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
-              <source src="assets/videos/JIICAS2024_video (1).mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <h3>JIICAS2024 Proceedings Presentation (IoT)</h3>
-            <p><strong>Date:</strong> August 2024</p>
-            <h4>🎓 About the Competition:</h4>
-            <ul>
-              <li>Participated alongside my supervisor <strong>Dr. Nor</strong> representing KPPIM, UiTM Shah Alam.</li>
-              <li>Our IoT project was presented in front of judges from top Malaysian universities.</li>
-              <li>Over <strong>300 participants</strong> joined, including delegates from Indonesia and Brunei.</li>
-            </ul>
-            <h4>📽️ Presentation Highlights:</h4>
-            <ul>
-              <li>Focused on real-time AI + IoT integration in safety systems.</li>
-              <li>Project was part of ongoing faculty research and innovation initiatives.</li>
-              <li>Highlighted technical aspects, user safety, and scalability.</li>
-            </ul>
-          </div>
-      </div>
-
-
+          </section>
+    
     <!-- Involvement Gallery Section -->
          <div class="involvement-section">
         <h2>📸 Involvement Gallery</h2>
@@ -997,7 +911,7 @@
         </div>
       </div>
 
-    <!-- Modals for Involvement Gallery -->
+        <!-- Modals for Involvement Gallery -->
             <div id="modalGTIDS" class="modal">
               <div class="modal-content">
                 <span class="close" onclick="closeModal('modalGTIDS')">&times;</span>
