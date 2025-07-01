@@ -263,15 +263,25 @@
       color: #2980b9;
     }
 
-    /* Video Section */
-    .video-section {
-      background: white;
-      border-radius: 12px;
-      padding: 3rem 2rem;
-      margin: 4rem 0;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   .video-section,
+    .gallery-section {
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 1000px;
     }
+    
+    .video-grid,
+    .gallery-grid {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
 
     /* Video Cards - Same Style as Project Cards */
     .video-card {
