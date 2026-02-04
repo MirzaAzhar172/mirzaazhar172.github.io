@@ -922,6 +922,22 @@
       <div class="video-grid">
         <!-- Video 1 -->
         <div class="video-card">
+          <div class="video-container" onclick="openModal('prismChat')">
+            <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
+              <source src="" type="video/mp4">
+            </video>
+            <div class="play-overlay">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Side Project: PrismCHAT for Autism Support</h3>
+            <p class="card-subtitle">Research Mode • Jan 2025</p>
+          </div>
+        </div>
+
+         <!-- Video 2 -->
+        <div class="video-card">
           <div class="video-container" onclick="openModal('newsModalSEDA')">
             <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
               <source src="assets/videos/seda2024.mp4" type="video/mp4">
@@ -936,7 +952,7 @@
           </div>
         </div>
 
-        <!-- Video 2 -->
+        <!-- Video 3 -->
         <div class="video-card">
           <div class="video-container" onclick="openModal('newsModalMicrosleepDemo')">
             <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
@@ -952,7 +968,7 @@
           </div>
         </div>
 
-        <!-- Video 3 -->
+        <!-- Video 4 -->
         <div class="video-card">
           <div class="video-container" onclick="openModal('newsModalJiicas2024')">
             <video muted autoplay loop playsinline poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
@@ -1154,7 +1170,35 @@
                   </p>
                 </div>
               </div>
-
+    
+              <!-- Modal for PrismCHAT Video -->
+                  <div id="newsModalSEDA" class="modal">
+                    <div class="modal-content">
+                      <span class="close" onclick="closeModal('prismchat')">&times;</span>
+                      <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+                        <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
+                      <p><strong>Date:</strong> April 2024</p>
+                      <h4>🎥 Video Context:</h4>
+                      <ul>
+                        <li>Submitted as part of the <strong>ISES2024 qualifying round</strong>.</li>
+                        <li>Purpose: Introduce my IoT project in under 30 seconds to judges and the public.</li>
+                      </ul>
+                      <h4>🚀 Purpose & Vision:</h4>
+                      <ul>
+                        <li>Showcasing how IoT & sensors can help advance <strong>sustainable technology</strong>.</li>
+                        <li>Expose the potential of small, efficient devices in promoting <strong>green energy use</strong>.</li>
+                        <li>My first step in sharing innovation to a broader audience.</li>
+                      </ul>
+                      <h4>🔖 Hashtags:</h4>
+                      <p style="font-size: 0.9rem; color: #666;">
+                        #IoT #Innovation #SustainableEnergy #ISES2024 #SEDA #Technology
+                      </p>
+                    </div>
+                  </div>
+    
               <!-- Modal for SEDA2024 Video -->
                   <div id="newsModalSEDA" class="modal">
                     <div class="modal-content">
