@@ -140,14 +140,14 @@
 
                      <!-- Project 1 -->
                     <div class="project__card" onclick="openProjectPopup('prismchat')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
-                      <img src="" alt="PrismChat" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <img src="assets/img/portfolio/My Projects/prismchat.png" alt="PrismChat" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
                       <h3 style="margin-top: 0.75rem;">AI Chatbot for Autism Support</h3>
                       <p>Side Project - Research Mode</p>
                     </div>
                       
                        <!-- Project 2 -->
                     <div class="project__card" onclick="openProjectPopup('objectdetect')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
-                      <img src="" alt="side project" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
+                      <img src="assets/img/portfolio/My Projects/livedetect.png" alt="side project" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
                       <h3 style="margin-top: 0.75rem;">Live Object Detection (YOLOv8, Python, OpenCV</h3>
                       <p>Side Project</p>
                     </div>
@@ -211,7 +211,17 @@
                     const report = document.getElementById('popupReportLink');
                 
                     const data = {
-                      gtids: {
+                      prismchat: {
+                        title: "AI Chatbot for Autism Support",
+                        description: "AI chatbot (ChatGPT-style) that acts like a virtual counsellor, where users can ask questions about autism and get feedback based on keywords and context.",
+                        github: "https://www.linkedin.com/posts/ahmadmirzaazhar_learningbybuilding-sideproject-aiproject-activity-7422862864924831744-2-iE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgjt0kBxh97A1hwbJZQqFekf0grgi6-BkQ",
+                      },
+                      objectdetect: {
+                        title: "Live Object Detection (YOLOv8, Python, OpenCV ",
+                        description: "It works, but it’s still a bit sensitive especially when detecting smaller objects. So far, I’m still learning how to tune and filter the detections properly.",
+                        github: "https://www.linkedin.com/posts/ahmadmirzaazhar_sideproject-computervision-objectdetection-activity-7409820851035930625-suge?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgjt0kBxh97A1hwbJZQqFekf0grgi6-BkQ,
+                      },
+                        gtids: {
                         title: "Sistem Aplikasi Mudah Alih Anti-Microsleep",
                         description: "Developed a Flutter-based mobile app to detect microsleep and drowsiness events in real-time with chatbot and emergency trigger.",
                         github: "https://github.com/MirzaAzhar172/Drowsiness_App-with-Alarm-Avatar-icon-Part-2-",
