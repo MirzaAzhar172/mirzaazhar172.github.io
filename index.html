@@ -485,23 +485,28 @@
                       <div class="publications__container" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; justify-content: center;">
                         
                         <!-- Publication 1 -->
+                        <div class="publication__item" onclick="openPublicationPopup('cascade')">
+                          <img src="assets/img/portfolio/publications/uitm_logo.png" alt="UiTM JIIICAS Logo" class="jiicas-logo">
+                          <p class="publication__text">HAAR CASCADE ALGORITHM FOR MICROSLEEP DETECTION  - Malaysian Journal of Computing / UITM Press</p>
+                        </div>
+
+                        <!-- Publication 2 - With PDF Download -->
+                            <div class="publication__item" onclick="openPublicationPopup('jiicas')">
+                              <img src="assets/img/portfolio/publications/uitm_logo.png" alt="UiTM JIIICAS Logo" class="jiicas-logo">
+                              <p class="publication__text">IoT Alarm System: Detecting & Preventing Microsleep Events – JIIICAS 2024</p>
+                        </div>
+                        
+                        <!-- Publication 3 -->
                         <div class="publication__item" onclick="openPublicationPopup('solar')">
                           <img src="assets/img/portfolio/publications/ijortas.png" alt="IJORTAS Logo" class="ijortas-logo">
                           <p class="publication__text">IoT-Based Solar Energy - IJORTAS, Vol. 3, No. 2 – Sept 2021</p>
                         </div>
-                        
-                        <!-- Publication 2 -->
+                          
+                        <!-- Publication 4 -->
                         <div class="publication__item" onclick="openPublicationPopup('egg')">
                           <img src="assets/img/portfolio/publications/ijortas.png" alt="IJORTAS Logo" class="ijortas-logo">
                           <p class="publication__text">Intelligent Egg Incubator - IJORTAS, Vol. 2, No. 2 – Sept 2020</p>
                         </div>
-
-                       <!-- Publication 3 - With PDF Download -->
-                            <div class="publication__item" onclick="openPublicationPopup('jiicas')">
-                              <img src="assets/img/portfolio/publications/uitm_logo.png" alt="UiTM JIIICAS Logo" class="jiicas-logo">
-                              <p class="publication__text">IoT Alarm System: Detecting & Preventing Microsleep Events – JIIICAS 2024</p>
-                            </div>
-
                       </div>
                     </section>
                     
@@ -603,6 +608,11 @@
                         const linkContainer = document.getElementById("pubLinkContainer");
                     
                         const data = {
+                          cascade: {
+                            title: "HAAR CASCADE ALGORITHM FOR MICROSLEEP DETECTION",
+                            description: "Published in Malaysian Journal of Computing / UITM Press",
+                            link: "https://mjoc.uitm.edu.my/main/images/journal/vol10-2-2025/2_HAAR_CASCADE_ALGORITHM_FOR_MICROSLEEP_DETECTION.pdf"
+                          },
                           solar: {
                             title: "IoT-Based Solar Energy",
                             description: "Published in IJORTAS Vol. 3, No. 2 – Sept 2021. Discusses solar-powered IoT integration.",
@@ -656,6 +666,7 @@
             <!-- ===== AWARDS SECTION ===== -->
                 <section class="awards section" id="awards">
                   <h2 class="section-title">Awards & Recognition</h2>
+                
                   <div class="awards__container">
                     <div class="award__card" onclick="openAwardPopup('gtids')">
                       <img src="assets/img/awards/platinum_award.png" alt="GTIDS">
