@@ -93,7 +93,7 @@
             color: #666;
         }
         
-        /* PDF Slider Section */
+        /* Presentation Slider Section */
         .pdf-slider-section {
             background: white;
             border-radius: 12px;
@@ -109,12 +109,23 @@
             margin: 0 auto;
         }
         
-        .pdf-viewer {
+        .slide-viewer {
             width: 100%;
-            height: 600px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
             background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .slide-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: opacity 0.3s ease;
+        }
+        
+        .slide-image.fade {
+            opacity: 0.5;
         }
         
         .slider-controls {
@@ -357,13 +368,26 @@
                 font-size: 1.8rem;
             }
             
-            .pdf-viewer {
-                height: 400px;
+            .slide-viewer {
+                border-radius: 4px;
             }
             
             .slider-controls {
-                flex-direction: column;
+                flex-direction: row;
                 gap: 1rem;
+                flex-wrap: wrap;
+            }
+            
+            .slider-btn {
+                font-size: 0.85rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .page-indicator {
+                width: 100%;
+                text-align: center;
+                order: -1;
+                margin-bottom: 0.5rem;
             }
             
             .flowchart-grid {
@@ -407,16 +431,13 @@
             <p>Sistem Aplikasi Mudah Alih Anti-Microsleep dengan Avatar AI Chatbot</p>
         </div>
 
-        <!-- PDF Slider Section -->
+        <!-- Presentation Slider Section -->
         <section class="pdf-slider-section">
             <h2 style="text-align: center; margin-bottom: 1.5rem; color: #0a1128;">Project Presentation</h2>
             <div class="slider-container">
-                <iframe 
-                    id="pdfViewer" 
-                    class="pdf-viewer" 
-                    src="assets/pdf/GTIDS24 - SISTEM MICROSLEEP SLIDER FULL.pdf"
-                    type="application/pdf">
-                </iframe>
+                <div class="slide-viewer">
+                    <img id="slideImage" src="assets/img/collaboration/slides/slide-1.jpg" alt="Presentation Slide" class="slide-image">
+                </div>
                 
                 <div class="slider-controls">
                     <button class="slider-btn" id="prevBtn" onclick="previousPage()">
@@ -424,7 +445,7 @@
                     </button>
                     
                     <div class="page-indicator">
-                        Page <span id="currentPage">1</span> of <span id="totalPages">22</span>
+                        Slide <span id="currentPage">1</span> of <span id="totalPages">21</span>
                     </div>
                     
                     <button class="slider-btn" id="nextBtn" onclick="nextPage()">
@@ -637,14 +658,26 @@
     </style>
 
     <script>
-        // PDF Slider Navigation
+        // Image Slider Navigation
         let currentPage = 1;
-        const totalPages = 22; // Total pages dalam PDF kau
+        const totalPages = 21; // Total slides
         
         function updatePage() {
-            const viewer = document.getElementById('pdfViewer');
-            viewer.src = `assets/pdf/GTIDS24_-_SISTEM_MICROSLEEP_SLIDER_FULL.pdf#page=${currentPage}`;
-            document.getElementById('currentPage').textContent = currentPage;
+            const slideImg = document.getElementById('slideImage');
+            
+            // Add fade effect
+            slideImg.classList.add('fade');
+            
+            setTimeout(() => {
+                // Update image source
+                slideImg.src = `assets/img/collaboration/slides/slide-${currentPage}.jpg`;
+                
+                // Update page counter
+                document.getElementById('currentPage').textContent = currentPage;
+                
+                // Remove fade effect
+                slideImg.classList.remove('fade');
+            }, 150);
             
             // Disable/Enable buttons
             document.getElementById('prevBtn').disabled = currentPage === 1;
