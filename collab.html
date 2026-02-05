@@ -436,7 +436,7 @@
             <h2 style="text-align: center; margin-bottom: 1.5rem; color: #0a1128;">Project Presentation</h2>
             <div class="slider-container">
                 <div class="slide-viewer">
-                    <img id="slideImage" src="assets/img/collaboration/slides/slide-1.jpg" alt="Presentation Slide" class="slide-image">
+                    <img id="slideImage" src="assets/img/pic slider/GTIDS24 - SISTEM MICROSLEEP SLIDER FULL_page-0001.jpg" alt="Presentation Slide" class="slide-image">
                 </div>
                 
                 <div class="slider-controls">
@@ -669,8 +669,11 @@
             slideImg.classList.add('fade');
             
             setTimeout(() => {
-                // Update image source
-                slideImg.src = `assets/img/collaboration/slides/slide-${currentPage}.jpg`;
+                // Format page number with leading zeros (0001, 0002, etc.)
+                const pageNum = String(currentPage).padStart(4, '0');
+                
+                // Update image source with correct filename format
+                slideImg.src = `assets/img/pic slider/GTIDS24 - SISTEM MICROSLEEP SLIDER FULL_page-${pageNum}.jpg`;
                 
                 // Update page counter
                 document.getElementById('currentPage').textContent = currentPage;
