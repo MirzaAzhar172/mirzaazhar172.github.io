@@ -128,6 +128,11 @@
             opacity: 0.5;
         }
         
+        /* Award Proof Cards Hover Effect */
+        .award-proof-card:hover {
+            transform: translateY(-5px);
+        }
+        
         .slider-controls {
             display: flex;
             justify-content: center;
@@ -452,6 +457,78 @@
                         Next <i class='bx bx-chevron-right'></i>
                     </button>
                 </div>
+            </div>
+        </section>
+
+        <!-- Awards & Recognition Section -->
+        <section class="awards-recognition-section" style="background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); padding: 2.5rem 2rem; margin-bottom: 3rem;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="color: #0a1128; font-size: 1.8rem; margin-bottom: 0.5rem;">
+                    <i class='bx bx-trophy' style="color: #f59e0b; font-size: 2rem; vertical-align: middle;"></i>
+                    Awards & Recognition
+                </h2>
+                <p style="color: #666; font-size: 1rem;">Proof of excellence and impact</p>
+            </div>
+
+            <!-- Awards Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                
+                <!-- Award 1: Platinum Award GTIDS -->
+                <div class="award-proof-card" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="background: white; border-radius: 8px; padding: 0.8rem; margin-bottom: 1rem;">
+                        <img src="assets/img/collaboration/awards/platinum-award.jpg" alt="Platinum Award GTIDS" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; cursor: pointer;" onclick="openModal(this.src)">
+                    </div>
+                    <h3 style="color: #0a1128; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">🏆 Platinum Award</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">GTIDS 2024 - Selangor Grant</p>
+                    <span style="display: inline-block; background: #10b981; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;">
+                        <i class='bx bx-check-circle'></i> Champion
+                    </span>
+                </div>
+
+                <!-- Award 2: UiTM FSKM Instagram Feature -->
+                <div class="award-proof-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="background: white; border-radius: 8px; padding: 0.8rem; margin-bottom: 1rem;">
+                        <img src="assets/img/collaboration/awards/uitm-instagram.jpg" alt="UiTM FSKM Instagram" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; cursor: pointer;" onclick="openModal(this.src)">
+                    </div>
+                    <h3 style="color: #0a1128; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">📱 Featured on Official Instagram</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">UiTM FSKM Official Account</p>
+                    <span style="display: inline-block; background: #8b5cf6; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;">
+                        <i class='bx bxl-instagram'></i> Social Recognition
+                    </span>
+                </div>
+
+                <!-- Award 3: Projek Negeri Selangor -->
+                <div class="award-proof-card" style="background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="background: white; border-radius: 8px; padding: 0.8rem; margin-bottom: 1rem;">
+                        <img src="assets/img/collaboration/awards/selangor-project.jpg" alt="Projek Negeri Selangor" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; cursor: pointer;" onclick="openModal(this.src)">
+                    </div>
+                    <h3 style="color: #0a1128; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">🏛️ Selangor State Project</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">Selected as Nominee Project</p>
+                    <span style="display: inline-block; background: #3b82f6; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;">
+                        <i class='bx bx-building'></i> RM 30,000 Grant
+                    </span>
+                </div>
+
+                <!-- Award 4: JIIICAS Gold Medal -->
+                <div class="award-proof-card" style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); border-radius: 12px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+                    <div style="background: white; border-radius: 8px; padding: 0.8rem; margin-bottom: 1rem;">
+                        <img src="assets/img/collaboration/awards/jiiicas-gold.jpg" alt="JIIICAS Gold Award" style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px; cursor: pointer;" onclick="openModal(this.src)">
+                    </div>
+                    <h3 style="color: #0a1128; font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 600;">🥇 Gold Medal</h3>
+                    <p style="color: #666; font-size: 0.9rem; margin-bottom: 0.5rem;">JIIICAS 2024 Exhibition</p>
+                    <span style="display: inline-block; background: #f59e0b; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem;">
+                        <i class='bx bx-medal'></i> Gold Award
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Additional Info -->
+            <div style="margin-top: 2rem; text-align: center; padding: 1.5rem; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #3b82f6;">
+                <p style="color: #1e40af; font-size: 0.95rem; line-height: 1.6;">
+                    <i class='bx bx-info-circle' style="font-size: 1.2rem; vertical-align: middle;"></i>
+                    <strong>Project Impact:</strong> This innovation project has been recognized at multiple levels - from university recognition to state-level grant approval, demonstrating its potential contribution to road safety and AI-driven solutions in Malaysia.
+                </p>
             </div>
         </section>
 
