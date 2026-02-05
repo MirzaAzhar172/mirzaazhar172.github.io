@@ -650,7 +650,8 @@
 
       .project-card,
       .video-card {
-        width: 280px;
+        flex: 0 0 auto;  /* ✅ Jangan shrink */
+        width: 320px;
       }
 
       .gallery-item {
@@ -748,6 +749,10 @@
     .projects-grid,
     .video-grid {
       margin-top: 0.5rem;
+      display: flex;
+      overflow-x: auto;
+      flex-wrap: nowrap;  /* ✅ Paksa satu baris je */
+      gap: 2rem;
     }
     
     /* Responsive tweak */
