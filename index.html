@@ -68,7 +68,7 @@
                           </div>
                         
                           <div class="nav__toggle" id="nav-toggle">
-                            <i class='bx bx-menu'></i> <!-- Make sure Boxicons loaded -->
+                            <i class='bx bx-menu'></i>
                           </div>
                         
                           <ul class="nav__list" id="nav-menu">
@@ -80,11 +80,6 @@
                             <li class="nav__item"><a href="#publications" class="nav__link">Publications & Awards</a></li>
                           </ul>
                         </nav>
-
-                        <div class="nav__toggle" id="nav-toggle">
-                            <i class='bx bx-menu'></i>
-                        </div>
-                    </nav>
                 </header>
         
                 <main class="l-main">
@@ -148,7 +143,7 @@
                        <!-- Project 2 -->
                     <div class="project__card" onclick="openProjectPopup('objectdetect')" style="min-width: 320px; max-width: 340px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); cursor: pointer; text-align: center;">
                       <img src="assets/img/portfolio/My Projects/livedetect.png" alt="side project" style="width: 100%; border-radius: 8px; max-height: 160px; object-fit: cover;">
-                      <h3 style="margin-top: 0.75rem;">Live Object Detection (YOLOv8, Python, OpenCV</h3>
+                      <h3 style="margin-top: 0.75rem;">Live Object Detection (YOLOv8, Python, OpenCV)</h3>
                       <p>Side Project</p>
                     </div>
                       
@@ -186,7 +181,7 @@
                 
                     <!-- Button Container -->
                     <div id="popupButtons" style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                        <a id="popupGithubLink" href="#" target="_blank" style="background:#1e40af; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">Full in Linkedin</a>
+                      <a id="popupLinkedinLink" href="#" target="_blank" style="background:#0077b5; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">Full in LinkedIn</a>
                       <a id="popupGithubLink" href="#" target="_blank" style="background:#1e40af; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">GitHub</a>
                       <a id="popupReportLink" href="#" target="_blank" style="background:#1e3a8a; color:white; padding:0.5rem 1.2rem; border-radius:5px; text-decoration:none; display: none;">Download PDF - Full Report</a>
                     </div>
@@ -208,6 +203,7 @@
                     const popup = document.getElementById('projectPopup');
                     const title = document.getElementById('popupProjectTitle');
                     const desc = document.getElementById('popupProjectDescription');
+                    const linkedin = document.getElementById('popupLinkedinLink');
                     const github = document.getElementById('popupGithubLink');
                     const report = document.getElementById('popupReportLink');
                 
@@ -215,27 +211,26 @@
                       prismchat: {
                         title: "AI Chatbot for Autism Support",
                         description: "AI chatbot (ChatGPT-style) that acts like a virtual counsellor, where users can ask questions about autism and get feedback based on keywords and context.",
-                        github: "https://www.linkedin.com/posts/ahmadmirzaazhar_learningbybuilding-sideproject-aiproject-activity-7422862864924831744-2-iE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADgjt0kBxh97A1hwbJZQqFekf0grgi6-BkQ",
+                        linkedin: "https://www.linkedin.com/posts/ahmadmirzaazhar_learningbybuilding-sideproject-aiproject-activity-7422862864924831744-2-iE?utm_source=share&utm_medium=member_desktop"
                       },
                       objectdetect: {
-                          title: "Live Object Detection (YOLOv8, Python, OpenCV)",
-                          description: "It works, but it's still a bit sensitive especially when detecting smaller objects.",
-                          github: "https://www.linkedin.com/posts/ahmadmirzaazhar_sideproject-computervision-objectdetection-activity-7409820851035930625-suge"
-                        },
-                        gtids: {
+                        title: "Live Object Detection (YOLOv8, Python, OpenCV)",
+                        description: "It works, but it's still a bit sensitive especially when detecting smaller objects. So far, I'm still learning how to tune and filter the detections properly.",
+                        linkedin: "https://www.linkedin.com/posts/ahmadmirzaazhar_sideproject-computervision-objectdetection-activity-7409820851035930625-suge?utm_source=share&utm_medium=member_desktop"
+                      },
+                      gtids: {
                         title: "Sistem Aplikasi Mudah Alih Anti-Microsleep",
                         description: "Developed a Flutter-based mobile app to detect microsleep and drowsiness events in real-time with chatbot and emergency trigger.",
-                        github: "https://github.com/MirzaAzhar172/Drowsiness_App-with-Alarm-Avatar-icon-Part-2-",
+                        github: "https://github.com/MirzaAzhar172/Drowsiness_App-with-Alarm-Avatar-icon-Part-2-"
                       },
                       degree: {
                         title: "IoT - Microsleep Alarm for Driver",
                         description: "An IoT-software based project using Python, OpenCV, MQTT & Slack API for network messaging and MongoDB as the database.",
-                        github: "https://github.com/MirzaAzhar172/FYP_DrowinessYawnDetection-Face",
+                        github: "https://github.com/MirzaAzhar172/FYP_DrowinessYawnDetection-Face"
                       },
                       diploma: {
                         title: "IoT - Smartphone Car Control",
                         description: "An IoT-based FYP project to control car locks, ignition, and GPS tracking using Blynk and NodeMCU ESP8266.",
-                        github: null,
                         report: "assets/pdf/SMARTPHONECONTROLCAr.MirzaAzhar.docx"
                       }
                     };
@@ -245,19 +240,25 @@
                     title.innerText = selected.title;
                     desc.innerText = selected.description;
                 
-                    // Toggle button visibility based on data availability
+                    // Hide all buttons first
+                    linkedin.style.display = 'none';
+                    github.style.display = 'none';
+                    report.style.display = 'none';
+                
+                    // Show relevant buttons
+                    if (selected.linkedin) {
+                      linkedin.href = selected.linkedin;
+                      linkedin.style.display = 'inline-block';
+                    }
+                    
                     if (selected.github) {
                       github.href = selected.github;
                       github.style.display = 'inline-block';
-                    } else {
-                      github.style.display = 'none';
                     }
                 
                     if (selected.report) {
                       report.href = selected.report;
                       report.style.display = 'inline-block';
-                    } else {
-                      report.style.display = 'none';
                     }
                 
                     popup.style.display = 'flex';
@@ -683,20 +684,22 @@
                       <img src="assets/img/portfolio/Awarrs&Rec/license.jpg" alt="license">
                       <h3 class="award__title">Creative Commons license BY-SA 4.0</h3>
                     </div>
-                 <div class="awards__container">
+
                     <div class="award__card" onclick="openAwardPopup('iidex25')">
                       <img src="assets/img/portfolio/Awarrs&Rec/iidex_silver award.jpg" alt="iidex25">
                       <h3 class="award__title">Silver Award - IIDEX 2025</h3>
                     </div>
-                  <div class="awards__container">
+
                     <div class="award__card" onclick="openAwardPopup('gtids')">
                       <img src="assets/img/awards/platinum_award.png" alt="GTIDS">
                       <h3 class="award__title">Platinum Award - GTIDS 2024</h3>
                     </div>
+
                     <div class="award__card" onclick="openAwardPopup('jiiicas')">
                       <img src="assets/img/awards/jiicas24.png" alt="JIIICAS">
                       <h3 class="award__title">Gold Award - JIIICAS 2024</h3>
                     </div>
+
                     <div class="award__card" onclick="openAwardPopup('fyp')">
                       <img src="assets/img/awards/best_iot.png" alt="FYP">
                       <h3 class="award__title">Best IoT FYP - UPSI/FSKIK EXHIBITION 2020</h3>
@@ -807,7 +810,7 @@
                 
                     const data = {
                       license: {
-                        title: "",
+                        title: "Creative Commons License BY-SA 4.0",
                         description: "Proud to be a co-author of research on drowsy driving detection in the Malaysian Journal of Computing.",
                         img: "assets/img/portfolio/Awarrs&Rec/license.jpg"
                       },
@@ -893,7 +896,7 @@
             <!-- ===== FOOTER CSS ===== -->
             <style>
               .footer {
-                background-color: #0a1128; /* deep navy blue */
+                background-color: #0a1128;
                 color: white;
                 padding: 3rem 1rem;
                 text-align: center;
