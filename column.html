@@ -804,6 +804,54 @@
       </div>
 
       <div class="projects-grid" id="newsContainer">
+         <!-- Article 1: IIDEX 2025 -->
+        <div class="project-card" data-category="ai">
+          <div class="card-image">
+            <img src="assets/img/portfolio/Gallery/iidex2025.jpg" alt="IIDEX 2025" />
+            <span class="new-badge">NEW</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">🏆 IIDEX 2025 @ UiTM Shah Alam - Anti-Microsleep with Avatar AI</h3>
+            <p class="card-subtitle">January 2025</p>
+            <a href="#" class="card-link" onclick="openModal('newsModalIIDEX2025')">
+              <i class="fas fa-external-link-alt"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+
+        <!-- Article 2: MJoC Publication -->
+        <div class="project-card" data-category="ai">
+          <div class="card-image">
+            <img src="assets/img/portfolio/publications/uitm_logo.png" alt="MJoC Publication" />
+            <span class="new-badge">NEW</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">📚 Published in Malaysian Journal of Computing - Haar Cascade for Microsleep</h3>
+            <p class="card-subtitle">December 2024</p>
+            <a href="#" class="card-link" onclick="openModal('newsModalMJoC')">
+              <i class="fas fa-external-link-alt"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+
+        <!-- Article 3: Hand Gesture Prototype -->
+        <div class="project-card" data-category="ai">
+          <div class="card-image">
+            <img src="assets/img/portfolio/Gallery/handgesture.jpg" alt="Hand Gesture System" />
+            <span class="new-badge">NEW</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">👋 Hand Gesture Detection System - OpenCV + MediaPipe Prototype</h3>
+            <p class="card-subtitle">January 2025</p>
+            <a href="#" class="card-link" onclick="openModal('newsModalHandGesture')">
+              <i class="fas fa-external-link-alt"></i>
+              Read More
+            </a>
+          </div>
+        </div>
+
          <!-- Presentation SUK SELANGOR -->
         <div class="project-card" data-category="iot">
           <div class="card-image">
@@ -1020,6 +1068,76 @@
 
         <!-- ========== ALL MODALS SECTION ========== -->
 
+              <!-- Modal for IIDEX 2025 -->
+              <div id="newsModalIIDEX2025" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('newsModalIIDEX2025')">&times;</span>
+                  <img src="assets/img/portfolio/Gallery/iidex2025.jpg" alt="IIDEX 2025">
+                  <h3>🏆 IIDEX 2025 @ UiTM Shah Alam</h3>
+                  <p><strong>Date:</strong> January 2025</p>
+                  <p>Feeling grateful to be part of the <strong>Invention, Innovation & Design Exposition (IIDEX) 2025</strong>, held at Dewan Agung Tuanku Canselor (DATC), UiTM Shah Alam, together with my lecturers and project teammates from Evocity Lab.</p>
+                  <p>I had the opportunity to present my research project developed during my time as a Research Assistant (RA), titled:</p>
+                  <p><strong>"Anti-Microsleep Application with Avatar AI Chatbot for Driver Safety"</strong></p>
+                  <p>This system integrates real-time drowsiness detection using Google ML Kit, multilingual avatar voice alerts, and a mobile dashboard to track driver behavior. The presentation showcased how AI-powered mobile apps can improve road safety through intelligent monitoring and adaptive warnings.</p>
+                  <p>The event brought together innovative minds from across Malaysia, and it was inspiring to see the range of creative solutions addressing real-world problems. Looking forward to further developing this project and exploring more collaborations in applied AI and IoT safety systems.</p>
+                </div>
+              </div>
+
+              <!-- Modal for MJoC Publication -->
+              <div id="newsModalMJoC" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('newsModalMJoC')">&times;</span>
+                  <img src="assets/img/portfolio/publications/uitm_logo.png" alt="MJoC Publication">
+                  <h3>📚 Published in Malaysian Journal of Computing</h3>
+                  <p><strong>Date:</strong> December 2024</p>
+                  <p>Alhamdulillah! Super happy to share that my student's project has been officially published in the <strong>Malaysian Journal of Computing (MJoC), UiTM</strong> ✨️😁</p>
+                  <p>The project, <strong>"Haar Cascade Algorithm for Microsleep Detection"</strong>, was developed focusing on real-time microsleep detection using Python, OpenCV, and IoT integration to improve driver safety.</p>
+                  <h4>🔬 Key Technical Highlights:</h4>
+                  <ul>
+                    <li>Utilized Haar Cascade classifier for facial landmark detection</li>
+                    <li>Eye Aspect Ratio (EAR) calculation for drowsiness detection</li>
+                    <li>Real-time processing with OpenCV and Python</li>
+                    <li>IoT integration for alert systems and data logging</li>
+                    <li>MQTT protocol for wireless communication with Node-RED dashboard</li>
+                  </ul>
+                  <p>This publication represents months of research, testing, and refinement under real-world driving simulation conditions. Really proud of this achievement and all the hard work put into it.</p>
+                  <p><a href="https://mjoc.uitm.edu.my/main/images/journal/vol10-2-2025/2_HAAR_CASCADE_ALGORITHM_FOR_MICROSLEEP_DETECTION.pdf" target="_blank" style="color: #3498db;">📄 Read Full Paper</a></p>
+                </div>
+              </div>
+
+              <!-- Modal for Hand Gesture System -->
+              <div id="newsModalHandGesture" class="modal">
+                <div class="modal-content">
+                  <span class="close" onclick="closeModal('newsModalHandGesture')">&times;</span>
+                  <img src="assets/img/portfolio/Gallery/handgesture.jpg" alt="Hand Gesture Detection">
+                  <h3>👋 Hand Gesture Detection System - Early Prototype</h3>
+                  <p><strong>Date:</strong> January 2025</p>
+                  <p>Early prototype of a hand gesture system (Been playing around with OpenCV + MediaPipe) that I'm working on during my free time 😊</p>
+                  <p>This is an early prototype where I'm experimenting with hand gesture detection and motion tracking before moving on to the virtual keyboard + YouTube search part.</p>
+                  <h4>🔧 Current Features:</h4>
+                  <ul>
+                    <li>Real-time hand landmark detection using MediaPipe</li>
+                    <li>Multi-gesture recognition (peace sign, thumbs up, fist, etc.)</li>
+                    <li>Warning popup system when specific gestures are detected</li>
+                    <li>OpenCV video processing pipeline</li>
+                  </ul>
+                  <h4>⚙️ Technical Stack:</h4>
+                  <ul>
+                    <li><strong>MediaPipe Hands</strong> - For 21-point hand landmark tracking</li>
+                    <li><strong>OpenCV</strong> - Video capture and frame processing</li>
+                    <li><strong>Python</strong> - Core logic and gesture classification</li>
+                  </ul>
+                  <h4>🎯 What's Next?</h4>
+                  <p>For now, it can detect different hand signs, and when certain gestures are detected, a warning popup will appear on screen. Still tuning the sensitivity and gesture logic since real-time detection is harder (and noisier) than I expected.</p>
+                  <p>Planning to add:</p>
+                  <ul>
+                    <li>Virtual keyboard control via finger pointing</li>
+                    <li>YouTube search integration with gesture commands</li>
+                    <li>Volume control and media playback gestures</li>
+                  </ul>
+                </div>
+              </div>
+
               <!-- Modal for Vigilance Monitor (MQTT/Node-Red) -->
               <div id="newsModalVigilance" class="modal">
                 <div class="modal-content">
@@ -1048,28 +1166,28 @@
                   </ul>
                   <h4>🔁 Conditional Logic</h4>
                   <pre><code>if (isDrowsy) {
-                player.play('alarm.mp3');
-              } else {
-                player.stop();
-              }
-              
-              if (isYawning && yawnCount >= 3) {
-                showWarningPopup();
-              }
-              
-              if (isDrowsy || isYawning) {
-                player.play('alarm.mp3');
-              }</code></pre>
+  player.play('alarm.mp3');
+} else {
+  player.stop();
+}
+
+if (isYawning && yawnCount >= 3) {
+  showWarningPopup();
+}
+
+if (isDrowsy || isYawning) {
+  player.play('alarm.mp3');
+}</code></pre>
                   <h4>🛑 Pausing & Resuming</h4>
                   <pre><code>// Pause if popup is active
-              if (isPopupVisible) {
-                return;
-              }
-              
-              // Resume detection
-              if (!isPopupVisible) {
-                startDetection();
-              }</code></pre>
+if (isPopupVisible) {
+  return;
+}
+
+// Resume detection
+if (!isPopupVisible) {
+  startDetection();
+}</code></pre>
                 </div>
               </div>
               
@@ -1175,25 +1293,13 @@
                   <div id="prismChat" class="modal">
                     <div class="modal-content">
                       <span class="close" onclick="closeModal('prismChat')">&times;</span>
-                      <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
+                      <video controls poster="assets/img/portfolio/Gallery/demo_thumb.jpg">
                         <source src="assets/videos/PrismCHAT Demo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                       <h3>Side Project: PrismCHAT for Autism Support</h3>
-                      <p><strong>Date:</strong> Jan 2026</p>
-                      <h4>🎥 Video Context:</h4>
-                      <ul>
-                        <li><strong>AI chatbot (ChatGPT-style) that acts like a virtual counsellor.</strong>.</li>
-                        <li>where users can ask questions about autism and get feedback based on keywords and context.</li>
-                      </ul>
-                      <h4>🚀 Purpose & Vision:</h4>
-                      <ul>
-                        <li>My first step in sharing innovation to a broader audience.</li>
-                      </ul>
-                      <h4>🔖 Hashtags:</h4>
-                      <p style="font-size: 0.9rem; color: #666;">
-                        #NLP #Innovation #Artificial Intelligence #Research
-                      </p>
+                      <p><strong>Date:</strong> January 2025</p>
+                      <p>An AI-powered chatbot designed to provide support and guidance for individuals with autism and their caregivers. The system uses natural language processing to understand questions and provide contextual responses based on autism support best practices.</p>
                     </div>
                   </div>
     
@@ -1202,7 +1308,7 @@
                     <div class="modal-content">
                       <span class="close" onclick="closeModal('newsModalSEDA')">&times;</span>
                       <video controls poster="assets/img/portfolio/Gallery/seda_teaser_thumb.jpg">
-                        <source src="assets/videos/seda_teaser.mp4" type="video/mp4">
+                        <source src="assets/videos/seda2024.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                       </video>
                       <h3>30s Teaser for SEDA Innovation Project – ISES 2024</h3>
